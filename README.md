@@ -19,15 +19,23 @@ Thus, he wants to have a simulation web application for blockchain technology so
 
 ## Usage facet: 
  
-In recent years, Blockchain technology is growing very fast and there are tons of introduction videos about Blockchain but there is no clear guideline application for amateurs to learn from this new technology. We want to have a simulator application for users to have hands-on experience in our virtual application without spending real money at high risk to try blockchain-related systems on the internet. 
+In recent years, Blockchain technology is growing very fast and there are tons of introduction videos about Blockchain but there is no clear guideline application for amateurs to learn from this new technology. We want to have a simulator application for users to have hands-on experience in our virtual application without spending real money at high risk to try blockchain-related systems on the internet.   
+
+![Blocks](image/Blocks.png)  
 
 [Intro to blockchain Youtube Video](https://www.youtube.com/watch?v=SSo_EIwHSd4)  
 
 This application will be used for educational purposes to help students understand the basic structure of blockchain and why it can be considered as decentralized systems from the Animation page. More specifically, the web application should offer several efficient functions of query and storing information that include user’s data and blocked data from the Block Explorer Page. And users can imitate the cryptocurrency transaction and view the buy/sell history chart through the Trade Cryptocurrency Page.   
 
+![Transaction](image/Transaction.png)  
+
 [Buy and Sell process](https://www.coinbase.com/ )
 
+![BitcoinExplore](image/BitcoinExplorer.png)  
+
 [Block Explorer for Bitcoin](https://blockstream.info/)  
+
+![History](image/History.png)  
 
 [History of Transaction Chart](https://bittrex.com/)  
 
