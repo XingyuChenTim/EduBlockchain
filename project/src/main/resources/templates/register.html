@@ -13,7 +13,7 @@
 
     <section id="inner-wrapper" class="login">
         <article>
-            <form action="/project/Register" method="post">
+            <form th:action="@{/registeruser}">
                 <div class="form-group" style="text-align: center;">
                     <h1 style="font-size: 20px;">Register Page</h1>
                 </div>
@@ -21,19 +21,19 @@
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><em class="fa fa-user"> </i></span>
-                        <input type="text" name="name" class="form-control" placeholder="Name">
+                        <input type="text" name="username" class="form-control" placeholder="Name">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><em class="fa fa-key"> </i></span>
-                        <input type="password" name="psw1" class="form-control" placeholder="Password">
+                        <input type="password" name="password" class="form-control" placeholder="Password">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><em class="fa fa-key"> </i></span>
-                        <input type="password" name="psw2" class="form-control" placeholder="Confirm Password">
+                        <input type="password" name="passwordrep" class="form-control" placeholder="Confirm Password">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success btn-block" style="color: LightYellow ;">Submit</button>

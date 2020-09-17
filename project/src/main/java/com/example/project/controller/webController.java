@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class WebController {
@@ -45,4 +46,11 @@ public class WebController {
         model.addAttribute("invalidCredentials", true);
         return "login";
     }
+
+    @RequestMapping("/registeruser")
+    public String userInfo(LoginForm reg) {
+        userRepository.registerUser(reg);
+        return "registeruser";
+    }
+    
 }
