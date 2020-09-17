@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14f84feb-474f-481b-bcbe-23d4e2a65ae0" name="Default Changelist" comment="" />
+    <list default="true" id="14f84feb-474f-481b-bcbe-23d4e2a65ae0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/project/src/main/resources/static/css/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/example/project/controller/webController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/example/project/controller/webController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/resources/templates/home.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +37,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599972715679</updated>
       <workItem from="1599972717328" duration="55000" />
+      <workItem from="1599976458366" duration="31000" />
     </task>
     <servers />
   </component>
