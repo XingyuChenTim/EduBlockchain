@@ -1,47 +1,33 @@
 <!DOCTYPE HTML>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Register</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/register.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/sigreg.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
 </head>
-<body style="background-color:LightYellow ;">
 
-<div class="col-md-4 col-md-offset-4" id="register" >
+<body class="text-center">
+    <form class="form-signin" th:action="@{/register}" method="post">
+        <h1 class="h3 mb-3 font-weight-normal">Please register</h1><br>
 
-    <section id="inner-wrapper" class="login">
-        <article>
-            <form th:action="@{/registeruser}">
-                <div class="form-group" style="text-align: center;">
-                    <h1 style="font-size: 20px;">Register Page</h1>
-                </div>
+        <label for="username" class="sr-only">Username</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
 
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><em class="fa fa-user"> </i></span>
-                        <input type="text" name="username" class="form-control" placeholder="Name">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><em class="fa fa-key"> </i></span>
-                        <input type="password" name="password" class="form-control" placeholder="Password">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><em class="fa fa-key"> </i></span>
-                        <input type="password" name="passwordrep" class="form-control" placeholder="Confirm Password">
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-success btn-block" style="color: LightYellow ;">Submit</button>
-            </form>
-        </article>
-        <p>Back to <a href="/">Home Page</a>.</p>
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+
+        <label for="passwordrep" class="sr-only">Passwordrep</label>
+        <input type="password" id="passwordrep" name="passwordrep" class="form-control" placeholder="Confirm Password"
+            required>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+
+        <p>Go Back to <a href="/">Home Page</a>.</p>
         <p class="mt-5 mb-3 text-muted">&copy; Company 2020 BlockChain Education</p>
-    </section></div>
-
+    </form>
 </body>
+
 </html>

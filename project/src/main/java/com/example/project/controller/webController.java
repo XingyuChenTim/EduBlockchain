@@ -1,13 +1,11 @@
 package com.example.project.controller;
 
-import com.example.project.form.LoginForm;
+import com.example.project.form.UserForm;
 import com.example.project.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 // Will try to use RestControlller in the future implemetation
 @Controller
@@ -26,23 +24,23 @@ public class WebController {
         return "register";
     }
 
-    @GetMapping("/login")
+    @GetMapping("/sign")
     public String login() {
-        return "login";
+        return "sign";
     }
 
-    @PostMapping(value = "/login")
-    public String login(@ModelAttribute(name = "loginForm") LoginForm sig) {
+    @PostMapping(value = "/sign")
+    public String login(UserForm sig) {
         if (userRepository.signinUser(sig)) {
             return "user";
         }
-        return "login";
+        return "sign";
     }
 
-    @RequestMapping("/registeruser")
-    public String userInfo(LoginForm reg) {
+    @PostMapping(value = "/register")
+    public String userInfo(UserForm reg) {
         userRepository.registerUser(reg);
-        return "registeruser";
+        return "home";
     }
 
 }
