@@ -13,8 +13,10 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
+    /*
     @GetMapping(path = "/getusernames")
     public List<String> getAllUserNames(){
         return userRepository.getAllUserNames();
     }
+    */
 }
