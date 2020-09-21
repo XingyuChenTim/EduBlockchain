@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+// Will try to use RestControlller in the future implemetation
 @Controller
 public class WebController {
 
@@ -16,23 +17,23 @@ public class WebController {
     UserRepository userRepository;
 
     @GetMapping("/")
-    public String home(){
+    public String home() {
         return "home";
     }
 
     @GetMapping("/register")
-    public String register(){
+    public String register() {
         return "register";
     }
 
     @GetMapping("/login")
-    public String login(){
+    public String login() {
         return "login";
     }
 
-    @PostMapping(value="/login")
-    public String login(@ModelAttribute(name="loginForm") LoginForm sig) {
-        if(userRepository.signinUser(sig)) {
+    @PostMapping(value = "/login")
+    public String login(@ModelAttribute(name = "loginForm") LoginForm sig) {
+        if (userRepository.signinUser(sig)) {
             return "user";
         }
         return "login";
@@ -43,5 +44,5 @@ public class WebController {
         userRepository.registerUser(reg);
         return "registeruser";
     }
-    
+
 }
