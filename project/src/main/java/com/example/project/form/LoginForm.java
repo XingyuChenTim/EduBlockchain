@@ -36,4 +36,9 @@ public class LoginForm {
         this.wallet = wallet;
     }
 
+    @Override
+    public String toString() {
+        return "LoginForm [password=" + password + ", username=" + username + ", wallet=" + wallet + "]";
+    }    
+
 }
