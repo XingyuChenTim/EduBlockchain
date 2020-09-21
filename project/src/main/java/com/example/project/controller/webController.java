@@ -4,7 +4,6 @@ import com.example.project.form.LoginForm;
 import com.example.project.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,12 +16,7 @@ public class WebController {
     UserRepository userRepository;
 
     @GetMapping("/")
-    public String home1(){
-        return "home";
-    }
-
-    @GetMapping("/home")
-    public String home2(){
+    public String home(){
         return "home";
     }
 
@@ -37,13 +31,10 @@ public class WebController {
     }
 
     @PostMapping(value="/login")
-    public String login(@ModelAttribute(name="loginForm") LoginForm loginForm, Model model) {
-        String username = loginForm.getUsername();
-        String password = loginForm.getPassword();
-        if("test".equals(username) && "test".equals(password)) {
+    public String login(@ModelAttribute(name="loginForm") LoginForm sig) {
+        if(userRepository.signinUser(sig)) {
             return "user";
         }
-        model.addAttribute("invalidCredentials", true);
         return "login";
     }
 
