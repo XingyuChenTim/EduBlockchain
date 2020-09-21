@@ -1,15 +1,13 @@
 package com.example.project.controller;
 
-import com.example.project.form.LoginForm;
+import com.example.project.form.UserForm;
 import com.example.project.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
+// Will try to use RestControlller in the future implemetation
 @Controller
 public class WebController {
 
@@ -17,40 +15,32 @@ public class WebController {
     UserRepository userRepository;
 
     @GetMapping("/")
-    public String home1(){
-        return "home";
-    }
-
-    @GetMapping("/home")
-    public String home2(){
+    public String home() {
         return "home";
     }
 
     @GetMapping("/register")
-    public String register(){
+    public String register() {
         return "register";
     }
 
-    @GetMapping("/login")
-    public String login(){
-        return "login";
+    @GetMapping("/sign")
+    public String login() {
+        return "sign";
     }
 
-    @PostMapping(value="/login")
-    public String login(@ModelAttribute(name="loginForm") LoginForm loginForm, Model model) {
-        String username = loginForm.getUsername();
-        String password = loginForm.getPassword();
-        if("test".equals(username) && "test".equals(password)) {
+    @PostMapping(value = "/sign")
+    public String login(UserForm sig) {
+        if (userRepository.signinUser(sig)) {
             return "user";
         }
-        model.addAttribute("invalidCredentials", true);
-        return "login";
+        return "sign";
     }
 
-    @RequestMapping("/registeruser")
-    public String userInfo(LoginForm reg) {
+    @PostMapping(value = "/register")
+    public String userInfo(UserForm reg) {
         userRepository.registerUser(reg);
-        return "registeruser";
+        return "home";
     }
-    
+
 }

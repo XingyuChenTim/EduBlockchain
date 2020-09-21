@@ -3,12 +3,12 @@ package com.example.project.form;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @EntityScan
-public class LoginForm {
+public class UserForm {
     private String username;
     private String password;
     private Double wallet;
 
-    public LoginForm() {
+    public UserForm() {
         super();
     }
 
@@ -35,5 +35,10 @@ public class LoginForm {
     public void setWallet(Double wallet) {
         this.wallet = wallet;
     }
+
+    @Override
+    public String toString() {
+        return "UserForm [password=" + password + ", username=" + username + ", wallet=" + wallet + "]";
+    }    
 
 }
