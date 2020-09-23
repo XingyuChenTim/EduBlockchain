@@ -36,9 +36,4 @@ public class UserForm {
         this.wallet = wallet;
     }
 
-    @Override
-    public String toString() {
-        return "UserForm [password=" + password + ", username=" + username + ", wallet=" + wallet + "]";
-    }    
-
 }
