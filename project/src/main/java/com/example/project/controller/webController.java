@@ -29,6 +29,11 @@ public class WebController {
         return "sign";
     }
 
+    @GetMapping("/sha256")
+    public String hash() {
+        return "sha256";
+    }
+
     @PostMapping(value = "/sign")
     public String login(UserForm sig) {
         if (userRepository.signinUser(sig)) {
