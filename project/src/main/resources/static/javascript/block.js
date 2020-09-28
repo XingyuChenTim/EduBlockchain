@@ -4,11 +4,41 @@ function slide1() {
 function slide2() {
     $("#panel2").slideToggle("slow");
 }
+function Initial() {
+    var previous_block_hash = document.getElementById("previous_block_hash");
+    var version = document.getElementById("version");
+    previous_block_hash.value = "0000000000000000000000000000000000000000000000000000000000000000";
+    version.value = SHA256("1").toString();
+    Initial2();
+}
+function Initial2() {
+    var today = new Date();
+    var time = document.getElementById("time");
+    var bits = document.getElementById("bits");
+    bits.value = SHA256("20").toString();
+    time.value = SHA256(today.getTime().toString()).toString();
+}
 function hash() {
-    var txtName = document.getElementById("txtData");
-    var txtOutput = document.getElementById("txtOutput");
-    var name = txtName.value;
-    txtOutput.value = SHA256(name).toString();
+    var nonce = document.getElementById("nonce");
+    var previous_block_hash = document.getElementById("previous_block_hash");
+    var version = document.getElementById("version");
+    var merkle_root = document.getElementById("merkle_root");
+    var time = document.getElementById("time");
+    var bits = document.getElementById("bits");
+    var blockheader = document.getElementById("blockheader");
+
+    nonce.value = SHA256((Math.random() * 50000).toString()).toString();
+    blockheader.value = SHA256("".concat(nonce.value, merkle_root.value, version.value, bits.value, previous_block_hash.value, time.value)).toString();
+}
+function mine() {
+    var sender_address = document.getElementById("sender_address");
+    var receiver_address = document.getElementById("receiver_address");
+    var date = document.getElementById("date");
+    var amount = document.getElementById("amount");
+    var transaction = document.getElementById("transaction");
+    transaction.value = SHA256(SHA256(sender_address.value) + SHA256(receiver_address.value) + SHA256(date.value) + SHA256(amount.value)).toString();
+    merkle_root.value = transaction.value;
+    setTimeout(function(){hash();}, 5000);
 }
 /**
  *
