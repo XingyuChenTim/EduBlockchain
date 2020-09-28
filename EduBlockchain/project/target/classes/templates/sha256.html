@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>sha256</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/sha256.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+    <script type="text/javascript" th:src="@{/javascript/sha256.js}"></script>
+</head>
+
+<body class="text-center">
+    <form class="form-signin">
+        <h1 class="h3 mb-3 font-weight-normal">SHA256</h1><br>
+        <label class="sr-only">Type your data: </label>
+        <textarea class="form-control" type="text" id="txtData" rows="4" cols="50"></textarea>
+        <br><br>
+        <input class="btn btn-lg btn-primary btn-block" type="button" value="click me" onclick="hash()" />
+        <br><br>
+        <label class="sr-only">The corresponding hashrate: </label>
+        <input class="form-control" type="text" id="txtOutput" />
+    </form>
+</body>
+
+</html>
