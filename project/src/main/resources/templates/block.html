@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>block</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/block.css}" />
+    <script type="text/javascript" th:src="@{/javascript/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/block.js}"></script>
+</head>
+
+<body class = "text-center">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="user">Back to user page<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main role="main">
+        <div class="jumbotron">
+            <div class="container">
+                <form class="form-signin">
+                    <br><br>
+                    <h1 class="h3 mb-3 font-weight-normal">Block</h1><br>
+                
+                    <p>Block Header:</p>
+                    <input type="text" onkeyup="hash()" size="75" /><br><br>
+                
+                    <input class="button" type="button" value="Structure Field" onclick="slide1()" /><br>
+                
+                    <div id="panel1">
+                        <p>Version: The version of the block</p>
+                        <input class="form-control" type="text" id="version"/>
+                        <p>Previous Block Hash: The Block Hash of the previous block</p>
+                        <input class="form-control" type="text" id="previous_block_hash"/>
+                        <p>Merkle Root: All of the transactions in this block, hashed together</p>
+                        <input class="form-control" type="text" id="merkle_root"/>
+                        <p>Time stamp: The Unix time at which this block header is being hashed</p>
+                        <input class="form-control" type="text" id="time"/>
+                        <p>Difficulty Bits: Impact how difficult it is to find a hash below a given target</p>
+                        <input class="form-control" type="text" id="bits"/>
+                        <p>Nonce: For miner try to get a hash of block header which is below the target</p>
+                        <input class="form-control" type="text" id="nonce"/>
+                    </div>
+                
+                    <p>Transactions:</p>
+                    <input type="text" onkeyup="hash()" size="75" /><br><br>
+                
+                    <input class="button" type="button" value="Structure Field" onclick="slide2()" /><br>
+                
+                    <div id="panel2">
+                        <p>Sender Address:</p>
+                        <input class="form-control" type="text" id="sender_address"/>
+                        <p>Receiver Address:</p>
+                        <input class="form-control" type="text" id="reveiver_address"/>
+                        <p>Date:</p>
+                        <input class="form-control" type="text" id="date"/>
+                        <p>Amount:</p>
+                        <input class="form-control" type="text" id="amount"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="container">
+    <p>&copy; Company 2020 BlockChain Education</p>
+    </footer>
+</body>
+</html>
