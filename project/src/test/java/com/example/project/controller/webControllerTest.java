@@ -1,0 +1,54 @@
+package com.example.project.controller;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+//@ExtendWith(MockitoExtension.class)
+//@RunWith(JUnitPlatform.class)
+public class webControllerTest {
+	private MockMvc mockMvc;
+	
+	@Before
+	public void setup() {
+		this.mockMvc = MockMvcBuilders.standaloneSetup(new webController()).build();
+	}
+	
+	@Test
+	public void testHome() throws Exception {
+		this.mockMvc = MockMvcBuilders.standaloneSetup(new webController()).build();
+		this.mockMvc.perform(get("/")
+				.accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
+		.andExpect(status().isOk());
+	}
+	
+	@Test
+	public void testRegister() throws Exception {
+		this.mockMvc.perform(get("/regist")
+				.accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
+		.andExpect(status().isOk());
+	}
+	@Test
+	public void testLogin() throws Exception {
+		this.mockMvc.perform(get("/login")
+				.accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
+		.andExpect(status().isOk());
+	}
+	@Test
+	public void testSha256() throws Exception {
+		this.mockMvc.perform(get("/sha")
+				.accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
+		.andExpect(status().isOk());
+	}
+	/*@Test
+	public void testLoginTwo() throws Exception {
+		this.mockMvc.perform(post("/login")
+				.accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
+		.andExpect(status().isOk());
+	}*/
+}

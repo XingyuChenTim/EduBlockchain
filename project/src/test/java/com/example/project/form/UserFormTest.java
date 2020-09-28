@@ -25,9 +25,14 @@ class UserFormTest {
 		assertEquals(u.getUsername(), "Hello");
 	}
 	
+<<<<<<< Updated upstream
 	@Test
 	public void testToString() {
 		assertEquals(u.toString(), "UserForm [password=" + u.getPassword() + ", username=" 
 	+ u.getUsername() + ", wallet=" + u.getWallet() + "]");
 	}
 }
+=======
+
+}
+>>>>>>> Stashed changes
