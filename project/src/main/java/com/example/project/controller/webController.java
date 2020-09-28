@@ -39,6 +39,11 @@ public class WebController {
         return "block";
     }
 
+    @GetMapping("/user")
+    public String user() {
+        return "user";
+    }
+
     @PostMapping(value = "/sign")
     public String login(UserForm sig) {
         if (userRepository.signinUser(sig)) {
