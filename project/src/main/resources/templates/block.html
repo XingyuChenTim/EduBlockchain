@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="utf-8">
+    <title>block</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>User page</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/block.css}" />
+    <script type="text/javascript" th:src="@{/javascript/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/block.js}"></script>
 </head>
 
-<body>
+<body class = "text-center">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Sign Out<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="user">Back to user page<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                 </li>
@@ -27,29 +30,51 @@
     <main role="main">
         <div class="jumbotron">
             <div class="container">
-                <br><br>
-                <h1 class="display-3" style="color: pink;">Welcome to BlockChain Education System!</h1>
-                <br><br>
-                <p><a class="btn btn-primary btn-lg" href="sha256" role="button">Testing! Start hash data
-                    &raquo;</a></p>
-                <p><a class="btn btn-primary btn-lg" href="trade" role="button">Greetings! Start your Trade today
-                        &raquo;</a></p>
-                <p><a class="btn btn-primary btn-lg" href="balance" role="button">Check your Wallet Balance here
-                        &raquo;</a></p>
-                <p><a class="btn btn-primary btn-lg" href="mining" role="button">Work, Work, Start Mining here
-                        &raquo;</a></p>
-                <p><a class="btn btn-primary btn-lg" href="animation" role="button">Blockchain Animation &raquo;</a></p>
-                <p><a class="btn btn-primary btn-lg" href="explorer" role="button">Block Explorer&raquo;</a></p>
-                <form action="/history" method="POST">
-                    <input class="btn btn-primary btn-lg" type="submit"
-                        value="Check your transaction history here &raquo;">
+                <form class="form-signin">
+                    <br><br>
+                    <h1 class="h3 mb-3 font-weight-normal">Block</h1><br>
+                
+                    <p>Block Header:</p>
+                    <input type="text" onkeyup="hash()" size="75" /><br><br>
+                
+                    <input class="button" type="button" value="Structure Field" onclick="slide1()" /><br>
+                
+                    <div id="panel1">
+                        <p>Version: The version of the block</p>
+                        <input class="form-control" type="text" id="version"/>
+                        <p>Previous Block Hash: The Block Hash of the previous block</p>
+                        <input class="form-control" type="text" id="previous_block_hash"/>
+                        <p>Merkle Root: All of the transactions in this block, hashed together</p>
+                        <input class="form-control" type="text" id="merkle_root"/>
+                        <p>Time stamp: The Unix time at which this block header is being hashed</p>
+                        <input class="form-control" type="text" id="time"/>
+                        <p>Difficulty Bits: Impact how difficult it is to find a hash below a given target</p>
+                        <input class="form-control" type="text" id="bits"/>
+                        <p>Nonce: For miner try to get a hash of block header which is below the target</p>
+                        <input class="form-control" type="text" id="nonce"/>
+                    </div>
+                
+                    <p>Transactions:</p>
+                    <input type="text" onkeyup="hash()" size="75" /><br><br>
+                
+                    <input class="button" type="button" value="Structure Field" onclick="slide2()" /><br>
+                
+                    <div id="panel2">
+                        <p>Sender Address:</p>
+                        <input class="form-control" type="text" id="sender_address"/>
+                        <p>Receiver Address:</p>
+                        <input class="form-control" type="text" id="reveiver_address"/>
+                        <p>Date:</p>
+                        <input class="form-control" type="text" id="date"/>
+                        <p>Amount:</p>
+                        <input class="form-control" type="text" id="amount"/>
+                    </div>
                 </form>
             </div>
         </div>
     </main>
     <footer class="container">
-        <p>&copy; Company 2020 BlockChain Education</p>
+    <p>&copy; Company 2020 BlockChain Education</p>
     </footer>
 </body>
-
 </html>
