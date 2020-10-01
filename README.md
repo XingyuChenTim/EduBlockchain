@@ -37,19 +37,39 @@ Description:
    1. Install Node.js with NPM as the below url. 
       [How to intall Node.js and NPM](https://phoenixnap.com/kb/install-node-js-npm-on-windows)
    2. After the download and configuration, verifying Node.js version and Npm status to make sure both have been installed correctly. (The verify command is also listed in           above URL
-   3. Download the code by using the **Code** button in the right corner or 
- 
- 
+   3. Download the Zipped code by using the **Code** button in the right corner and unzip it
+      
+   4. Or Using the git clone command: 
+      ```
+      git clone https://github.com/fire-holder/EduBlockchain.git
+      ```
+   5. After you get the Edublockchain folder, open the folder inside of Visual studio to compile and generate a new executable.jar file and store it in your /Desktop.
+   6. Open Powershell and direct to the the .jar file location, then run the following command (Make sure your JDK and JRE have the most recent version).
+      ```
+      java -jar YOUR_EXECUTABLE_FILE_NAME.jar
+      ``` 
+   7. Then you can open a web browser (e.g. Google Chrome) and type the following command in the URL box
+       ```
+       http://localhost:8080
+       ```
+       
  **On the Web Applications:**
-   1. Login
-      ![]()
-   2. Register
-   3. Hashrate Exploration
-   5. Blocks Components
+   1. _Login page_ 
+      <comment> needs video demo   
+   2. _Register page_ 
+      <comment> needs video demo  
+   3. _Hashrate Exploration page_  
+      <comment> needs video demo  
+   5. _Blocks Components page_  
+      <comment> needs video demo  
    
 
 
 ## License
-MIT
+MIT  
 JQuery
+Pug  
+JSON  
+
+
 
