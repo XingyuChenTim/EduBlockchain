@@ -54,9 +54,9 @@ Description:
        ```
        
  **On the Web Applications:**
-   1. _Login page_ 
+   1. _Login page_  
       <comment> needs video demo   
-   2. _Register page_ 
+   2. _Register page_   
       <comment> needs video demo  
    3. _Hashrate Exploration page_  
       <comment> needs video demo  
