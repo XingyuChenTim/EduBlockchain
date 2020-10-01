@@ -27,19 +27,29 @@ Description:
    
 ## Usage
 
- **Prerequirement:**  
+ <!--**Prerequirement:**  
  * Step 1: Connect to your UNO vpn through DUO-factor authentication.
  * Step 2: Open any favorite browser and type the URL.
  * Step 3: Using the URL (unomahablockchain.ddns.net) to access the project web application
  * Step 4: Waitting the server response for a while  
- * Step 5: If the server doesn't response or the webpage shows the error message, please inform the system admin to start the server. (In current stage, server is closed)
+ * Step 5: If the server doesn't response or the webpage shows the error message, please inform the system admin to start the server. (In current stage, server is closed)-->
+ **Installation**
+   1. Install Node.js with NPM as the below url. 
+      [How to intall Node.js and NPM](https://phoenixnap.com/kb/install-node-js-npm-on-windows)
+   2. After the download and configuration, verifying Node.js version and Npm status to make sure both have been installed correctly. (The verify command is also listed in           above URL
+   3. Download the code by using the **Code** button in the right corner or 
+ 
  
  **On the Web Applications:**
    1. Login
       ![]()
    2. Register
    3. Hashrate Exploration
-   4. Blockchain introduction
    5. Blocks Components
    
+
+
+## License
+MIT
+JQuery
 
