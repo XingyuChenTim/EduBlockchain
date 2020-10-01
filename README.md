@@ -24,3 +24,20 @@ Description:
    A middleware to support both Admin’s and Student’s functionalities. Log diagram strictly separates the accessibility of students and administrators. Students’ accounts only    have a read privilege to the system information, but administrators have more privilege (not including the remove and add privilege) of the system log like verify and revise    the users’ transactions at a specific moment. (In this case, we haven’t applied the full function of decentralized system because the users might be intentionally or            inadvertently to compromise the system log, but we specify a time period to constrain modifications on blockchain) 
 5. **Admin:**  
    The main function of manipulating the system environment. It can handle multiple threads simultaneously. The Admin has authority to CRUD (create, read, update, delete) these    functions mainly for Animation function and Transaction function. Additionally, they can verify and revise scripts or databases related to corresponding functions such as      Trend Chart Script for user history framework and data tamper showcase for explaining potential drawbacks to cryptocurrency using blockchain. 
+   
+## Usage
+
+ **Prerequirement:**  
+ * Step 1: Connect to your UNO vpn through DUO-factor authentication.
+ * Step 2: Open any favorite browser and type the URL.
+ * Step 3: Using the URL (unomahablockchain.ddns.net) to access the project web application
+ * Step 5: Waitting the server response for a while
+ **On the Web Applications**
+   1. Login
+      ![]()
+   2. Register
+   3. Hashrate Exploration
+   4. Blockchain introduction
+   5. Blocks Components
+   
+
