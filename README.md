@@ -31,8 +31,9 @@ Description:
  * Step 1: Connect to your UNO vpn through DUO-factor authentication.
  * Step 2: Open any favorite browser and type the URL.
  * Step 3: Using the URL (unomahablockchain.ddns.net) to access the project web application
- * Step 5: Waitting the server response for a while
- **On the Web Applications**
+ * Step 5: Waitting the server response for a while  
+ 
+ **On the Web Applications:**
    1. Login
       ![]()
    2. Register
