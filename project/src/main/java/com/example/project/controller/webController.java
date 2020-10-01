@@ -61,6 +61,11 @@ public class webController {
     * Post mapping and go to the user page if signed in successfully
     * Remain in the sign in page if unsuccessful
     */
+    @GetMapping("/user")
+    public String user() {
+        return "user";
+    }
+
     @PostMapping(value = "/sign")
     public String login(UserForm sig) {
         if (userRepository.signinUser(sig)) {

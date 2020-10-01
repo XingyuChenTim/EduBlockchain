@@ -33,9 +33,9 @@
                 <form class="form-signin">
                     <br><br>
                     <h1 class="h3 mb-3 font-weight-normal">Block</h1><br>
-                
+                    <input class="button" type="button" value="Initial" onclick="Initial()" /><br>
                     <p>Block Header:</p>
-                    <input type="text" onkeyup="hash()" size="75" /><br><br>
+                    <input type="text" id="blockheader" size="75" /><br><br>
                 
                     <input class="button" type="button" value="Structure Field" onclick="slide1()" /><br>
                 
@@ -55,20 +55,21 @@
                     </div>
                 
                     <p>Transactions:</p>
-                    <input type="text" onkeyup="hash()" size="75" /><br><br>
+                    <input type="text" id="transaction" size="75" /><br><br>
                 
                     <input class="button" type="button" value="Structure Field" onclick="slide2()" /><br>
                 
                     <div id="panel2">
                         <p>Sender Address:</p>
-                        <input class="form-control" type="text" id="sender_address"/>
+                        <input class="form-control" type="text" id="sender_address" />
                         <p>Receiver Address:</p>
-                        <input class="form-control" type="text" id="reveiver_address"/>
+                        <input class="form-control" type="text" id="receiver_address"/>
                         <p>Date:</p>
-                        <input class="form-control" type="text" id="date"/>
+                        <input class="form-control" type="text" id="date" />
                         <p>Amount:</p>
-                        <input class="form-control" type="text" id="amount"/>
+                        <input class="form-control" type="text" id="amount" />
                     </div>
+                    <input class="button" type="button" value="Mining" onclick="mine()" /><br>
                 </form>
             </div>
         </div>
