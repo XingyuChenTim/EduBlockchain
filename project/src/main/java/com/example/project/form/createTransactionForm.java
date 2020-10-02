@@ -9,10 +9,10 @@ public class createTransactionForm {
 	private int amount;
 	private String hashid;
 	
-	public createTransactionForm ( ) {
+	public createTransactionForm () {
 		 super();
 	}
-	
+
 	public String getSenderName() {
 		return senderName;
 	}
