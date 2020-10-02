@@ -14,30 +14,32 @@
 
 	<div class="form-group">
 		<label for="toAddress">Sender</label> <input type="text"
-			class="form-control" id="toAddress" aria-describedby="toAddressHelp"> <small id="toAddressHelp"
-			class="form-text text-muted"> Enter the name of the Sender,
-			here! </small>
+			class="form-control" id="toAddress" aria-describedby="toAddressHelp">
+		<small id="toAddressHelp" class="form-text text-muted"> Enter
+			the name of the Sender, here! </small>
 	</div>
 
 	<div class="form-group">
 		<label for="toAddress">Receiver</label> <input type="text"
-			class="form-control" id="toAddress" aria-describedby="toAddressHelp"> <small id="toAddressHelp"
-			class="form-text text-muted"> Enter the name of the Receiver,
-			here! </small>
+			class="form-control" id="toAddress" aria-describedby="toAddressHelp">
+		<small id="toAddressHelp" class="form-text text-muted"> Enter
+			the name of the Receiver, here! </small>
 	</div>
 
 	<div class="form-group">
 		<label for="amount">Amount</label> <input type="number"
-			class="form-control" id="amount" aria-describedby="amountHelp"> <small id="amountHelp"
-			class="form-text text-muted"> Enter Amount , here! </small>
+			class="form-control" id="amount" aria-describedby="amountHelp">
+		<small id="amountHelp" class="form-text text-muted"> Enter
+			Amount , here! </small>
 	</div>
 
-	<div class="form-group md-form">
-		<input type="date" id="inputMDEx" class="form-control">
-			<small id="amountHelp"
-			class="form-text text-muted"> Choose your date , here! </small>
+	<div class="form-group">
+		<label for="hashid">Hash ID</label> <input type="text"
+			class="form-control" id="hashid" aria-describedby="hashid">
+		<small id="hashid" class="form-text text-muted"> Your hash id </small>
 	</div>
-	<button (click)="createTransaction()" type="submit"
-		class="btn btn-primary">Sign & create transaction</button>
+
+	<button class="btn btn-lg btn-primary" type="submit"
+		>Sign & create transaction</button>
 
 </div>
