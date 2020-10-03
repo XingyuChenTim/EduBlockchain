@@ -4,26 +4,34 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @EntityScan
 public class createTransactionForm {
-	private String senderName;
-	private String receiverName;
+	private String sender;
+	private String receiver;
 	private int amount;
 	private String hashid;
 	
 	public createTransactionForm () {
-		 super();
+	}
+	
+
+	public createTransactionForm(String sender, String receiver, int amount, String hashid) {
+		super();
+		this.sender = sender;
+		this.receiver = receiver;
+		this.amount = amount;
+		this.hashid = hashid;
 	}
 
-	public String getSenderName() {
-		return senderName;
+	public String getSender() {
+		return sender;
 	}
-	public void setSenderName(String senderName) {
-		this.senderName = senderName;
+	public void setSender(String sender) {
+		this.sender = sender;
 	}
-	public String getReceiverName() {
-		return receiverName;
+	public String getReceiver() {
+		return receiver;
 	}
-	public void setReceiverName(String receiverName) {
-		this.receiverName = receiverName;
+	public void setReceiver(String receiver) {
+		this.receiver = receiver;
 	}
 	public int getAmount() {
 		return amount;
@@ -37,7 +45,5 @@ public class createTransactionForm {
 	public void setHashid(String hashid) {
 		this.hashid = hashid;
 	}
-	
-	
 
 }

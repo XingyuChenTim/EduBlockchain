@@ -1,71 +1,72 @@
 package com.example.project.controller;
 
 import com.example.project.form.UserForm;
+import com.example.project.form.createTransactionForm;
 import com.example.project.repository.UserRepository;
+import com.example.project.repository.createTransactionRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
-/*
- * This class is the web controller.
- * Will try to use RestController in the future implemetation
- */
 
+// Will try to use RestControlller in the future implemetation
 @Controller
 public class webController {
 
     @Autowired
     UserRepository userRepository;
-	/*
-	 * Get mapping and go to the home page
-	 */
+    
+    @Autowired
+    createTransactionRepository createTransactionRepository;
+
     @GetMapping("/")
     public String home() {
         return "home";
     }
-	/*
-	 * Get mapping and go to the register page
-	 * This might be changed to avoid the circular error.
-	 */
+
     @GetMapping("/register")
     public String register() {
         return "register";
     }
-    /*
-     * Get mapping and go to the register page
-     * This might be changed to avoid the circular error.
-     */
+
     @GetMapping("/sign")
     public String login() {
         return "sign";
     }
-    /*
-     * Get mapping and go to the sha256 page
-     * This might be changed to avoid the circular error.
-     */
+
+    @GetMapping("/user")
+    public String user() {
+        return "user";
+    }
+    
     @GetMapping("/sha256")
     public String hash() {
         return "sha256";
     }
-    /*
-     * Get mapping and go to the block page
-     * This might be changed to avoid the circular error.
-     */
+
     @GetMapping("/block")
     public String block() {
         return "block";
     }
     
-   /*
-    * Post mapping and go to the user page if signed in successfully
-    * Remain in the sign in page if unsuccessful
-    */
-    @GetMapping("/user")
-    public String user() {
+    @GetMapping("/createTransaction")
+    public String createTransaction(Model model) {
+    	createTransactionForm createtrans = new createTransactionForm();
+    	model.addAttribute("createtrans",createtrans);
+        return "createTransaction";
+    } 
+    
+    @PostMapping(value = "/createTransaction")
+    public String createTransaction(@ModelAttribute("createtrans") createTransactionForm createtrans) {
+    	createTransactionRepository.createTransaction(createtrans);
         return "user";
     }
-
+    
     @PostMapping(value = "/sign")
     public String login(UserForm sig) {
         if (userRepository.signinUser(sig)) {
@@ -73,9 +74,7 @@ public class webController {
         }
         return "sign";
     }
-    /*
-     * Post mapping and go to the home page if registered
-     */
+
     @PostMapping(value = "/register")
     public String userInfo(UserForm reg) {
         userRepository.registerUser(reg);
