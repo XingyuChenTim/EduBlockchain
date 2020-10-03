@@ -15,9 +15,10 @@ public class createTransactionRepository {
     JdbcTemplate jdbcTemplate;
 
     public int createTransaction(createTransactionForm createForm){
-    	//jdbcTemplate.execute("create table transaction (SENDER varchar(32) not null, RECEIVER varchar(32) not null, AMOUNT int not null, HASHID varchar(32) not null)");
+    	jdbcTemplate.execute("DROP TABLE IF EXISTS transaction");
+    	jdbcTemplate.execute("create table transaction (SENDER varchar(32), RECEIVER varchar(32), AMOUNT int, HASHID varchar(32))");
         String sql = "insert into transaction(SENDER,RECEIVER,AMOUNT,HASHID) values(?,?,?,?)";
-        return jdbcTemplate.update(sql, createForm.getSenderName(), createForm.getReceiverName(), createForm.getAmount(), createForm.getHashid());
+        return jdbcTemplate.update(sql, createForm.getSender(), createForm.getReceiver(), createForm.getAmount(), createForm.getHashid());
         
     }
 
