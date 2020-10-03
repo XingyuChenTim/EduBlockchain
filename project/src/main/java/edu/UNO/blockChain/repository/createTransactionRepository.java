@@ -6,7 +6,10 @@ import org.springframework.stereotype.Repository;
 
 import edu.UNO.blockChain.form.createTransactionForm;
 
-
+/*
+ * Transaction repository
+ * Repository that stores transaction information.
+ */
 
 @Repository
 public class createTransactionRepository {
