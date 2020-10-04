@@ -62,20 +62,23 @@ Description:
        ```
        
  **On the Web Applications:**
-   1. _Home Page_: Start page
-      ![](/image/Home.png)
-   2. _Login page_: By using user's registered credential
-      ![](/image/Signin.png)
-   3. _Register page_ : Double check password  
+   1. _Home Page_: Start page  
+      ![](/image/Home.png)  
+   2. _Login page_: By using user's registered credential  
+      ![](/image/Signin.png)  
+   3. _Register page_ : Double check password    
       ![](/image/Registe.png)  
-   4. _Hashrate Exploration page_: Generating hashcode based on user's input
-      ![](/image/Hash.png)
-   5. _Blocks Components page_: Multiple functions can be executed in this page
-      ![Overview](/image/Block1.png)
-      ![Block Header Structure](/image/Block2.png)
-      ![Transaction](/image/Block3.png)
-   6. _Payment_: More concrete transaction simulator
-      ![Payment](/image/Payment.png)
+   4. _Hashrate Exploration page_: Generating hashcode based on user's input  
+      ![](/image/Hash.png)  
+   5. _Blocks Components page_: Multiple functions can be executed in this page  
+      * Overview of block structure  
+        ![Overview](/image/Block1.png)  
+      * How does the block head looks like in every block  
+        ![Block Header Structure](/image/Block2.png)  
+      * How to initiate a transaction between different users  
+        ![Transaction](/image/Block3.png)  
+   6. _Payment_: More concrete transaction simulator  
+      ![Payment](/image/Payment.png)  
    
 
 ## License
