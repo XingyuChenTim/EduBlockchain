@@ -86,7 +86,7 @@ JSON
    Block: Jquery.js, show what is a block looks like in the Bitcoin World.  
    Transaction: Payment prototype.  
 3. **Test + Documentation:**
-   Home, Sign, Register, User, ProjectApplication, Application Properties;   
+   Home, Sign, Register, User, ProjectApplication, Application Properties;     
    webController, UserRepository, createTransactionRepository;  
    UserForm, createTransactionForm;  
    SHA256, Block, Transaction.  
