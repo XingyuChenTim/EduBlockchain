@@ -43,7 +43,15 @@ Description:
       ```
       git clone https://github.com/fire-holder/EduBlockchain.git
       ```
-   5. After you get the Edublockchain folder, open the folder inside of Visual studio to compile and generate a new executable.jar file and store it in your /Desktop.
+   5. After you get the Edublockchain folder, open the folder inside of Visual Studio to compile and generate a new executable.jar file and store it in your /Desktop. For             example you can run beneath command to generate .jar in Visual Studio's terminal
+      ``` 
+      cd YOUR_PROJECT_DIRECTORY // locate the project directory
+      mvn package // Using Maven to generate .jar file
+      cd target // Direct to the /target folder, the .jar file will be there. 
+      ```
+      The .jar file ought to look like:
+      ![JAR](image/JAR.png)  
+      
    6. Open Powershell and direct to the the .jar file location, then run the following command (Make sure your JDK and JRE have the most recent version).
       ```
       java -jar YOUR_EXECUTABLE_FILE_NAME.jar
