@@ -49,10 +49,10 @@ Description:
       mvn package // Using Maven to generate .jar file
       cd target // Direct to the /target folder, the .jar file will be there. 
       ```
-      The .jar file ought to look like:
-      ![JAR](image/AR.PNG)  
+      The .jar file ought to look like:  
+      ![JAR](image/GenJAR.PNG)  
       
-   6. Open Powershell and direct to the the .jar file location, then run the following command (Make sure your JDK and JRE have the most recent version).
+   6. Open Powershell and direct to the the .jar file location, then run the following command (Make sure your JDK and JRE have the most recent version like version 11).
       ```
       java -jar YOUR_EXECUTABLE_FILE_NAME.jar
       ``` 
@@ -62,16 +62,21 @@ Description:
        ```
        
  **On the Web Applications:**
-   1. _Login page_  
-      <comment> needs video demo   
-   2. _Register page_   
-      <comment> needs video demo  
-   3. _Hashrate Exploration page_  
-      <comment> needs video demo  
-   5. _Blocks Components page_  
-      <comment> needs video demo  
+   1. _Home Page_: Start page
+      ![](/image/Home.png)
+   2. _Login page_: By using user's registered credential
+      ![](/image/Signin.png)
+   3. _Register page_ : Double check password  
+      ![](/image/Registe.png)  
+   4. _Hashrate Exploration page_: Generating hashcode based on user's input
+      ![](/image/Hash.png)
+   5. _Blocks Components page_: Multiple functions can be executed in this page
+      ![Overview](/image/Block1.png)
+      ![Block Header Structure](/image/Block2.png)
+      ![Transaction](/image/Block3.png)
+   6. _Payment_: More concrete transaction simulator
+      ![Payment](/image/Payment.png)
    
-
 
 ## License
 MIT  
