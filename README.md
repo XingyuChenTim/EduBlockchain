@@ -67,7 +67,7 @@ Description:
    2. _Login page_: By using user's registered credential  
       ![](/image/Signin.png)  
    3. _Register page_ : Double check password    
-      ![](/image/Registe.png)  
+      ![](/image/Register.png)  
    4. _Hashrate Exploration page_: Generating hashcode based on user's input  
       ![](/image/Hash.png)  
    5. _Blocks Components page_: Multiple functions can be executed in this page  
@@ -86,6 +86,8 @@ MIT
 JQuery  
 Pug  
 JSON  
+SpringBoot  
+
 
 ## Release Update - October 4, 2020
 1. **Spring Boot:**  
