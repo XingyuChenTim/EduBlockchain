@@ -19,7 +19,7 @@ public class createTransactionRepository {
 
     public int createTransaction(createTransactionForm createForm){
     	jdbcTemplate.execute("DROP TABLE IF EXISTS transaction");
-    	jdbcTemplate.execute("create table transaction (SENDER varchar(32), RECEIVER varchar(32), AMOUNT int, HASHID varchar(32))");
+    	jdbcTemplate.execute("create table transaction (SENDER varchar(32), RECEIVER varchar(32), AMOUNT int, HASHID varchar(64))");
         String sql = "insert into transaction(SENDER,RECEIVER,AMOUNT,HASHID) values(?,?,?,?)";
         return jdbcTemplate.update(sql, createForm.getSender(), createForm.getReceiver(), createForm.getAmount(), createForm.getHashid());
         
