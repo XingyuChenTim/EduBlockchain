@@ -71,5 +71,24 @@ JQuery
 Pug  
 JSON  
 
-
-
+## Release Update - October 4, 2020
+1. **Spring Boot:**
+   webController: postmapping and getmapping 
+   UserRepository: insert/select user info to database
+   createTransactionRepository: insert transaction info to database
+   UserForm: Entity for user variables of username, password, and wallet
+   createTransactionForm: Entity for transaction variabel of sender_addr, receiver_addr, amount, hashid
+   Application Properties: directories for data source, JPA, and thymeleaf  
+2. **CSS + JS + HTML5:**
+   Home/User: Bootstrap, web interface
+   Sign/Register: user authentication
+   SHA256: hash rate function to encrypt data
+   Block: Jquery.js, show what is a block looks like in the Bitcoin World
+   Transaction: Payment prototype
+3. **Test + Documentation:**
+   Home, Sign, Register, User, ProjectApplication, Application Properties;
+   webController, UserRepository, createTransactionRepository;
+   UserForm, createTransactionForm;
+   SHA256, Block, Transaction.
+   
+   
