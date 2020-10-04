@@ -50,7 +50,7 @@ Description:
       cd target // Direct to the /target folder, the .jar file will be there. 
       ```
       The .jar file ought to look like:
-      ![JAR](image/JAR.png)  
+      ![JAR](image/AR.PNG)  
       
    6. Open Powershell and direct to the the .jar file location, then run the following command (Make sure your JDK and JRE have the most recent version).
       ```
@@ -75,7 +75,7 @@ Description:
 
 ## License
 MIT  
-JQuery
+JQuery  
 Pug  
 JSON  
 
