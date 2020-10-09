@@ -43,8 +43,16 @@ Description:
       ```
       git clone https://github.com/fire-holder/EduBlockchain.git
       ```
-   5. After you get the Edublockchain folder, open the folder inside of Visual studio to compile and generate a new executable.jar file and store it in your /Desktop.
-   6. Open Powershell and direct to the the .jar file location, then run the following command (Make sure your JDK and JRE have the most recent version).
+   5. After you get the Edublockchain folder, open the folder inside of Visual Studio to compile and generate a new executable.jar file and store it in your /Desktop. For             example you can run beneath command to generate .jar in Visual Studio's terminal
+      ``` 
+      cd YOUR_PROJECT_DIRECTORY // locate the project directory
+      mvn package // Using Maven to generate .jar file
+      cd target // Direct to the /target folder, the .jar file will be there. 
+      ```
+      The .jar file ought to look like:  
+      ![JAR](image/GenJAR.PNG)  
+      
+   6. Open Powershell and direct to the the .jar file location, then run the following command (Make sure your JDK and JRE have the most recent version like version 11).
       ```
       java -jar YOUR_EXECUTABLE_FILE_NAME.jar
       ``` 
@@ -54,22 +62,51 @@ Description:
        ```
        
  **On the Web Applications:**
-   1. _Login page_  
-      <comment> needs video demo   
-   2. _Register page_   
-      <comment> needs video demo  
-   3. _Hashrate Exploration page_  
-      <comment> needs video demo  
-   5. _Blocks Components page_  
-      <comment> needs video demo  
+   1. _Home Page_: Start page  
+      ![](/image/Home.png)  
+   2. _Login page_: By using user's registered credential  
+      ![](/image/Signin.png)  
+   3. _Register page_ : Double check password    
+      ![](/image/Register.png)  
+   4. _Hashrate Exploration page_: Generating hashcode based on user's input  
+      ![](/image/Hash.png)  
+   5. _Blocks Components page_: Multiple functions can be executed in this page  
+      * Overview of block structure  
+        ![Overview](/image/Block1.png)  
+      * How does the block head looks like in every block  
+        ![Block Header Structure](/image/Block2.png)  
+      * How to initiate a transaction between different users  
+        ![Transaction](/image/Block3.png)  
+   6. _Payment_: More concrete transaction simulator  
+      ![Payment](/image/Payment.png)  
    
-
 
 ## License
 MIT  
-JQuery
+JQuery  
 Pug  
 JSON  
+SpringBoot  
 
 
-
+## Release Update - October 4, 2020
+1. **Spring Boot:**  
+   webController: postmapping and getmapping.   
+   UserRepository: insert/select user info to database.  
+   createTransactionRepository: insert transaction info to database.  
+   UserForm: Entity for user variables of username, password, and wallet.  
+   createTransactionForm: Entity for transaction variabel of sender_addr, receiver_addr, amount, hashid.  
+   Application Properties: directories for data source, JPA, and thymeleaf.  
+2. **CSS + JS + HTML5:**  
+   Home/User: Bootstrap, web interface.  
+   Sign/Register: user authentication.  
+   SHA256: hash rate function to encrypt data.  
+   Block: Jquery.js, show what is a block looks like in the Bitcoin World.  
+   Transaction: Payment prototype.  
+3. **Test + Documentation:**  
+   Home, Sign, Register, User, ProjectApplication, Application Properties;     
+   webController, UserRepository, createTransactionRepository;  
+   UserForm, createTransactionForm;  
+   SHA256, Block, Transaction.  
+   
+   
