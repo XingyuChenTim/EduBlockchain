@@ -1,4 +1,4 @@
-package edu.UNO.blockChain.form;
+package edu.uno.blockchain.form;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
  * The class for transaction object.
  */
 @EntityScan
-public class createTransactionForm {
+public class Broadcastform {
 	private String sender;
 	private String receiver;
 	private int amount;
@@ -14,13 +14,13 @@ public class createTransactionForm {
 	/*
 	 * Default constructor
 	 */
-	public createTransactionForm () {
+	public Broadcastform () {
 	}
 	
 	/*
 	 * Constructor with initial value.
 	 */
-	public createTransactionForm(String sender, String receiver, int amount, String hashid) {
+	public Broadcastform(String sender, String receiver, int amount, String hashid) {
 		super();
 		this.sender = sender;
 		this.receiver = receiver;

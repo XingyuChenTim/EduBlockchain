@@ -1,4 +1,4 @@
-package edu.UNO.blockChain.controller;
+package edu.uno.blockchain.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,23 +7,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import edu.UNO.blockChain.form.UserForm;
-import edu.UNO.blockChain.form.createTransactionForm;
-import edu.UNO.blockChain.repository.UserRepository;
-import edu.UNO.blockChain.repository.createTransactionRepository;
+import edu.uno.blockchain.form.UserForm;
+import edu.uno.blockchain.form.Broadcastform;
+import edu.uno.blockchain.repository.UserRepository;
+import edu.uno.blockchain.repository.Broadcastrepo;
 
 /*
  * This class is the web controller.
  * Will try to use RestController in the future implemetation
  */
 @Controller
-public class webController {
+public class WebController {
 
     @Autowired
     UserRepository userRepository;
     
     @Autowired
-    createTransactionRepository createTransactionRepository;
+    Broadcastrepo broadcastrepo;
+
     /*
 	 * Get mapping and go to the home page.
 	 */
@@ -77,7 +78,7 @@ public class webController {
      */
     @GetMapping("/createTransaction")
     public String createTransaction(Model model) {
-    	createTransactionForm createtrans = new createTransactionForm();
+    	Broadcastform createtrans = new Broadcastform();
     	model.addAttribute("createtrans",createtrans);
         return "createTransaction";
     } 
@@ -85,8 +86,8 @@ public class webController {
      * Post mapping and go to the user page if the transaction was created.
      */
     @PostMapping(value = "/createTransaction")
-    public String createTransaction(@ModelAttribute("createtrans") createTransactionForm createtrans) {
-    	createTransactionRepository.createTransaction(createtrans);
+    public String createTransaction(@ModelAttribute("createtrans") Broadcastform createtrans) {
+    	broadcastrepo.createTransaction(createtrans);
         return "user";
     }
     /*

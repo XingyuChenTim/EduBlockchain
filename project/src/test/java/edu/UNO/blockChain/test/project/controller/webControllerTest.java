@@ -8,19 +8,19 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import edu.UNO.blockChain.controller.webController;
+import edu.uno.blockchain.controller.WebController;
 
 public class webControllerTest {
 	private MockMvc mockMvc;
 	
 	@Before
 	public void setup() {
-		this.mockMvc = MockMvcBuilders.standaloneSetup(new webController()).build();
+		this.mockMvc = MockMvcBuilders.standaloneSetup(new WebController()).build();
 	}
 	
 	@Test
 	public void testHome() throws Exception {
-		this.mockMvc = MockMvcBuilders.standaloneSetup(new webController()).build();
+		this.mockMvc = MockMvcBuilders.standaloneSetup(new WebController()).build();
 		this.mockMvc.perform(get("/")
 				.accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
 		.andExpect(status().isOk());
