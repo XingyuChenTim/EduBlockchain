@@ -25,25 +25,25 @@ public class UserRepository {
     public int registerUser(UserForm user) {
         Hashfunctions hash = new Hashfunctions();
         String sql = "insert into user(NUID,PASSWORD,WALLET,AUTHORITY, PRIVATEKEY) values(?,?,?,?,?)";
-        String tokensql = "create table token" + user.getunid() + " (id INT NOT NULL AUTO_INCREMENT, token VARCHAR(64) NOT NULL, PRIMARY KEY (id)) ";
-        String historysql = "create table history" + user.getunid() + " (id INT NOT NULL AUTO_INCREMENT, amount VARCHAR(64) NOT NULL, date VARCHAR(45) NOT NULL, status VARCHAR(45) NOT NULL, hash VARCHAR(64) NOT NULL, sender VARCHAR(64) NOT NULL, receiver VARCHAR(64) NOT NULL, PRIMARY KEY (id)) ";     
+        String tokensql = "create table token" + user.getnuid() + " (id INT NOT NULL AUTO_INCREMENT, token VARCHAR(64) NOT NULL, PRIMARY KEY (id)) ";
+        String historysql = "create table history" + user.getnuid() + " (id INT NOT NULL AUTO_INCREMENT, amount VARCHAR(64) NOT NULL, date VARCHAR(45) NOT NULL, status VARCHAR(45) NOT NULL, hash VARCHAR(64) NOT NULL, sender VARCHAR(64) NOT NULL, receiver VARCHAR(64) NOT NULL, PRIMARY KEY (id)) ";     
         jdbcTemplate.execute(tokensql);
         jdbcTemplate.execute(historysql);
         String privatekey = "";
         try{
-            privatekey = hash.hash(user.getunid());
+            privatekey = hash.hash(user.getnuid());
         }
         catch (NoSuchAlgorithmException e){
             privatekey = "wrong";
         }
-        return jdbcTemplate.update(sql, user.getunid(), user.getPassword(), 0, "student", privatekey);
+        return jdbcTemplate.update(sql, user.getnuid(), user.getPassword(), 0, "student", privatekey);
     }
     /*
      * Select the user information from myTable when sign in.
      */
     public boolean signinUser(UserForm user){
-        String sql = "select * from user where UNID = ? and PASSWORD = ?";
-        return !jdbcTemplate.queryForList(sql, user.getunid(), user.getPassword()).isEmpty();
+        String sql = "select * from user where NUID = ? and PASSWORD = ?";
+        return !jdbcTemplate.queryForList(sql, user.getnuid(), user.getPassword()).isEmpty();
     }
 
 }

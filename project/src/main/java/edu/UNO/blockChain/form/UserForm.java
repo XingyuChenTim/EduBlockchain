@@ -11,10 +11,11 @@ public class UserForm {
 	/*
 	 * Variables of UNID, password and walletBalance.
 	 */
-    private String unid;
+    private String nuid;
     private String password;
     private Integer wallet;
     private String authority;
+    private String privatekey;
 
     public UserForm() {
         super();
@@ -22,14 +23,14 @@ public class UserForm {
     /*
      * Get method for user name.
      */
-    public String getunid() {
-        return unid;
+    public String getnuid() {
+        return nuid;
     }
     /*
      * Set method for user name.
      */
-    public void setunid(String unid) {
-        this.unid = unid;
+    public void setnuid(String unid) {
+        this.nuid = unid;
     }
     /*
      * Get method for password.
@@ -67,5 +68,11 @@ public class UserForm {
     public void setAUTHORITY(String aUTHORITY) {
         this.authority = aUTHORITY;
     }
+	public String getPrivatekey() {
+		return privatekey;
+	}
+	public void setPrivatekey(String privatekey) {
+		this.privatekey = privatekey;
+	}
 
 }
