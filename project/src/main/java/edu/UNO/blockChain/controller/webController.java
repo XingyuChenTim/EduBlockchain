@@ -76,16 +76,16 @@ public class WebController {
      * Get mapping and create the transaction, then go to the transaction page.
      * This might be changed to avoid the circular error.
      */
-    @GetMapping("/createTransaction")
+    @GetMapping("/broadcast")
     public String createTransaction(Model model) {
     	Broadcastform createtrans = new Broadcastform();
     	model.addAttribute("createtrans",createtrans);
-        return "createTransaction";
+        return "broadcast";
     } 
     /*
      * Post mapping and go to the user page if the transaction was created.
      */
-    @PostMapping(value = "/createTransaction")
+    @PostMapping(value = "/broadcast")
     public String createTransaction(@ModelAttribute("createtrans") Broadcastform createtrans) {
     	broadcastrepo.createTransaction(createtrans);
         return "user";

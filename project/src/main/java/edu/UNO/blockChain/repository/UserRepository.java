@@ -31,7 +31,7 @@ public class UserRepository {
         jdbcTemplate.execute(historysql);
         String privatekey = "";
         try{
-            privatekey = hash.hash(user.getnuid());
+            privatekey = hash.sha256hash(user.getnuid());
         }
         catch (NoSuchAlgorithmException e){
             privatekey = "wrong";
