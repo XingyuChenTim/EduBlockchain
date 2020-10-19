@@ -18,6 +18,11 @@ function Initial2() {
     bits.value = SHA256("20").toString();
     time.value = SHA256(today.getTime().toString()).toString();
 }
+
+function myFunc(){
+	document.getElementById('hashid').value= SHA256('s');
+}
+
 function hash() {
     var nonce = document.getElementById("nonce");
     var previous_block_hash = document.getElementById("previous_block_hash");
