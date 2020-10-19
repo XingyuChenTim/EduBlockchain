@@ -6,10 +6,11 @@
 <title>createTransaction</title>
 <link rel="stylesheet" type="text/css"
 	th:href="@{/css/bootstrap.min.css}" />
-    <script type="text/javascript" th:src="@{/javascript/createTransaction.js}"></script>
+<script type="text/javascript" th:src="@{/javascript/sha256.js}"></script>
+<script type="text/javascript" th:src="@{/javascript/block.js}"></script>
 </head>
 <body>
-<form class="form-createtransaction" action="#" th:action="@{/createTransaction}"  th:object="${createtrans}" method="post">
+<form class="form-createtransaction"  th:action="@{/createTransaction}"  th:object="${createtrans}" method="post">
 <div class="container">
 	<h1>Payment Options</h1>
 
@@ -17,31 +18,30 @@
 
 	<div class="form-group">
 		<label for="sender">Sender</label> <input type="text" th:field="*{sender}"
-			class="form-control" id="sender_address" aria-describedby="toAddressHelp">
-		<small id="toAddressHelp" class="form-text text-muted"> Enter
+			class="form-control" id="toAddress" aria-describedby="toAddressHelp" pattern="[a-zA-Z0-9]*" title="only strings and number allowed" required ="required">
+		<small id="toAddressHelp" class="form-text text-muted" > Enter
 			the name of the Sender, here! </small>
 	</div>
 
 	<div class="form-group">
 		<label for="receiver">Receiver</label> <input type="text" th:field="*{receiver}"
-			class="form-control" id="receiver_address" aria-describedby="toAddressHelp">
-		<small id="toAddressHelp" class="form-text text-muted"> Enter
+			class="form-control" id="toAddress" aria-describedby="toAddressHelp" pattern="[a-zA-Z0-9]*" title="only strings and number allowed" required ="required">
+		<small id="toAddressHelp" class="form-text text-muted" > Enter
 			the name of the Receiver, here! </small>
 	</div>
 
 	<div class="form-group">
 		<label for="amount">Amount</label> <input type="number" th:field="*{amount}"
-			class="form-control" id="amount" aria-describedby="amountHelp">
-		<small id="amountHelp" class="form-text text-muted"> Enter
+			class="form-control" id="amount" aria-describedby="amountHelp" pattern="[0-9]*" required ="required">
+		<small id="amountHelp" class="form-text text-muted" > Enter
 			Amount , here! </small>
 	</div>
-
-	<button class="btn btn-lg btn-primary" type="button" onclick="hash()">Get Hash Value</button>
-
+	
+	
 	<div class="form-group">
 		<label for="hashid">Hash ID</label> <input type="text" th:field="*{hashid}"
-			class="form-control" id="hashid" aria-describedby="hashid"	> <small
-			id="hashid" class="form-text text-muted"> Your hash id </small>
+			class="form-control" id="hashid" aria-describedby="hashid"	required ="required" /> 	
+			<input type = "button" class="btn btn-small btn-primary" onclick="document.getElementById('hashid').value= SHA256((Math.random() * 5000).toString()).toString()" value= "Generate HashId">
 	</div>
 
 	<button class="btn btn-lg btn-primary" type="submit">Sign and Create Transaction</button>
@@ -53,4 +53,4 @@
 </div>
 </form>
 </body>
-</html>>
+</html>

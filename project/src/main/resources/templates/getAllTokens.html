@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr>
+            <th> User </th>
+            <th> Tokens </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="tokens : ${tokenList}">
+            <td><span th:text="${tokens.sender}"> Sender </span></td>
+            <td><span th:text="${tokens.token}"> Token </span></td>
+        </tr>
+    </tbody>
+</table>

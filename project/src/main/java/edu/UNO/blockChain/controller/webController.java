@@ -1,11 +1,15 @@
 package edu.UNO.blockChain.controller;
 
+import java.lang.reflect.Array;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import edu.UNO.blockChain.form.UserForm;
 import edu.UNO.blockChain.form.createTransactionForm;
@@ -70,6 +74,21 @@ public class webController {
     @GetMapping("/block")
     public String block() {
         return "block";
+    }
+    
+    @GetMapping("/getAllTokens")
+    public String getAllTokens(Model model) {
+    	List<createTransactionForm> ctf = createTransactionRepository.findByTokens();
+    	/*
+    	TO test if the data is being received from the repo.
+    	
+    	for (createTransactionForm c : ctf) {
+    		System.out.println(c.getSender());
+    	}
+    	*/
+    	
+    	model.addAttribute("tokenList", ctf);
+    	return "getAllTokens";
     }
     /*
      * Get mapping and create the transaction, then go to the transaction page.

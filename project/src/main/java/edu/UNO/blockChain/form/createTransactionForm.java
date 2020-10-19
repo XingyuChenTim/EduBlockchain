@@ -10,7 +10,9 @@ public class createTransactionForm {
 	private String sender;
 	private String receiver;
 	private int amount;
+	private String token;
 	private String hashid;
+	
 	/*
 	 * Default constructor
 	 */
@@ -20,11 +22,12 @@ public class createTransactionForm {
 	/*
 	 * Constructor with initial value.
 	 */
-	public createTransactionForm(String sender, String receiver, int amount, String hashid) {
+	public createTransactionForm(String sender, String receiver, int amount, String token, String hashid) {
 		super();
 		this.sender = sender;
 		this.receiver = receiver;
 		this.amount = amount;
+		this.token = token;
 		this.hashid = hashid;
 	}
 	/*
@@ -74,6 +77,21 @@ public class createTransactionForm {
 	 */
 	public void setHashid(String hashid) {
 		this.hashid = hashid;
+	}
+	
+	/*
+	 * Get method for getToken
+	 */
+	public String getToken() {
+		return token;
+	}
+
+	/*
+	 * Set method for set Token
+	 */
+	public void setToken(String token) {
+		this.token = token;
+		
 	}
 
 }
