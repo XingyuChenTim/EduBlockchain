@@ -13,10 +13,10 @@ public class BlockChain {
 		addBlock(new Block("Hi im the first block", "0"));
 		
 		System.out.println("Trying to Mine block 2... ");
-		addBlock(new Block("Yo im the second block",blockchain.get(blockchain.size()-1).hash));
+		addBlock(new Block("Yo im the second block",blockchain.get(blockchain.size()-1).blockheader));
 		
 		System.out.println("Trying to Mine block 3... ");
-		addBlock(new Block("Hey im the third block",blockchain.get(blockchain.size()-1).hash));	
+		addBlock(new Block("Hey im the third block",blockchain.get(blockchain.size()-1).blockheader));	
 		
 		System.out.println("\nBlockchain is Valid: " + isChainValid());
 		
@@ -33,17 +33,17 @@ public class BlockChain {
 			currentBlock = blockchain.get(i);
 			previousBlock = blockchain.get(i-1);
 			//compare registered hash and calculated hash:
-			if(!currentBlock.hash.equals(currentBlock.calculateHash()) ){
+			if(!currentBlock.blockheader.equals(currentBlock.calculateBlockHeader()) ){
 				System.out.println("Current Hashes not equal");			
 				return false;
 			}
 			//compare previous hash and registered previous hash
-			if(!previousBlock.hash.equals(currentBlock.previousHash) ) {
+			if(!previousBlock.blockheader.equals(currentBlock.previousHash) ) {
 				System.out.println("Previous Hashes not equal");
 				return false;
 			}
 			//check if hash is solved
-			if(!currentBlock.hash.substring( 0, difficulty).equals(hashTarget)) {
+			if(!currentBlock.blockheader.substring(0, difficulty).equals(hashTarget)) {
 				System.out.println("This block hasn't been mined");
 				return false;
 			}

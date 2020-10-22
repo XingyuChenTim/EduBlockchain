@@ -9,6 +9,9 @@ import org.springframework.stereotype.Repository;
 import edu.uno.blockchain.form.UserForm;
 import edu.uno.blockchain.function.Hashfunctions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  * User repository
  * Repository that stores users information.
@@ -44,6 +47,23 @@ public class UserRepository {
     public boolean signinUser(UserForm user){
         String sql = "select * from user where NUID = ? and PASSWORD = ?";
         return !jdbcTemplate.queryForList(sql, user.getnuid(), user.getPassword()).isEmpty();
+    }
+
+    public List<String> gettransactionpoll() {
+        List<String> transactionList = new ArrayList<>();
+        transactionList.addAll(jdbcTemplate.queryForList("select hash from transactionpoll", String.class));
+        transactionList.addAll(jdbcTemplate.queryForList("select amount from transactionpoll", String.class));
+        transactionList.addAll(jdbcTemplate.queryForList("select fee from transactionpoll", String.class));
+        transactionList.addAll(jdbcTemplate.queryForList("select date from transactionpoll", String.class));
+        transactionList.addAll(jdbcTemplate.queryForList("select receiver from transactionpoll", String.class));
+        transactionList.addAll(jdbcTemplate.queryForList("select sender from transactionpoll", String.class));
+        return transactionList;
+    }
+
+    public List<String> gettokentable() {
+        List<String> tokenList = new ArrayList<>();
+        tokenList.addAll(jdbcTemplate.queryForList("select token from token09255062", String.class));
+        return tokenList;
     }
 
 }

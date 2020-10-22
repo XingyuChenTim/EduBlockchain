@@ -77,17 +77,15 @@ public class WebController {
      * This might be changed to avoid the circular error.
      */
     @GetMapping("/broadcast")
-    public String createTransaction(Model model) {
-    	Broadcastform createtrans = new Broadcastform();
-    	model.addAttribute("createtrans",createtrans);
+    public String broadcast() {
         return "broadcast";
-    } 
+    }
     /*
      * Post mapping and go to the user page if the transaction was created.
      */
     @PostMapping(value = "/broadcast")
-    public String createTransaction(@ModelAttribute("createtrans") Broadcastform createtrans) {
-    	broadcastrepo.createTransaction(createtrans);
+    public String createTX(Broadcastform tx) {
+    	broadcastrepo.createTransaction(tx);
         return "user";
     }
     /*

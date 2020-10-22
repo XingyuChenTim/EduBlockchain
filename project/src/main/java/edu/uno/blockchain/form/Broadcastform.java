@@ -15,17 +15,7 @@ public class Broadcastform {
 	 * Default constructor
 	 */
 	public Broadcastform () {
-	}
-	
-	/*
-	 * Constructor with initial value.
-	 */
-	public Broadcastform(String sender, String receiver, int amount, String hashid) {
 		super();
-		this.sender = sender;
-		this.receiver = receiver;
-		this.amount = amount;
-		this.hashid = hashid;
 	}
 	/*
 	 * Get method for sender.
@@ -75,5 +65,4 @@ public class Broadcastform {
 	public void setHashid(String hashid) {
 		this.hashid = hashid;
 	}
-
 }
