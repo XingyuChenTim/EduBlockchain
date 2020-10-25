@@ -80,8 +80,10 @@ Description:
       * How to initiate a transaction between different users  
         ![Transaction](/image/Block3.png)  
    6. _Payment_: More concrete transaction simulator  
-      ![Payment](/image/Payment.png)  
- **Simulation of Real World Blockchain:**
+      ![Payment](/image/Payment.png)    
+      
+ **Simulation of Real World Blockchain:**  
+ 
    1. _Introduction Page_: Home  
       ![](/image/Intro.png)  
    2. _Hash Function Practice Page_: User can practice and compare the result of hash based on same input 
