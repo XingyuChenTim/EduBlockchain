@@ -87,7 +87,7 @@ Description:
    1. _Introduction Page_: Home  
       ![](/image/Intro.png)  
    2. _Hash Function Practice Page_: User can practice and compare the result of hash based on same input 
-      ![](/image/Hash.png)  
+      ![](/image/Hashbox.png)  
    3. _Block Practice Page_ : it gives user some information about the block to help them understand the structure of a block header,user can modify the content of one block;   
       ![](/image/Block.png)  
    4. _Blockchain Practice Page_: based on previous block page, we connect different blocks together to form a chain. Even a minor change in a block will make the rest of              connected blocks become invalid.  
