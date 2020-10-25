@@ -61,7 +61,9 @@ Description:
        http://localhost:8080
        ```
        
- **On the Web Applications:**
+## User Interface
+
+ **Educational Blockchain:**
    1. _Home Page_: Start page  
       ![](/image/Home.png)  
    2. _Login page_: By using user's registered credential  
@@ -79,7 +81,15 @@ Description:
         ![Transaction](/image/Block3.png)  
    6. _Payment_: More concrete transaction simulator  
       ![Payment](/image/Payment.png)  
-   
+ **Simulation of Real World Blockchain:**
+   1. _Introduction Page_: Home  
+      ![](/image/Intro.png)  
+   2. _Hash Function Practice Page_: User can practice and compare the result of hash based on same input 
+      ![](/image/Hash.png)  
+   3. _Block Practice Page_ : it gives user some information about the block to help them understand the structure of a block header,user can modify the content of one block;   
+      ![](/image/Block.png)  
+   4. _Blockchain Practice Page_: based on previous block page, we connect different blocks together to form a chain. Even a minor change in a block will make the rest of              connected blocks become invalid.  
+      ![](/image/Chain.png)  
 
 ## License
 MIT  
