@@ -61,7 +61,9 @@ Description:
        http://localhost:8080
        ```
        
- **On the Web Applications:**
+## User Interface
+
+ **Educational Blockchain:**
    1. _Home Page_: Start page  
       ![](/image/Home.png)  
    2. _Login page_: By using user's registered credential  
@@ -78,8 +80,18 @@ Description:
       * How to initiate a transaction between different users  
         ![Transaction](/image/Block3.png)  
    6. _Payment_: More concrete transaction simulator  
-      ![Payment](/image/Payment.png)  
-   
+      ![Payment](/image/Payment.png)    
+      
+ **Simulation of Real World Blockchain:**  
+ 
+   1. _Introduction Page_: Home  
+      ![](/image/Intro.PNG)  
+   2. _Hash Function Practice Page_: User can practice and compare the result of hash based on same input 
+      ![](/image/Hashbox.png)  
+   3. _Block Practice Page_ : it gives user some information about the block to help them understand the structure of a block header,user can modify the content of one block;   
+      ![](/image/Block.png)  
+   4. _Blockchain Practice Page_: based on previous block page, we connect different blocks together to form a chain. Even a minor change in a block will make the rest of              connected blocks become invalid.  
+      ![](/image/Chain.png)  
 
 ## License
 MIT  
@@ -109,23 +121,4 @@ SpringBoot
    UserForm, createTransactionForm;  
    SHA256, Block, Transaction.  
    
-## Release Update - October 22, 2020
-1. **Database structure modified:**  
-   Blockchain table: store all block, each row represent one block.   
-   User table: store user information and user’s private key.   
-   Token table: User’s token for wallet balance.   
-   History table: User’s transaction history for trade trend plot.   
-   Transaction poll table: Pending transaction that need to be mined.   
-2. **Mining function (not integrated with database):**       
-   BlockChain.java: main driver for mining.   
-   Block.java: block structure and mining function with difficulty.   
-   StringUtil.java: SHA256.      
-3. **Broadcast function :**      
-   Broadcast html and css: user view to input transaction detail.   
-   Broadcast form, repository, and controller: backend to process transaction and store into database.   
-4. **Pug Simulation by Zexi:**    
-   Index with video page.       
-   Hash simulation page.     
-   Block simulation page.   
-   Blockchain simulation page.        
- 
+   
