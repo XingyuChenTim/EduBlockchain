@@ -4,38 +4,24 @@ import java.util.Date;
 
 public class Block {
 	public String blockheader;
-	private int nonce;
-	public int difficulty;
+	public int nonce;
 	private long timeStamp;
-	public String previousHash; 
+	private String previousHash; 
 	private String transaction; 
 
-	//Block Constructor.  
 	public Block(String transaction,String previousHash) {
+		this.nonce = 0;
 		this.transaction = transaction;
 		this.previousHash = previousHash;
 		this.timeStamp = new Date().getTime();
-		this.blockheader = calculateBlockHeader(); //Making sure we do this after we set the other values.
+		this.blockheader = StringUtil.applySha256(previousHash + Long.toString(timeStamp) +	Integer.toString(nonce) + transaction);
 	}
-	
-	//Calculate new hash based on blocks contents
-	public String calculateBlockHeader() {
-		String calculatedBlockHeader = StringUtil.applySha256( 
-				previousHash +
-				Long.toString(timeStamp) +
-				Integer.toString(nonce) + 
-				transaction 
-				);
-		return calculatedBlockHeader;
-	}
-	
-	//Increases nonce value until hash target is reached.
+
 	public void mineBlock(int difficulty) {
-		String target = StringUtil.getDificultyString(difficulty); //Create a string with difficulty * "0" 
+		String target = StringUtil.getDificultyString(difficulty); 
 		while(!blockheader.substring( 0, difficulty).equals(target)) {
 			nonce ++;
-			blockheader = calculateBlockHeader();
+			blockheader = StringUtil.applySha256(previousHash + Long.toString(timeStamp) +	Integer.toString(nonce) + transaction);
 		}
-		System.out.println("Block Mined!!! : " + blockheader);
 	}
 }
