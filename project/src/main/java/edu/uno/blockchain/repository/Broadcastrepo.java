@@ -18,8 +18,8 @@ public class Broadcastrepo {
     JdbcTemplate jdbcTemplate;
 
     public int createTransaction(Broadcastform createForm){
-        String sql = "insert into transactionpoll(amount, fee, hash, date, sender, receiver) values(?,?,?,?,?,?)";
-        return jdbcTemplate.update(sql, createForm.getAmount(), 1, createForm.getHashid(), new Date().getTime(), createForm.getSender(), createForm.getReceiver());
+        String sql = "insert into transactionpoll(id, amount, fee, hash, date, sender, receiver) values(?,?,?,?,?,?,?)";
+        return jdbcTemplate.update(sql, 1, createForm.getAmount(), 1, createForm.getHashid(), new Date().getTime(), createForm.getSender(), createForm.getReceiver());
     }
 
 }

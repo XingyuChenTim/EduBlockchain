@@ -108,4 +108,9 @@ public class WebController {
         return "home";
     }
 
+    @GetMapping(value = "/mining")
+    public String miningpending() {
+    	userRepository.miningpending();
+        return "home";
+    }
 }
