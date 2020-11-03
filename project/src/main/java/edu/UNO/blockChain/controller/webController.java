@@ -1,6 +1,5 @@
 package edu.UNO.blockChain.controller;
 
-import java.lang.reflect.Array;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import edu.UNO.blockChain.form.UserForm;
 import edu.UNO.blockChain.form.createTransactionForm;
@@ -76,20 +74,23 @@ public class webController {
         return "block";
     }
     
+    /*
+     Merged this inside create transaction form
     @GetMapping("/getAllTokens")
     public String getAllTokens(Model model) {
     	List<createTransactionForm> ctf = createTransactionRepository.findByTokens();
-    	/*
+   
     	TO test if the data is being received from the repo.
     	
     	for (createTransactionForm c : ctf) {
     		System.out.println(c.getSender());
     	}
-    	*/
     	
     	model.addAttribute("tokenList", ctf);
     	return "getAllTokens";
     }
+	*/
+
     /*
      * Get mapping and create the transaction, then go to the transaction page.
      * This might be changed to avoid the circular error.
@@ -97,7 +98,18 @@ public class webController {
     @GetMapping("/createTransaction")
     public String createTransaction(Model model) {
     	createTransactionForm createtrans = new createTransactionForm();
+    	List<createTransactionForm> ctf = createTransactionRepository.findByTokens();
+    	
+        /*
+        To check if you are getting the data
+    	for (createTransactionForm c : ctf) {
+    		System.out.println(c.getSender());
+    	}
+    	*/
+    	
+    	model.addAttribute("tokenList", ctf);
     	model.addAttribute("createtrans",createtrans);
+    	
         return "createTransaction";
     } 
     /*
