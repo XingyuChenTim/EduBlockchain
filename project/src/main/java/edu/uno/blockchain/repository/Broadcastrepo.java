@@ -16,18 +16,19 @@ import edu.uno.blockchain.form.TokenMapper;
 
 @Repository
 public class Broadcastrepo {
-	
+
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    public int createTransaction(Broadcastform createForm){
+    public int createTransaction(Broadcastform createForm) {
         String sql = "insert into transactionpoll(id, amount, fee, hash, date, sender, receiver) values(?,?,?,?,?,?,?)";
-        return jdbcTemplate.update(sql, 1, createForm.getAmount(), 1, createForm.getHashid(), new Date().getTime(), createForm.getSender(), createForm.getReceiver());
+        return jdbcTemplate.update(sql, 1, createForm.getAmount(), 1, createForm.getHashid(), new Date().getTime(),
+                createForm.getSender(), createForm.getReceiver());
     }
 
-    public List<Tokenform> findByTokens(){
+    public List<Tokenform> findByTokens() {
 
-		return jdbcTemplate.query("SELECT id,token FROM token09255062", new TokenMapper());
-		
-	}
+        return jdbcTemplate.query("SELECT id,token FROM token09255062", new TokenMapper());
+
+    }
 }

@@ -7,14 +7,15 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
  */
 @EntityScan
 public class Tokenform {
-	private int id;
-	private String token;
-	/*
-	 * Default constructor
-	 */
-	public Tokenform () {
+    private int id;
+    private String token;
+
+    /*
+     * Default constructor
+     */
+    public Tokenform() {
         super();
-	}
+    }
 
     public int getId() {
         return id;
