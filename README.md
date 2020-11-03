@@ -80,7 +80,7 @@ Description:
       * How to initiate a transaction between different users  
         ![Transaction](/image/Block3.png)  
    6. _Payment_: More concrete transaction simulator  
-      ![Payment](/image/UpdatedPayment.png)    
+      ![Payment](/image/UpdatedPayment.PNG)    
       
  **Simulation of Real World Blockchain:**  
  
