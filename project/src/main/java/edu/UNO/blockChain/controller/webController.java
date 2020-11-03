@@ -1,14 +1,16 @@
 package edu.uno.blockchain.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import edu.uno.blockchain.form.UserForm;
 import edu.uno.blockchain.form.Broadcastform;
+import edu.uno.blockchain.form.Tokenform;
 import edu.uno.blockchain.repository.UserRepository;
 import edu.uno.blockchain.repository.Broadcastrepo;
 
@@ -77,7 +79,9 @@ public class WebController {
      * This might be changed to avoid the circular error.
      */
     @GetMapping("/broadcast")
-    public String broadcast() {
+    public String broadcast(Model model) {
+        List<Tokenform> ctf = broadcastrepo.findByTokens();
+        model.addAttribute("tokenList", ctf);
         return "broadcast";
     }
     /*

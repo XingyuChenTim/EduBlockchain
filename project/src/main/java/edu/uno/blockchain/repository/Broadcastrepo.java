@@ -4,7 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import java.util.Date;
+import java.util.List;
 import edu.uno.blockchain.form.Broadcastform;
+import edu.uno.blockchain.form.Tokenform;
+import edu.uno.blockchain.form.TokenMapper;
 
 /*bodc
  * Transaction repository
@@ -22,4 +25,9 @@ public class Broadcastrepo {
         return jdbcTemplate.update(sql, 1, createForm.getAmount(), 1, createForm.getHashid(), new Date().getTime(), createForm.getSender(), createForm.getReceiver());
     }
 
+    public List<Tokenform> findByTokens(){
+
+		return jdbcTemplate.query("SELECT id,token FROM token09255062", new TokenMapper());
+		
+	}
 }
