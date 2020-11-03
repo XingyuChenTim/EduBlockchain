@@ -1,5 +1,7 @@
 package edu.uno.blockchain.repository;
 
+import static edu.uno.blockchain.function.Hashfunctions.sha256hash;
+
 import java.security.NoSuchAlgorithmException;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +28,6 @@ public class UserRepository {
      * Insert the user information into myTable when register.
      */
     public int registerUser(UserForm user) {
-        Hashfunctions hash = new Hashfunctions();
         String sql = "insert into user(NUID,PASSWORD,WALLET,AUTHORITY, PRIVATEKEY) values(?,?,?,?,?)";
         String tokensql = "create table token" + user.getnuid()
                 + " (id INT NOT NULL AUTO_INCREMENT, token VARCHAR(64) NOT NULL, PRIMARY KEY (id)) ";
@@ -36,7 +37,7 @@ public class UserRepository {
         jdbcTemplate.execute(historysql);
         String privatekey = "";
         try {
-            privatekey = hash.sha256hash(user.getnuid());
+            privatekey = sha256hash(user.getnuid());
         } catch (NoSuchAlgorithmException e) {
             privatekey = "wrong";
         }
