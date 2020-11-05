@@ -11,7 +11,7 @@
     <script type="text/javascript" th:src="@{/javascript/block.js}"></script>
 </head>
 
-<body class = "text-center">
+<body class="text-center">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,34 +36,34 @@
                     <input class="button" type="button" value="Initial" onclick="Initial()" /><br>
                     <p>Block Header:</p>
                     <input type="text" id="blockheader" size="75" /><br><br>
-                
+
                     <input class="button" type="button" value="Structure Field" onclick="slide1()" /><br>
-                
+
                     <div id="panel1">
                         <p>Version: The version of the block</p>
-                        <input class="form-control" type="text" id="version"/>
+                        <input class="form-control" type="text" id="version" />
                         <p>Previous Block Hash: The Block Hash of the previous block</p>
-                        <input class="form-control" type="text" id="previous_block_hash"/>
+                        <input class="form-control" type="text" id="previous_block_hash" />
                         <p>Merkle Root: All of the transactions in this block, hashed together</p>
-                        <input class="form-control" type="text" id="merkle_root"/>
+                        <input class="form-control" type="text" id="merkle_root" />
                         <p>Time stamp: The Unix time at which this block header is being hashed</p>
-                        <input class="form-control" type="text" id="time"/>
+                        <input class="form-control" type="text" id="time" />
                         <p>Difficulty Bits: Impact how difficult it is to find a hash below a given target</p>
-                        <input class="form-control" type="text" id="bits"/>
+                        <input class="form-control" type="text" id="bits" />
                         <p>Nonce: For miner try to get a hash of block header which is below the target</p>
-                        <input class="form-control" type="text" id="nonce"/>
+                        <input class="form-control" type="text" id="nonce" />
                     </div>
-                
+
                     <p>Transactions:</p>
                     <input type="text" id="transaction" size="75" /><br><br>
-                
+
                     <input class="button" type="button" value="Structure Field" onclick="slide2()" /><br>
-                
+
                     <div id="panel2">
                         <p>Sender Address:</p>
                         <input class="form-control" type="text" id="sender_address" />
                         <p>Receiver Address:</p>
-                        <input class="form-control" type="text" id="receiver_address"/>
+                        <input class="form-control" type="text" id="receiver_address" />
                         <p>Date:</p>
                         <input class="form-control" type="text" id="date" />
                         <p>Amount:</p>
@@ -75,7 +75,8 @@
         </div>
     </main>
     <footer class="container">
-    <p>&copy; Company 2020 BlockChain Education</p>
+        <p>&copy; Company 2020 BlockChain Education</p>
     </footer>
 </body>
+
 </html>
