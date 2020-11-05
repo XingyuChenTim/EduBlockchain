@@ -8,6 +8,8 @@ import java.util.List;
 import edu.uno.blockchain.form.Broadcastform;
 import edu.uno.blockchain.form.Tokenform;
 import edu.uno.blockchain.form.TokenMapper;
+import edu.uno.blockchain.form.Pollform;
+import edu.uno.blockchain.form.PollMapper;
 
 /*bodc
  * Transaction repository
@@ -32,7 +34,7 @@ public class Broadcastrepo {
 
     }
 
-    public List<Tokenform> findByPolls() {
+    public List<Pollform> findByPolls() {
 
         return jdbcTemplate.query("SELECT * FROM transactionpoll", new PollMapper());
 

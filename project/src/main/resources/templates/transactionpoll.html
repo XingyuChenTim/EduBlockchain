@@ -28,31 +28,39 @@
 		<div class="container">
 			<div class="form-group">
 				<a class="btn btn-info" data-toggle="collapse" href="#collapseExample" role="button"
-					aria-expanded="false" aria-controls="collapseExample"> Click to view your tokens </a>
-				<p class="text-primary"><em>Tokens you have in your Wallet: <strong class="text-danger"
+					aria-expanded="false" aria-controls="collapseExample"> Click to view the poll </a>
+				<p class="text-primary"><em>Transaction in the poll: <strong class="text-danger"
 							id="count"></strong></em></p>
 				<div class="collapse" id="collapseExample">
 					<div class="card card-body">
 						<table id="tableId" class="table">
-							<caption>Your wallet balance details</caption>
+							<caption>Transactionpoll details</caption>
 							<thead class="thead-dark">
 								<tr>
 									<th scope="col">Id</th>
-									<th scope="col">Tokens</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Fee</th>
+                                    <th scope="col">Hash</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Sender</th>
+                                    <th scope="col">Receiver</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr th:each="tokens : ${tokenList}">
-									<td th:text="${tokens.id}"></td>
-									<td th:text="${tokens.token}"></td>
+								<tr th:each="poll : ${pollList}">
+									<td th:text="${pollList.id}"></td>
+                                    <td th:text="${pollList.amount}"></td>
+                                    <td th:text="${pollList.fee}"></td>
+                                    <td th:text="${pollList.hash}"></td>
+                                    <td th:text="${pollList.date}"></td>
+                                    <td th:text="${pollList.sender}"></td>
+                                    <td th:text="${pollList.receiver}"></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
 			</div>
-
-			<button class="btn btn-lg btn-primary" type="submit">Sign and Create Transaction</button>
 
 			<p>
 				Go Back to <a href="/">Home Page</a>.

@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import edu.uno.blockchain.form.UserForm;
 import edu.uno.blockchain.form.Broadcastform;
 import edu.uno.blockchain.form.Tokenform;
+import edu.uno.blockchain.form.Pollform;
 import edu.uno.blockchain.repository.UserRepository;
 import edu.uno.blockchain.repository.Broadcastrepo;
 
@@ -106,7 +107,7 @@ public class WebController {
 
     @GetMapping("/transactionpoll")
     public String txpoll(Model model) {
-        List<Tokenform> ctf = broadcastrepo.findByTokens();
+        List<Pollform> ctf = broadcastrepo.findByPolls();
         model.addAttribute("pollList", ctf);
         return "transactionpoll";
     }
