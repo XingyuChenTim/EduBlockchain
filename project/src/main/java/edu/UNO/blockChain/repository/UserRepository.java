@@ -26,12 +26,6 @@ public class UserRepository {
      */
     public int registerUser(UserForm user) {
         String sql = "insert into user(NUID,PASSWORD,WALLET,AUTHORITY, PRIVATEKEY) values(?,?,?,?,?)";
-        String tokensql = "create table token" + user.getnuid()
-                + " (id INT NOT NULL AUTO_INCREMENT, token VARCHAR(64) NOT NULL, PRIMARY KEY (id)) ";
-        String historysql = "create table history" + user.getnuid()
-                + " (id INT NOT NULL AUTO_INCREMENT, amount VARCHAR(64) NOT NULL, date VARCHAR(45) NOT NULL, status VARCHAR(45) NOT NULL, hash VARCHAR(64) NOT NULL, sender VARCHAR(64) NOT NULL, receiver VARCHAR(64) NOT NULL, PRIMARY KEY (id)) ";
-        jdbcTemplate.execute(tokensql);
-        jdbcTemplate.execute(historysql);
         String privatekey = "";
         try {
             privatekey = sha256hash(user.getnuid());
