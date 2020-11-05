@@ -28,7 +28,13 @@ public class Broadcastrepo {
 
     public List<Tokenform> findByTokens() {
 
-        return jdbcTemplate.query("SELECT id,token FROM token09255062", new TokenMapper());
+        return jdbcTemplate.query("SELECT id,token FROM token", new TokenMapper());
+
+    }
+
+    public List<Tokenform> findByPolls() {
+
+        return jdbcTemplate.query("SELECT * FROM transactionpoll", new PollMapper());
 
     }
 }
