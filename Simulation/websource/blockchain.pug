@@ -17,10 +17,6 @@ block content
   script.
     $(function() {
       setup(1, 1);
-      setup(2, 1);
-      setup(3, 1);
-      setup(4, 1);
-      setup(5, 1);
     });
 
     function getText(block, chain) {
@@ -31,7 +27,7 @@ block content
     }
 
     function setup(block, chain) {
-      updateHash(block, chain);
+      updateChain(block, chain);
       $('#block'+block+'chain'+chain+'mineButton').click(function(e) {
           e.preventDefault();
           var l = Ladda.create(this);
