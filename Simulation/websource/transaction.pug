@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  .container-fluid
+    h1 #{('Transaction')}
+    p
+      | Everything here should not be changed because different users have their own local copy of Blockchain. Hence, any changes on their
+      | own chain will result in a deviation of original blockchain
+    - var users = {1: 'Bishwo\'s', 2: 'Yiming\'s', 3: 'Xinyu\'s'}
+      each user, chain in users
+        h3  #{user} #{__('Chain')}
+        .row.row-horizon
+          - var blocks = []
+          - blocks.push({block: 1, chain: chain, nonce: 29764, txs: [{value: '25.00', from: 'Xinyu', to: 'Zexi'},{value: '4.27', from: 'Tim', to: 'Jersey'},{value: '19.22', from: 'Bishwo', to: 'Deep'},{value: '106.44', from: 'Yiming', to: 'Job'},{value: '6.42', from: 'Chen', to: 'Siy'}], previous: '0000000000000000000000000000000000000000000000000000000000000000'})
+          - blocks.push({block: 2, chain: chain, nonce: 34347, txs: [{value: '97.67', from: 'Zexi', to: 'Xinyu'},{value: '48.61', from: 'Jersey', to: 'Tim'},{value: '6.15', from: 'Deep', to: 'Bishwo'},{value: '10.44', from: 'Job', to: 'Yiming'},{value: '88.32', from: 'Bishwo', to: 'Siy'},{value: '45.00', from: 'Nimabi', to: 'Mybad'},{value: '92.00', from: 'Cool', to: 'Super'}], previous: '0000e13b9131191f53bf7deb5e8727fa4e75ae68ff8ff0c732ef5f10a79bb4dc'})
+          - blocks.push({block: 3, chain: chain, nonce: 156808, txs: [{value: '10.00', from: 'Hi', to: 'Money'},{value: '5.00', from: 'Chen', to: 'Dog'},{value: '20.00', from: 'Jerk', to: 'Buhuiba'}], previous: '0000e58d5df8a22cd8fab601cf5c2d28feb16d4ad2d6c062cc3f1eab6cdb9628'})
+          - blocks.push({block: 4, chain: chain, nonce: 41107, txs: [{value: '62.19', from: 'Su', to: 'Xu'},{value: '867.96', from: 'Hu', to: 'Jianyu'},{value: '276.15', from: 'Wang', to: 'Zhipeng'},{value: '97.13', from: 'Liang', to: 'Yi'},{value: '119.63', from: 'Xing', to: 'Great'}], previous: '00000db81cfe4f3aff804cdbb54b906bd9bf21aa78e82044f8dcf4982c248091'})
+          - blocks.push({block: 5, chain: chain, nonce: 123723, txs: [{value: '14.12', from: 'Yu', to: 'Guang'},{value: '2,760.29', from: 'Harvy', to: 'Dr.Chen'},{value: '413.78', from: 'Mr', to: 'Miss'}], previous: '00001c47e69038841f39678badfbfd9ddf5abf03a3a9a91783bf15b301a23e0a'})
+          each block in blocks
+            .col-xs-7
+              include includes/tokenblock
+
+  script.
+    $(function() {
+      setup(1, 1);
+      setup(1, 2);
+      setup(1, 3);
+    });
+
+    function getText(block, chain) {
+      var s = $('#block'+block+'chain'+chain+'number').val() +
+              $('#block'+block+'chain'+chain+'nonce').val();
+      for (var x=0; $('#block'+block+'chain'+chain+'tx'+x+'value').length > 0; x++) {
+        s = s + $('#block'+block+'chain'+chain+'tx'+x+'value').val() +
+                $('#block'+block+'chain'+chain+'tx'+x+'from').val() +
+                $('#block'+block+'chain'+chain+'tx'+x+'to').val();
+      }
+      s = s + $('#block'+block+'chain'+chain+'previous').val();
+      return s;
+    }
+    function setup(block, chain) {
+      updateChain(block, chain);
+    }
+

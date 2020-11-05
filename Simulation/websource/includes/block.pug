@@ -14,6 +14,11 @@
          input.form-control(id='block'+block.block+'chain'+block.chain+'nonce', type='text', value=block.nonce, onkeyup='updateChain('+block.block+', '+block.chain+');')
 
     .form-group
+      label.col-sm-2.control-label(for='block1chain1vernumber') #{__('Version number')}:
+      .col-sm-10
+        input#block1chain1vernumber.form-control(type='text', value='1.0', disabled)
+
+    .form-group
       label.col-sm-2.control-label(for='block'+block.block+'chain'+block.chain+'data') #{__('Transaction')}:
       .col-sm-10
         textarea.form-control(id='block'+block.block+'chain'+block.chain+'data', rows='10', onkeyup='updateChain('+block.block+', '+block.chain+');')
