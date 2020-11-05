@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 public class Tokenform {
     private int id;
     private String token;
+    private String owner;
 
     /*
      * Default constructor
@@ -33,9 +34,18 @@ public class Tokenform {
         this.token = token;
     }
 
-    public Tokenform(int id, String token) {
+    public Tokenform(int id, String token, String owner) {
         this.id = id;
         this.token = token;
+        this.owner = owner;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
 }
