@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import edu.uno.blockchain.form.UserForm;
 import edu.uno.blockchain.form.Broadcastform;
@@ -78,6 +79,11 @@ public class WebController {
     @GetMapping("/block")
     public String block() {
         return "block";
+    }
+
+    @GetMapping(value = "/animation")
+    public ModelAndView animation() {
+        return new ModelAndView("redirect:http://localhost:3000");
     }
 
     /*
