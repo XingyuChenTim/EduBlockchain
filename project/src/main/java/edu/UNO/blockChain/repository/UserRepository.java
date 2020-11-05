@@ -25,14 +25,14 @@ public class UserRepository {
      * Insert the user information into myTable when register.
      */
     public int registerUser(UserForm user) {
-        String sql = "insert into user(NUID,PASSWORD,WALLET,AUTHORITY, PRIVATEKEY) values(?,?,?,?,?)";
+        String sql = "insert into user(NUID,PASSWORD,AUTHORITY, PRIVATEKEY) values(?,?,?,?)";
         String privatekey = "";
         try {
             privatekey = sha256hash(user.getnuid());
         } catch (NoSuchAlgorithmException e) {
             privatekey = "wrong";
         }
-        return jdbcTemplate.update(sql, user.getnuid(), user.getPassword(), 0, "student", privatekey);
+        return jdbcTemplate.update(sql, user.getnuid(), user.getPassword(), "student", privatekey);
     }
 
     /*
