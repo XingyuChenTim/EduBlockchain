@@ -45,17 +45,25 @@ public class Broadcastrepo {
 
     }
 
-    public String minereward(String user, String userprivatekey) {
+    public String minereward(String miner, String minerprivatekey) {
+        // Miner will also get the fee from the sender, which is 1 bitcoin.
         String sql = "insert into token(token, owner) values(?,?)";
         String tokenkey = "";
         for (int i = 0; i < 5; i++) {
             try {
-                tokenkey = sha256hash(userprivatekey + i);
-                jdbcTemplate.update(sql, tokenkey, user);
+                tokenkey = sha256hash(minerprivatekey + i);
+                jdbcTemplate.update(sql, tokenkey, miner);
             } catch (NoSuchAlgorithmException e) {
                 return "reward insert failed";
             }
         }
         return "reward inserted";
     }
+
+    /*
+    public String transaction(String sender, String receiver, int amount) {
+        //change owner of sender to receiver
+
+    }
+    */
 }
