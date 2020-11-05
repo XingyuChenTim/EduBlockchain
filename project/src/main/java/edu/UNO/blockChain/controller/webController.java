@@ -97,6 +97,20 @@ public class WebController {
         return "broadcast";
     }
 
+    @GetMapping("/token")
+    public String token(Model model) {
+        List<Tokenform> ctf = broadcastrepo.findByTokens();
+        model.addAttribute("tokenList1", ctf);
+        return "token";
+    }
+
+    @GetMapping("/transactionpoll")
+    public String txpoll(Model model) {
+        List<Tokenform> ctf = broadcastrepo.findByTokens();
+        model.addAttribute("pollList", ctf);
+        return "transactionpoll";
+    }
+
     /*
      * Post mapping and go to the user page if the transaction was created.
      */

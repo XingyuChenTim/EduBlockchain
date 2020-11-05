@@ -11,6 +11,7 @@ public class TokenMapper implements RowMapper<Tokenform> {
 		Tokenform createTrans = new Tokenform();
 		createTrans.setId(rs.getInt("id"));
 		createTrans.setToken(rs.getString("token"));
+		createTrans.setOwner(rs.getString("owner"));
 		return createTrans;
 	}
 }
