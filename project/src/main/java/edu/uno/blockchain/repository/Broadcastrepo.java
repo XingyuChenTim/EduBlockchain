@@ -30,7 +30,7 @@ public class Broadcastrepo {
     public int createTransaction(Broadcastform createForm) {
         String sql = "insert into transactionpoll(id, amount, fee, hash, date, sender, receiver) values(?,?,?,?,?,?,?)";
         return jdbcTemplate.update(sql, 1, createForm.getAmount(), 1, createForm.getHashid(), new Date().getTime(),
-                createForm.getSender(), createForm.getReceiver());
+                createForm.getnuid(),createForm.getReceiver());
     }
 
     public List<Tokenform> findByTokens() {

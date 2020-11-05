@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
  * The class for transaction object.
  */
 @EntityScan
-public class Tokenform {
+public class Tokenform extends UserForm{
     private int id;
     private String token;
     private String owner;

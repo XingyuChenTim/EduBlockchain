@@ -13,7 +13,6 @@ public class UserForm {
 	 */
     private String nuid;
     private String password;
-    private Integer wallet;
     private String authority;
     private String privatekey;
 
@@ -43,18 +42,6 @@ public class UserForm {
      */
     public void setPassword(String password) {
         this.password = password;
-    }
-    /*
-     * Get method for wallet.
-     */
-    public Integer getWallet() {
-        return wallet;
-    }
-    /*
-     * Set method for wallet.
-     */
-    public void setWallet(Integer wallet) {
-        this.wallet = wallet;
     }
     /*
      * Get method for authority.

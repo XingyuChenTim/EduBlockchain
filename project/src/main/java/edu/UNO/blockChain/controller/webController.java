@@ -33,6 +33,13 @@ public class WebController {
      * Get mapping and go to the home page.
      */
     @GetMapping("/")
+    public String index() {
+        return "home";
+    }
+    /*
+     * Get mapping and go to the home page.
+     */
+    @GetMapping("/home")
     public String home() {
         return "home";
     }

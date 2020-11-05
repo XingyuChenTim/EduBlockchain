@@ -3,7 +3,7 @@ package edu.uno.blockchain.form;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @EntityScan
-public class Pollform {
+public class Pollform extends UserForm{
     private int id;
     private int amount;
     private int fee;
