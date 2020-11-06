@@ -11,11 +11,13 @@ public class PollMapper implements RowMapper<Pollform>{
 		Pollform createTrans = new Pollform();
 		createTrans.setId(rs.getInt("id"));
         createTrans.setAmount(rs.getInt("amount"));
-        createTrans.setDate(rs.getString("date"));
         createTrans.setFee(rs.getInt("fee"));
-        createTrans.setReceiver(rs.getString("receiver"));
-        createTrans.setSender(rs.getString("sender"));
+
         createTrans.setHash(rs.getString("hash"));
+        createTrans.setDate(rs.getString("date"));
+        createTrans.setSender(rs.getString("sender"));
+        createTrans.setReceiver(rs.getString("receiver"));
+
 		return createTrans;
 	}
 }

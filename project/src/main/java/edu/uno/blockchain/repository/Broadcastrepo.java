@@ -40,7 +40,7 @@ public class Broadcastrepo {
 
     public List<Pollform> findByPolls() {
 
-        return jdbcTemplate.query("SELECT * FROM transactionpoll", new PollMapper());
+        return jdbcTemplate.query("SELECT id,amount,fee,hash,date,sender,receiver FROM transactionpoll", new PollMapper());
 
     }
 
