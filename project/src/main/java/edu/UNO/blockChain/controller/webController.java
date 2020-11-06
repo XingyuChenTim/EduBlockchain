@@ -29,6 +29,7 @@ public class WebController {
     @Autowired
     Broadcastrepo broadcastrepo;
 
+    private String user;
     /*
      * Get mapping and go to the home page.
      */
@@ -95,46 +96,13 @@ public class WebController {
     }
 
     /*
-     * Get mapping and create the transaction, then go to the transaction page. This
-     * might be changed to avoid the circular error.
-     */
-    @GetMapping("/broadcast")
-    public String broadcast(Model model) {
-        List<Tokenform> ctf = broadcastrepo.findByTokens();
-        model.addAttribute("tokenList", ctf);
-        return "broadcast";
-    }
-
-    @GetMapping("/token")
-    public String token(Model model) {
-        List<Tokenform> ctf = broadcastrepo.findByTokens();
-        model.addAttribute("tokenList1", ctf);
-        return "token";
-    }
-
-    @GetMapping("/transactionpoll")
-    public String txpoll(Model model) {
-        List<Pollform> ctf = broadcastrepo.findByPolls();
-        model.addAttribute("pollList", ctf);
-        return "transactionpoll";
-    }
-
-    /*
-     * Post mapping and go to the user page if the transaction was created.
-     */
-    @PostMapping(value = "/broadcast")
-    public String createTX(Broadcastform tx) {
-        broadcastrepo.createTransaction(tx);
-        return "user";
-    }
-
-    /*
      * Post mapping and go to the user page if signed in successfully. Remain in the
      * sign in page if unsuccessful.
      */
     @PostMapping(value = "/sign")
     public String login(UserForm sig) {
         if (userRepository.signinUser(sig)) {
+            user = sig.getnuid();
             return "user";
         }
         return "sign";
@@ -149,9 +117,45 @@ public class WebController {
         return "home";
     }
 
+
+    /*
+     * Get mapping and create the transaction, then go to the transaction page. This
+     * might be changed to avoid the circular error.
+     */
+    @GetMapping("/broadcast")
+    public String broadcast(Model model) {
+        List<Tokenform> ctf = broadcastrepo.findByTokens(user);
+        model.addAttribute("tokenList", ctf);
+        return "broadcast";
+    }
+     /*
+     * Post mapping and go to the user page if the transaction was created.
+     */
+    @PostMapping(value = "/broadcast")
+    public String createTX(Broadcastform tx) {
+        broadcastrepo.createTransaction(tx, user);
+        return "user";
+    }
+
+
+    @GetMapping("/token")
+    public String token(Model model) {
+        List<Tokenform> ctf = broadcastrepo.findByTokens(user);
+        model.addAttribute("tokenList1", ctf);
+        return "token";
+    }
+
+    @GetMapping("/transactionpoll")
+    public String txpoll(Model model) {
+        List<Pollform> ctf = broadcastrepo.findByPolls();
+        model.addAttribute("pollList", ctf);
+        return "transactionpoll";
+    }
+
     @GetMapping(value = "/mining")
     public String miningpending() {
         userRepository.miningpending();
+        broadcastrepo.minereward(user);
         return "home";
     }
 }

@@ -5,8 +5,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Broadcast</title>
+
 	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+
 	<script type="text/javascript" th:src="@{/javascript/broadcast.js}"></script>
+	<script type="text/javascript" th:src="@{/javascript/jquery.min.js}"></script>
 	<script type="text/javascript" th:src="@{/javascript/jquery-3.2.1.slim.min.js}"></script>
 	<script type="text/javascript" th:src="@{/javascript/popper.min.js}"></script>
 	<script type="text/javascript" th:src="@{/javascript/bootstrap.min.js}"></script>
@@ -32,22 +35,25 @@
 			<br>
 
 			<div class="form-group">
-				<label for="receiver">Receiver</label> <input type="text" class="form-control" id="receiver"
-					name="receiver" aria-describedby="toAddressHelp">
+				<label for="receiver">Receiver</label> 
+				<input type="text" class="form-control" id="receiver" name="receiver" 
+					aria-describedby="toAddressHelp">
 				<small id="toAddressHelp" class="form-text text-muted"> Enter
 					the name of the Receiver, here! </small>
 			</div>
 
 			<div class="form-group">
-				<label for="amount">Amount</label> <input type="number" class="form-control" id="amount" name="amount"
+				<label for="amount">Amount</label> 
+				<input type="number" class="form-control" id="amount" name="amount"
 					aria-describedby="amountHelp">
 				<small id="amountHelp" class="form-text text-muted"> Enter
 					Amount , here! </small>
 			</div>
 
 			<div class="form-group">
-				<label for="hashid">Hash ID</label> <input type="text" class="form-control" id="hashid" name="hashid"
-					aria-describedby="hashid" required="required" disabled/>
+				<label for="hashid">Hash ID</label> 
+				<input type="text" class="form-control" id="hashid" name="hashid"
+					aria-describedby="hashid" />
 				<input class="btn btn-small btn-primary" type="button" value="Generate HashId" onclick="mine()" /><br>
 			</div>
 
@@ -87,12 +93,11 @@
 	</form>
 </body>
 <script>
-	function rowCount() {
-		var table = document.getElementById("tableId");
-		var tbodyRowCount = table.tBodies[0].rows.length;
-		return tbodyRowCount;
-	}
-	document.getElementById("count").innerHTML = rowCount();
+    function rowCount() {
+        var table = document.getElementById("tableId");
+        var tbodyRowCount = table.tBodies[0].rows.length;
+        return tbodyRowCount;
+    }
+    document.getElementById("count").innerHTML = rowCount();
 </script>
-
 </html>

@@ -68,7 +68,22 @@ public class UserRepository {
 
         String removesql = "DELETE FROM transactionpoll where id = '1'";
         jdbcTemplate.execute(removesql);
-
+        
+        String count = jdbcTemplate.queryForList("select count(token) from token", String.class).get(0);
+        int tolrow = Integer.parseInt(count);
+        int ownerchanged = Integer.parseInt(amount);
+        int affected = 0;
+        for (int t = 1; t <= tolrow; t++){
+            int tem = jdbcTemplate.update("update token set owner = "+receiver+" where owner = "+sender+" AND id = "+t);
+            if (tem == 1)
+            {
+               affected++; 
+            }
+            if (affected == ownerchanged)
+            {
+                break;
+            }
+        }
         return blockheader;
 
     }

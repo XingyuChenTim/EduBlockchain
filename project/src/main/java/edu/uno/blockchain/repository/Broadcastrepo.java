@@ -27,15 +27,14 @@ public class Broadcastrepo {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    public int createTransaction(Broadcastform createForm) {
+    public int createTransaction(Broadcastform createForm, String user) {
         String sql = "insert into transactionpoll(id, amount, fee, hash, date, sender, receiver) values(?,?,?,?,?,?,?)";
         return jdbcTemplate.update(sql, 1, createForm.getAmount(), 1, createForm.getHashid(), new Date().getTime(),
-                createForm.getnuid(),createForm.getReceiver());
+                user,createForm.getReceiver());
     }
 
-    public List<Tokenform> findByTokens() {
-
-        return jdbcTemplate.query("SELECT id,token FROM token", new TokenMapper());
+    public List<Tokenform> findByTokens(String user) {
+        return jdbcTemplate.query("SELECT id,token,owner FROM token where owner = "+user, new TokenMapper());
 
     }
 
@@ -45,8 +44,9 @@ public class Broadcastrepo {
 
     }
 
-    public String minereward(String miner, String minerprivatekey) {
+    public String minereward(String miner) {
         // Miner will also get the fee from the sender, which is 1 bitcoin.
+        String minerprivatekey = jdbcTemplate.queryForList("select PRIVATEKEY from user where NUID ="+miner, String.class).get(0);
         String sql = "insert into token(token, owner) values(?,?)";
         String tokenkey = "";
         for (int i = 0; i < 5; i++) {
@@ -60,10 +60,4 @@ public class Broadcastrepo {
         return "reward inserted";
     }
 
-    /*
-    public String transaction(String sender, String receiver, int amount) {
-        //change owner of sender to receiver
-
-    }
-    */
 }

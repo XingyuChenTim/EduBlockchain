@@ -1,10 +1,10 @@
 function mine() {
-    var sender = document.getElementById("sender");
     var receiver = document.getElementById("receiver");
     var amount = document.getElementById("amount");
     var hashid = document.getElementById("hashid");
-    hashid.value = SHA256(SHA256(sender.value) + SHA256(receiver.value) + SHA256(amount.value)).toString();
+    hashid.value = SHA256(SHA256(receiver.value)+SHA256(amount.value)).toString();
 }
+
 /**
  *
  * Secure Hash Algorithm (SHA256)

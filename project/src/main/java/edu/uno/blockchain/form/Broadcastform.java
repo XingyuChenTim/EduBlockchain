@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
  * The class for transaction object.
  */
 @EntityScan
-public class Broadcastform extends UserForm{
+public class Broadcastform {
 	private String receiver;
 	private int amount;
 	private String hashid;
