@@ -8,26 +8,27 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import edu.uno.blockchain.controller.WebController;
+import edu.UNO.blockChain.controller.webController;
 
 public class webControllerTest {
 	private MockMvc mockMvc;
 	
 	@Before
 	public void setup() {
-		this.mockMvc = MockMvcBuilders.standaloneSetup(new WebController()).build();
+		this.mockMvc = MockMvcBuilders.standaloneSetup(new webController()).build();
 	}
 	
 	@Test
 	public void testHome() throws Exception {
-		this.mockMvc = MockMvcBuilders.standaloneSetup(new WebController()).build();
+		this.mockMvc = MockMvcBuilders.standaloneSetup(new webController()).build();
 		this.mockMvc.perform(get("/")
 				.accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
 		.andExpect(status().isOk());
 	}
-	/*
+	/**
 	 * Fails.
 	 * Will get circular error using the same name as template
+	 * @throws Exception
 	 */
 	@Test
 	public void testRegister() throws Exception {
@@ -35,9 +36,10 @@ public class webControllerTest {
 				.accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
 		.andExpect(status().isOk());
 	}
-	/*
+	/**
 	 * Fails.
 	 * Will get circular error using the same name as template
+	 * @throws Exception
 	 */
 	@Test
 	public void testLogin() throws Exception {
@@ -45,9 +47,10 @@ public class webControllerTest {
 				.accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
 		.andExpect(status().isOk());
 	}
-	/*
+	/**
 	 * Fails.
 	 * Will get circular error using the same name as template
+	 * @throws Exception
 	 */
 	@Test
 	public void testSha256() throws Exception {

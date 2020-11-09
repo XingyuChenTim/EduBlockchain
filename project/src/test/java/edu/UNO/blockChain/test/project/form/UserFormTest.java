@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import edu.uno.blockchain.form.UserForm;
+import edu.UNO.blockChain.form.UserForm;
 
 class UserFormTest {
 
