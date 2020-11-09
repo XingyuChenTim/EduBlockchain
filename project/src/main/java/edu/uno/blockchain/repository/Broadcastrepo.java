@@ -16,9 +16,11 @@ import edu.UNO.blockChain.form.TokenMapper;
 import edu.UNO.blockChain.form.Pollform;
 import edu.UNO.blockChain.form.PollMapper;
 
-/*bodc
+/**
  * Transaction repository
  * Repository that stores transaction information.
+ * @author fire-holder
+ *
  */
 
 @Repository

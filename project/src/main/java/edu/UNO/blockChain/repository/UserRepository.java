@@ -11,9 +11,11 @@ import org.springframework.stereotype.Repository;
 import edu.UNO.blockChain.form.UserForm;
 import edu.UNO.blockChain.function.*;
 
-/*
+/**
  * User repository
  * Repository that stores users information.
+ * @author fire-holder
+ *
  */
 @Repository
 public class UserRepository {

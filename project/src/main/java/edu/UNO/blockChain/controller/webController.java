@@ -19,7 +19,7 @@ import edu.UNO.blockChain.repository.Broadcastrepo;
 /**
  * This class is the web controller.
  * Will try to use RestController in the future implementation
- * @author Xingyu Chen
+ * @author fire-holder
  *
  */
 @Controller

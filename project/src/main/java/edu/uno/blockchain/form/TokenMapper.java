@@ -4,8 +4,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
-
+/**
+ * 
+ * @author fire-holder
+ *
+ */
 public class TokenMapper implements RowMapper<Tokenform> {
+	/**
+	 * 
+	 * @param rs
+	 * @param rowNum
+	 * @return 
+	 * @throws SQLException 
+	 */
 	@Override
 	public Tokenform mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Tokenform createTrans = new Tokenform();

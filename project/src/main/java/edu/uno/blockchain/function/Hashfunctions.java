@@ -2,8 +2,18 @@ package edu.UNO.blockChain.function;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
+/**
+ * 
+ * @author fire-holder
+ *
+ */
 public class Hashfunctions {
+	/**
+	 * 
+	 * @param text
+	 * @return
+	 * @throws NoSuchAlgorithmException
+	 */
     public static String sha256hash(String text) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         md.update(text.getBytes());
@@ -14,7 +24,12 @@ public class Hashfunctions {
         }
         return sb.toString();
     }
-
+    /**
+     * 
+     * @param text
+     * @return
+     * @throws NoSuchAlgorithmException
+     */
     public String md5hash(String text) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("MD5");
         md.update(text.getBytes());
