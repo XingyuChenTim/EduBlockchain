@@ -23,56 +23,56 @@ public class UserForm {
     }
     /**
      * Get method for user name.
-     * @return
+     * @return The string of NUID.
      */
     public String getnuid() {
         return nuid;
     }
     /**
      * Set method for user name.
-     * @param unid
+     * @param unid The string to be set as NUID.
      */
     public void setnuid(String unid) {
         this.nuid = unid;
     }
     /**
      * Get method for password.
-     * @return
+     * @return The string of password.
      */
     public String getPassword() {
         return password;
     }
     /**
      * Set method for password.
-     * @param password
+     * @param password The string to be set as password.
      */
     public void setPassword(String password) {
         this.password = password;
     }
     /**
      * Get method for authority.
-     * @return
+     * @return The string of authority.
      */
     public String getAUTHORITY() {
         return authority;
     }
     /**
      * Set method for authority.
-     * @param aUTHORITY
+     * @param aUTHORITY The string to be set as authority.
      */
     public void setAUTHORITY(String aUTHORITY) {
         this.authority = aUTHORITY;
     }
     /**
      * Get method for private key.
-     * @return
+     * @return The string of private key.
      */
 	public String getPrivatekey() {
 		return privatekey;
 	}
 	/**
 	 * Set method for private key.
-	 * @param privatekey
+	 * @param privatekey The string to be set as private key.
 	 */
 	public void setPrivatekey(String privatekey) {
 		this.privatekey = privatekey;

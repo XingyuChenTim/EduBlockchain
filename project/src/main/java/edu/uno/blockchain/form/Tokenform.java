@@ -3,7 +3,7 @@ package edu.UNO.blockChain.form;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 /**
- * The class for transaction object.
+ * 
  * @author fire-holder
  *
  */

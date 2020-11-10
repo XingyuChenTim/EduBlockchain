@@ -2,9 +2,9 @@ package edu.UNO.blockChain.form;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 /**
- * 
+ * The class for poll object.
  * @author fire-holder
- *
+ * 
  */
 @EntityScan
 public class Pollform {
@@ -16,118 +16,118 @@ public class Pollform {
     private String sender;
     private String receiver;
     /**
-     * 
+     * Default constructor.
      */
     public Pollform() {
         super();
     }
     /**
-     * 
-     * @return
+     * Get method for id.
+     * @return The int of id.
      */
     public int getId() {
         return id;
     }
     /**
-     * 
-     * @param id
+     * Set method for id.
+     * @param id The int to be set as id.
      */
     public void setId(int id) {
         this.id = id;
     }
     /**
-     * 
-     * @return
+     * Get method for amount.
+     * @return The int of amount.
      */
     public int getAmount() {
         return amount;
     }
     /**
-     * 
-     * @param amount
+     * Set method for amount.
+     * @param amount The int to be set as amount.
      */
     public void setAmount(int amount) {
         this.amount = amount;
     }
     /**
-     * 
-     * @return
+     * Get method for fee.
+     * @return The int of fee.
      */
     public int getFee() {
         return fee;
     }
     /**
-     * 
-     * @param fee
+     * Set method for fee.
+     * @param fee The int to be set as fee.
      */
     public void setFee(int fee) {
         this.fee = fee;
     }
     /**
-     * 
-     * @return
+     * Get method for hash.
+     * @return The string of hash.
      */
     public String getHash() {
         return hash;
     }
     /**
-     * 
-     * @param hash
+     * Set method for hash.
+     * @param hash The String to be set as hash.
      */
     public void setHash(String hash) {
         this.hash = hash;
     }
     /**
-     * 
-     * @return
+     * Get method for date.
+     * @return The string of date.
      */
     public String getDate() {
         return date;
     }
     /**
-     * 
-     * @param date
+     * Set method for date.
+     * @param date The string to be set as date.
      */
     public void setDate(String date) {
         this.date = date;
     }
     /**
-     * 
-     * @return
+     * Get method for sender.
+     * @return The string of sender.
      */
     public String getSender() {
         return sender;
     }
     /**
-     * 
-     * @param sender
+     * Set method for sender.
+     * @param sender The string to be set as sender.
      */
     public void setSender(String sender) {
         this.sender = sender;
     }
     /**
-     * 
-     * @return
+     * Get method for receiver.
+     * @return The string of receiver.
      */
     public String getReceiver() {
         return receiver;
     }
     /**
-     * 
-     * @param receiver
+     * Set method for receiver.
+     * @param receiver The string to be set as receiver.
      */
     public void setReceiver(String receiver) {
         this.receiver = receiver;
     }
     /**
-     * 
-     * @param id
-     * @param amount
-     * @param fee
-     * @param hash
-     * @param date
-     * @param sender
-     * @param receiver
+     * The constructor to set with id, amount, fee, hash, date, sender and receiver.
+     * @param id The int to be set as id.
+     * @param amount The int to be set as amount.
+     * @param fee The int to be set as fee.
+     * @param hash The string to be set as hash.
+     * @param date The string to be set as date.
+     * @param sender The string to be set as sender.
+     * @param receiver The string to be set as receiver.
      */
     public Pollform(int id, int amount, int fee, String hash, String date, String sender, String receiver) {
         this.id = id;

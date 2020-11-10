@@ -3,7 +3,7 @@ package edu.UNO.blockChain.form;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 /**
- * The class for transaction object.
+ * The class for broadcast object.
  * @author fire-holder
  *
  */
@@ -20,10 +20,10 @@ public class Broadcastform {
 		super();
 	}
 	/**
-	 * 
-	 * @param receiver
-	 * @param amount
-	 * @param hashid
+	 * Constructor to set the receiver, amount and hash id.
+	 * @param receiver String of receiver
+	 * @param amount An int for amount
+	 * @param hashid String for hash id.
 	 */
 	public Broadcastform(String receiver, int amount, String hashid) {
         this.receiver = receiver;
@@ -33,7 +33,7 @@ public class Broadcastform {
 
 	/**
 	 * Get method for receiver.
-	 * @return
+	 * @return String of receiver.
 	 */
 	public String getReceiver() {
 		return receiver;
@@ -41,7 +41,7 @@ public class Broadcastform {
 
 	/**
 	 * Set method for receiver.
-	 * @param receiver
+	 * @param receiver String of receiver
 	 */
 	public void setReceiver(String receiver) {
 		this.receiver = receiver;
@@ -49,7 +49,7 @@ public class Broadcastform {
 
 	/**
 	 * Get method for amount.
-	 * @return
+	 * @return An int of amount
 	 */
 	public int getAmount() {
 		return amount;
@@ -57,7 +57,7 @@ public class Broadcastform {
 
 	/**
 	 * Set method for amount.
-	 * @param amount
+	 * @param amount The int to set the amount.
 	 */
 	public void setAmount(int amount) {
 		this.amount = amount;
@@ -65,7 +65,7 @@ public class Broadcastform {
 
 	/**
 	 * Get method for hash id.
-	 * @return
+	 * @return String of hash id.
 	 */
 	public String getHashid() {
 		return hashid;
@@ -73,7 +73,7 @@ public class Broadcastform {
 
 	/**
 	 * Set method for hash id.
-	 * @param hashid
+	 * @param hashid The string to set the hash id.
 	 */
 	public void setHashid(String hashid) {
 		this.hashid = hashid;
