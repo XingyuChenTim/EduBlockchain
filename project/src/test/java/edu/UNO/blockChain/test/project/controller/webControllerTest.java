@@ -2,17 +2,17 @@ package edu.UNO.blockChain.test.project.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import org.junit.Before;
+//import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+//import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import edu.uno.blockchain.controller.WebController;
+//import edu.uno.blockchain.controller.WebController;
 
 public class webControllerTest {
 	private MockMvc mockMvc;
-	
+	/*
 	@Before
 	public void setup() {
 		this.mockMvc = MockMvcBuilders.standaloneSetup(new WebController()).build();
@@ -62,3 +62,4 @@ public class webControllerTest {
 		.andExpect(status().isOk());
 	}*/
 }
+
