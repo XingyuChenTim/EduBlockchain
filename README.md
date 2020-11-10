@@ -169,4 +169,8 @@ SpringBoot
    Pollform.   
    PollMapper.   
 
- 
+Future updates in milestone 4:    
+1. Transaction pull table function fix.  
+2. Loading mining function.  
+3. Blockchain Explorer function.  
+4. User History Plot function (undecided).  
