@@ -1,0 +1,45 @@
+.well(id='block'+block.block+'chain'+block.chain+'well')
+    form.form-horizontal
+
+        .form-group
+            label.col-sm-2.control-label(for='block'+block.block+'chain'+block.chain+'number') #{__('Block')}:
+            .col-sm-10
+                .input-group
+                    span.input-group-addon #
+                    input.form-control(id='block'+block.block+'chain'+block.chain+'number', type='number', value=block.block disabled)
+
+        .form-group
+            label.col-sm-2.control-label(for='block'+block.block+'chain'+block.chain+'nonce') #{__('Nonce')}:
+            .col-sm-10
+                input.form-control(id='block'+block.block+'chain'+block.chain+'nonce', type='text', value=block.nonce, disabled)
+
+        .form-group
+            label.col-sm-2.control-label(for='block1chain1vernumber') #{__('Version number')}:
+            .col-sm-10
+                input#block1chain1vernumber.form-control(type='text', value='1.0', disabled)
+
+        .form-group
+            label.col-sm-2.control-label(for='block' + block.block + 'chain' + block.chain + 'data') #{__('Transaction')}:
+            .col-sm-10
+                textarea.form-control(id='block' + block.block + 'chain' + block.chain + 'data', rows='1', onkeyup='updateChain(' + block.block + ', ' + block.chain + ');' disabled)
+
+        #state.form-group
+            label.col-sm-2.control-label(for='block'+block.block+'chain'+block.chain+'previous') #{__('Prev')}:
+            .col-sm-10
+                input.form-control(id='block'+block.block+'chain'+block.chain+'previous', type='text', value=block.previous disabled)
+
+        #state.form-group
+            label.col-sm-2.control-label(for='block'+block.block+'chain'+block.chain+'hash') #{__('Hash')}:
+            .col-sm-10
+                input.form-control(id='block'+block.block+'chain'+block.chain+'hash', type='text' disabled)
+
+
+
+script.
+    $(function() {
+        setupwhole(1,0)
+    })
+
+    function setupwhole(block, chain) {
+        updateChain(block, chain);
+    }

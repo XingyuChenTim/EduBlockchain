@@ -1,0 +1,75 @@
+extends layout
+
+block content
+  .container-fluid
+    h1 #{__('Mining Block')}
+    p
+      | Please try some Mining work to have fun!
+    - var users = {1: 'Xinyu', 2: 'Zexi', 3: 'Bishwo', 4: 'Yiming'}
+    each user, chain in users
+      h3 #{__('User')} #{user}
+      .row.row-horizon
+        - var blocks = []
+        - blocks.push({block: 1, chain: chain, nonce: 73409, mreward: '100.00', miner: 'Zexi', txs: [], previous: '0000000000000000000000000000000000000000000000000000000000000000'})
+        - blocks.push({block: 2, chain: chain, nonce: 76406, mreward: '100.00', miner: 'Xinyu', txs: [{value: '10.00', from: 'Zexi', to: 'Xinyu'},{value: '20.00', from: 'Zexi', to: 'Bishwo'},{value: '15.00', from: 'Zexi', to: 'Yiming'},{value: '15.00', from: 'Zexi', to: 'Chen'}], previous: '0000ede117ece04d54197e4ec42c549190e4bb9f585cd4d15c3a18561a69ba00'})
+        - blocks.push({block: 3, chain: chain, nonce: 1715, mreward: '50.00', miner: 'Bishwo', txs: [{value: '10.00', from: 'Xinyu', to: 'Zexi'},{value: '20.00', from: 'Xinyu', to: 'Bishwo'},{value: '20.00', from: 'Zexi', to: 'Yiming'}], previous: '0000381ed9c6616a27b7e335d59a00a561600388a70fc824f1c03d966707690b'})
+        - blocks.push({block: 4, chain: chain, nonce: 103969, mreward: '50.00', miner: 'Yiming', txs: [{value: '15.00', from: 'Bishwo', to: 'Zexi'},{value: '5.00', from: 'Bishwo', to: 'Xinyi'},{value: '8.00', from: 'Yiming', to: 'Zexi'}], previous: '00007a1732e6ab98450e904fc2a562093e20ad35f12d319c667d943280bfe190'})
+        - blocks.push({block: 5, chain: chain, nonce: 18587, mreward: '50.00', miner: 'Chen', txs: [{value: '20.00', from: 'Chen', to: 'Zexi'},{value: '16.00', from: 'Chen', to: 'Bishwo'},{value: '14.00', from: 'Yiming', to: 'Xinyu'},{value: '9.95', from: 'Zexi', to: 'Chen'}], previous: '0000d3439d428d057c7b61e57d3564e7c1fea29621d9f8ec4f4ba9dfc1837095'})
+        each block in blocks
+          .col-xs-7
+            include includes/coinbaseblock
+
+  script.
+    $(function() {
+      setup(1, 1);
+      setup(2, 1);
+      setup(3, 1);
+      setup(4, 1);
+      setup(5, 1);
+
+      setup(1, 2);
+      setup(2, 2);
+      setup(3, 2);
+      setup(4, 2);
+      setup(5, 2);
+
+      setup(1, 3);
+      setup(2, 3);
+      setup(3, 3);
+      setup(4, 3);
+      setup(5, 3);
+
+      setup(1, 4);
+      setup(2, 4);
+      setup(3, 4);
+      setup(4, 4);
+      setup(5, 4);
+    });
+
+    function getText(block, chain) {
+      var s = $('#block'+block+'chain'+chain+'number').val() +
+              $('#block'+block+'chain'+chain+'nonce').val() +
+              $('#block'+block+'chain'+chain+'mreward').val() +
+              $('#block'+block+'chain'+chain+'miner').val();
+
+      for (var x=0; $('#block'+block+'chain'+chain+'tx'+x+'value').length > 0; x++) {
+        s = s + $('#block'+block+'chain'+chain+'tx'+x+'value').val() +
+                $('#block'+block+'chain'+chain+'tx'+x+'from').val() +
+                $('#block'+block+'chain'+chain+'tx'+x+'to').val();
+      }
+      s = s + $('#block'+block+'chain'+chain+'previous').val();
+      return s;
+    }
+
+    function setup(block, chain) {
+      updateHash(block, chain);
+      $('#block'+block+'chain'+chain+'mineButton').click(function(e) {
+          e.preventDefault();
+          var l = Ladda.create(this);
+          l.start();
+          setTimeout(function() {
+              mine(block, chain, true);
+              l.stop();
+            }, 250); // give UI time to update
+        });
+    }

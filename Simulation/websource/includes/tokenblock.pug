@@ -24,11 +24,11 @@
         each tx, x in block.txs
           .input-group
             .input-group-addon #{__('$')}
-            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'value', type='text', value=tx.value, onkeyup='updateChain('+block.block+', '+block.chain+');' disabled)
+            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'value', type='text', value=tx.value, disabled)
             .input-group-addon #{__('From')}:
-            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'from', type='text', value=tx.from, onkeyup='updateChain('+block.block+', '+block.chain+');' disabled)
+            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'from', type='text', value=tx.from, disabled)
             .input-group-addon -&gt;
-            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'to', type='text', value=tx.to, onkeyup='updateChain('+block.block+', '+block.chain+');' disabled)
+            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'to', type='text', value=tx.to, disabled)
 
     #state.form-group
       label.col-sm-2.control-label(for='block'+block.block+'chain'+block.chain+'previous') #{__('Prev')}:

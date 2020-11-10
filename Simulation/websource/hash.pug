@@ -8,7 +8,7 @@ block content
       form.form-horizontal
 
         .form-group
-          label.col-sm-2.control-label(for='data') #{__('Transaction (Merkle Tree)')}:
+          label.col-sm-2.control-label(for='data') #{__('Transaction (Merkle Tree) 10 rows')}:
           .col-sm-10
             textarea#data.form-control(rows='10', onkeyup='$("#hash").val(sha256())')
 
@@ -17,11 +17,13 @@ block content
           .col-sm-10
             input#hash.form-control(type='text', disabled)
 
+    p
+      | Same input will generate different hash rate because the difference of text box size
     .well#well2
       form.form-horizontal
 
         .form-group
-          label.col-sm-2.control-label(for='data1') #{__('Transaction (Merkle Tree)')}:
+          label.col-sm-2.control-label(for='data1') #{__('Transaction (Merkle Tree) 20 rows')}:
           .col-sm-10
             textarea#data1.form-control(rows='20', onkeyup='$("#hash1").val(sha256())')
 
