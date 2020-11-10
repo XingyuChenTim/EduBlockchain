@@ -109,7 +109,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abc9e70046d2b9ec724e427e559948e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The class for transaction object. </p><dl class="section author"><dt>Author</dt><dd>fire-holder </dd></dl>
+<div class="textblock"><p>The class for broadcast object. </p><dl class="section author"><dt>Author</dt><dd>fire-holder </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad68afc38a540ecd1cf7b0c268edf85b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad68afc38a540ecd1cf7b0c268edf85b3">&#9670;&nbsp;</a></span>Broadcastform() <span class="overload">[1/2]</span></h2>
@@ -160,11 +160,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Constructor to set the receiver, amount and hash id. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">receiver</td><td></td></tr>
-    <tr><td class="paramname">amount</td><td></td></tr>
-    <tr><td class="paramname">hashid</td><td></td></tr>
+    <tr><td class="paramname">receiver</td><td>String of receiver </td></tr>
+    <tr><td class="paramname">amount</td><td>An int for amount </td></tr>
+    <tr><td class="paramname">hashid</td><td>String for hash id. </td></tr>
   </table>
   </dd>
 </dl>
@@ -186,7 +186,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get method for amount. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Get method for amount. </p><dl class="section return"><dt>Returns</dt><dd>An int of amount </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="classedu_1_1_u_n_o_1_1block_chain_1_1repository_1_1_broadcastrepo.html#a866e1a66dbdd3637fe775e835a752941">edu.UNO.blockChain.repository.Broadcastrepo.createTransaction()</a>.</p>
 
@@ -206,7 +206,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get method for hash id. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Get method for hash id. </p><dl class="section return"><dt>Returns</dt><dd>String of hash id. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="classedu_1_1_u_n_o_1_1block_chain_1_1repository_1_1_broadcastrepo.html#a866e1a66dbdd3637fe775e835a752941">edu.UNO.blockChain.repository.Broadcastrepo.createTransaction()</a>.</p>
 
@@ -226,7 +226,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get method for receiver. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Get method for receiver. </p><dl class="section return"><dt>Returns</dt><dd>String of receiver. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="classedu_1_1_u_n_o_1_1block_chain_1_1repository_1_1_broadcastrepo.html#a866e1a66dbdd3637fe775e835a752941">edu.UNO.blockChain.repository.Broadcastrepo.createTransaction()</a>.</p>
 
@@ -249,7 +249,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Set method for amount. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">amount</td><td></td></tr>
+    <tr><td class="paramname">amount</td><td>The int to set the amount. </td></tr>
   </table>
   </dd>
 </dl>
@@ -273,7 +273,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Set method for hash id. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hashid</td><td></td></tr>
+    <tr><td class="paramname">hashid</td><td>The string to set the hash id. </td></tr>
   </table>
   </dd>
 </dl>
@@ -297,7 +297,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Set method for receiver. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">receiver</td><td></td></tr>
+    <tr><td class="paramname">receiver</td><td>String of receiver </td></tr>
   </table>
   </dd>
 </dl>
