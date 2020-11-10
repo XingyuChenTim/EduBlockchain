@@ -1,4 +1,4 @@
-package edu.UNO.blockChain;
+package edu.uno.blockchain;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

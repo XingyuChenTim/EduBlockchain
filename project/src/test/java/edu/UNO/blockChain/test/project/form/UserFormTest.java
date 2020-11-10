@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import edu.UNO.blockChain.form.UserForm;
+import edu.uno.blockchain.form.UserForm;
 
 class UserFormTest {
 
@@ -12,18 +12,18 @@ class UserFormTest {
 	@Test
 	public void testConstructorOne() {
 		u.setPassword("123456");
-		assertEquals(u.getPassword(), "123456");
+		assertEquals("123456", u.getPassword());
 	}
 	
-	@Test
-	public void testSetWallet() {
-		u.setWallet(123.2);
-		assertEquals(u.getWallet(), 123.2);
-	}
+	//@Test
+	//public void testSetWallet() {
+		//u.setWallet(123.2);
+		//assertEquals(u.getWallet(), 123.2);
+	//}
 	
-	@Test
-	public void testSetUsername() {
-		u.setUsername("Hello");
-		assertEquals(u.getUsername(), "Hello");
-	}
+	//@Test
+	//public void testSetUsername() {
+		//u.setUsername("Hello");
+		//assertEquals(u.getUsername(), "Hello");
+	//}
 }

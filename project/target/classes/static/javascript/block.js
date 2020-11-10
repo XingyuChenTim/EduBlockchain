@@ -15,7 +15,7 @@ function Initial2() {
     var today = new Date();
     var time = document.getElementById("time");
     var bits = document.getElementById("bits");
-    bits.value = SHA256("20").toString();
+    bits.value = SHA256("5").toString();
     time.value = SHA256(today.getTime().toString()).toString();
 }
 

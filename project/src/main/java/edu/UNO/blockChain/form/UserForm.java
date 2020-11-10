@@ -1,18 +1,20 @@
-package edu.UNO.blockChain.form;
+package edu.uno.blockchain.form;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 /*
  * The class of user object.
  */
+
 @EntityScan
 public class UserForm {
 	/*
-	 * Variables of username, password and walletBalance.
+	 * Variables of UNID, password and walletBalance.
 	 */
-    private String username;
+    private String nuid;
     private String password;
-    private Double wallet;
+    private String authority;
+    private String privatekey;
 
     public UserForm() {
         super();
@@ -20,14 +22,14 @@ public class UserForm {
     /*
      * Get method for user name.
      */
-    public String getUsername() {
-        return username;
+    public String getnuid() {
+        return nuid;
     }
     /*
      * Set method for user name.
      */
-    public void setUsername(String username) {
-        this.username = username;
+    public void setnuid(String unid) {
+        this.nuid = unid;
     }
     /*
      * Get method for password.
@@ -42,16 +44,22 @@ public class UserForm {
         this.password = password;
     }
     /*
-     * Get method for wallet.
+     * Get method for authority.
      */
-    public Double getWallet() {
-        return wallet;
+    public String getAUTHORITY() {
+        return authority;
     }
     /*
-     * Set method for wallet.
+     * Set method for authority.
      */
-    public void setWallet(Double wallet) {
-        this.wallet = wallet;
+    public void setAUTHORITY(String aUTHORITY) {
+        this.authority = aUTHORITY;
     }
+	public String getPrivatekey() {
+		return privatekey;
+	}
+	public void setPrivatekey(String privatekey) {
+		this.privatekey = privatekey;
+	}
 
 }

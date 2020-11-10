@@ -121,4 +121,23 @@ SpringBoot
    UserForm, createTransactionForm;  
    SHA256, Block, Transaction.  
    
-   
+## Release Update - October 22, 2020
+1. **Database structure modified:**  
+   Blockchain table: store all block, each row represent one block.   
+   User table: store user information and user’s private key.   
+   Token table: User’s token for wallet balance.   
+   History table: User’s transaction history for trade trend plot.   
+   Transaction poll table: Pending transaction that need to be mined.   
+2. **Mining function (not integrated with database):**       
+   BlockChain.java: main driver for mining.   
+   Block.java: block structure and mining function with difficulty.   
+   StringUtil.java: SHA256.      
+3. **Broadcast function :**      
+   Broadcast html and css: user view to input transaction detail.   
+   Broadcast form, repository, and controller: backend to process transaction and store into database.   
+4. **Pug Simulation by Zexi:**    
+   Index with video page.       
+   Hash simulation page.     
+   Block simulation page.   
+   Blockchain simulation page.        
+ 
