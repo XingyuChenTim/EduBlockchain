@@ -21,7 +21,7 @@ import edu.uno.blockchain.repository.Broadcastrepo;
  * Will try to use RestController in the future implemetation
  */
 @Controller
-public class WebController {
+public class webController {
 
     @Autowired
     UserRepository userRepository;
