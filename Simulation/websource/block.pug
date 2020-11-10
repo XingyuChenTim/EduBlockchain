@@ -19,9 +19,19 @@ block content
              input#block1chain1nonce.form-control(type='text', value='72608', onkeyup='updateHash(1, 1);')
 
         .form-group
-          label.col-sm-2.control-label(for='block1chain1data') #{__('Data')}:
+          label.col-sm-2.control-label(for='block1chain1vernumber') #{__('Version number')}:
           .col-sm-10
-            textarea#block1chain1data.form-control(rows='10', onkeyup='updateHash(1, 1);')
+            input#block1chain1vernumber.form-control(type='text', value='1.0', disabled)
+
+        .form-group
+          label.col-sm-2.control-label(for='block1chain1prehash') #{__('Previous Hash')}:
+          .col-sm-10
+            input#block1chain1prehash.form-control(type='text', value='0000000000000000000000000000000000000000000000000000000000000000', disabled)
+
+        .form-group
+          label.col-sm-2.control-label(for='block1chain1data') #{__('Transaction')}:
+          .col-sm-10
+            textarea#block1chain1data.form-control(rows='6', onkeyup='updateHash(1, 1);')
 
         #state.form-group
           label.col-sm-2.control-label(for='block1chain1hash') #{__('Hash')}:
