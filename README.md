@@ -140,4 +140,33 @@ SpringBoot
    Hash simulation page.     
    Block simulation page.   
    Blockchain simulation page.        
+   
+## Release Update - November 10, 2020
+1. **Database structure by Xingyu:**  
+   User table.   
+   Token table.   
+   History table.  
+   Blockchain table.   
+   Transactionpoll table.   
+2. **Mining function by Xingyu:**       
+   Miningpendng function.   
+   Miningreware function.   
+   Database table updated.  
+3. **Token table function by Bishwo and Xingyu:**      
+   Tokenform.java.    
+   TokenMapper.java.   
+   token.html. 
+4. **Broadcast function by Bishwo and Xingyu:**    
+   Sender removed. 
+   Hashid generated function updated.  
+   Token table function. 
+5. **Pug Simulation function by Zexi :**    
+   Transaction.    
+   Decentralization.  
+   Mining. 
+6. **Documentation Github Page by Yimin:**    
+   WebController.   
+   Pollform.   
+   PollMapper.   
+
  
