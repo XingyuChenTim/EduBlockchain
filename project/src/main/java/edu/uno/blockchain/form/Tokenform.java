@@ -3,7 +3,7 @@ package edu.UNO.blockChain.form;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 /**
- * 
+ * The class is the object of token.
  * @author fire-holder
  *
  */
@@ -20,38 +20,38 @@ public class Tokenform {
         super();
     }
     /**
-     * 
-     * @return
+     * Get method for id.
+     * @return The int of id.
      */
     public int getId() {
         return id;
     }
     /**
-     * 
-     * @param id
+     * Set method for id.
+     * @param id The int to be set as id.
      */
     public void setId(int id) {
         this.id = id;
     }
     /**
-     * 
-     * @return
+     * Get method for token.
+     * @return The string of token.
      */
     public String getToken() {
         return token;
     }
     /**
-     * 
-     * @param token
+     * Set method for token.
+     * @param token The String to be set as token.
      */
     public void setToken(String token) {
         this.token = token;
     }
     /**
-     * 
-     * @param id
-     * @param token
-     * @param owner
+     * The constructor which set the id, token and owner.
+     * @param id The int to be set as id.
+     * @param token The String to be set as token.
+     * @param owner The String to be set as owner.
      */
     public Tokenform(int id, String token, String owner) {
         this.id = id;
@@ -59,15 +59,15 @@ public class Tokenform {
         this.owner = owner;
     }
     /**
-     * 
-     * @return
+     * Get method for owner.
+     * @return The string of owner.
      */
     public String getOwner() {
         return owner;
     }
     /**
-     * 
-     * @param owner
+     * Set method for owner.
+     * @param owner The string to be set as owner.
      */
     public void setOwner(String owner) {
         this.owner = owner;
