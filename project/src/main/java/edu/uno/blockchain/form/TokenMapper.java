@@ -5,16 +5,16 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 /**
- * 
+ * This class is the token mapper.
  * @author fire-holder
  *
  */
 public class TokenMapper implements RowMapper<Tokenform> {
 	/**
-	 * 
-	 * @param rs
-	 * @param rowNum
-	 * @return 
+	 * To map a row of token.
+	 * @param rs The result set.
+	 * @param rowNum The number of rows.
+	 * @return The token that have set each data value.
 	 * @throws SQLException 
 	 */
 	@Override

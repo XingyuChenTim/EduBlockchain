@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.RowMapper;
  */
 public class PollMapper implements RowMapper<Pollform>{
 	/**
-	 * To map a row of transaction.
+	 * To map a row of poll.
 	 * @param rs The result set.
 	 * @param rowNum The number of rows.
 	 * @return The poll that have set each data value.
