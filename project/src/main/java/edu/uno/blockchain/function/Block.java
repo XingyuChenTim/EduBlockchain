@@ -1,4 +1,4 @@
-package edu.uno.blockchain.function;
+package edu.UNO.blockChain.function;
 
 import java.util.Date;
 

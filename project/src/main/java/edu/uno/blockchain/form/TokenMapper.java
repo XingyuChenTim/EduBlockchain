@@ -1,4 +1,4 @@
-package edu.uno.blockchain.form;
+package edu.UNO.blockChain.form;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
