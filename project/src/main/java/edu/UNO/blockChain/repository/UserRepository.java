@@ -1,6 +1,6 @@
-package edu.uno.blockchain.repository;
+package edu.UNO.blockChain.repository;
 
-import static edu.uno.blockchain.function.Hashfunctions.sha256hash;
+import static edu.UNO.blockChain.function.Hashfunctions.sha256hash;
 
 import java.security.NoSuchAlgorithmException;
 
@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import edu.uno.blockchain.form.UserForm;
-import edu.uno.blockchain.function.*;
+import edu.UNO.blockChain.form.UserForm;
+import edu.UNO.blockChain.function.*;
 
 /*
  * User repository
