@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['createtransaction_108',['createTransaction',['../classedu_1_1uno_1_1blockchain_1_1repository_1_1_broadcastrepo.html#aea93ad790f57a75d3dad8c582bab345b',1,'edu::uno::blockchain::repository::Broadcastrepo']]],
-  ['createtx_109',['createTX',['../classedu_1_1uno_1_1blockchain_1_1controller_1_1_web_controller.html#a9683fd14bb5d1e058b8dbc2be5b2a2aa',1,'edu::uno::blockchain::controller::WebController']]]
+  ['block_147',['block',['../classedu_1_1_u_n_o_1_1block_chain_1_1controller_1_1web_controller.html#acc2ee561d0342cde35589fc0bd6435b6',1,'edu.UNO.blockChain.controller.webController.block()'],['../classedu_1_1_u_n_o_1_1block_chain_1_1function_1_1_block.html#a80e476e2b68316d4c5788a8be8788137',1,'edu.UNO.blockChain.function.Block.Block()']]],
+  ['blockchainform_148',['blockChainform',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1block_chainform.html#a9dd08a27b7aba2eaed3ee8c893a2f598',1,'edu.UNO.blockChain.form.blockChainform.blockChainform()'],['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1block_chainform.html#a004896815ce00fad5a76ae1be0d636cc',1,'edu.UNO.blockChain.form.blockChainform.blockChainform(int id, String blockheader, String nonce, String previousblock, String timestamp, String transaction)']]],
+  ['broadcast_149',['broadcast',['../classedu_1_1_u_n_o_1_1block_chain_1_1controller_1_1web_controller.html#ae7dc5909a24e7b7b44b46c1adb728e02',1,'edu::UNO::blockChain::controller::webController']]],
+  ['broadcastform_150',['Broadcastform',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_broadcastform.html#ad68afc38a540ecd1cf7b0c268edf85b3',1,'edu.UNO.blockChain.form.Broadcastform.Broadcastform()'],['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_broadcastform.html#a6fdaf2bc365a0923d9e1ea9af13e33bd',1,'edu.UNO.blockChain.form.Broadcastform.Broadcastform(String receiver, int amount, String hashid)']]]
 ];

@@ -1,7 +1,22 @@
 var searchData=
 [
-  ['hash_31',['hash',['../classedu_1_1uno_1_1blockchain_1_1controller_1_1_web_controller.html#ad53ccdc2989230c2d328afbb96cd927f',1,'edu::uno::blockchain::controller::WebController']]],
-  ['hashfunctions_32',['Hashfunctions',['../classedu_1_1uno_1_1blockchain_1_1function_1_1_hashfunctions.html',1,'edu::uno::blockchain::function']]],
-  ['hashfunctions_2ejava_33',['Hashfunctions.java',['../_hashfunctions_8java.html',1,'']]],
-  ['home_34',['home',['../classedu_1_1uno_1_1blockchain_1_1controller_1_1_web_controller.html#aa88411c688e4f50523086f4298c43efe',1,'edu::uno::blockchain::controller::WebController']]]
+  ['getamount_27',['getAmount',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_broadcastform.html#a36818d82a82557b9204f295818c592f7',1,'edu.UNO.blockChain.form.Broadcastform.getAmount()'],['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_pollform.html#a4cf7d31eaf9f69f06efcc8b23c96fa37',1,'edu.UNO.blockChain.form.Pollform.getAmount()']]],
+  ['getauthority_28',['getAUTHORITY',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_user_form.html#a065d8f3676a1890e7cd773d2dcc7df31',1,'edu::UNO::blockChain::form::UserForm']]],
+  ['getblockheader_29',['getBlockheader',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1block_chainform.html#a861701f93580d9a28bd88937e5eb35f8',1,'edu::UNO::blockChain::form::blockChainform']]],
+  ['getdate_30',['getDate',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_pollform.html#a0a758fff9c8b52f3f5541a024dd3c24b',1,'edu::UNO::blockChain::form::Pollform']]],
+  ['getfee_31',['getFee',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_pollform.html#a387030002598eebca99272eeb33022db',1,'edu::UNO::blockChain::form::Pollform']]],
+  ['gethash_32',['getHash',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_pollform.html#a4ca39d322e418abf13f1415f17389f07',1,'edu::UNO::blockChain::form::Pollform']]],
+  ['gethashid_33',['getHashid',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_broadcastform.html#a1f4bdd472f194913325012ba9e81323a',1,'edu::UNO::blockChain::form::Broadcastform']]],
+  ['getid_34',['getId',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1block_chainform.html#a1ecdd6ff90a26a005ceba87fa4d2e574',1,'edu.UNO.blockChain.form.blockChainform.getId()'],['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_pollform.html#ae96f53c88a72e93dd932f15918106e58',1,'edu.UNO.blockChain.form.Pollform.getId()'],['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_tokenform.html#a4f848b43a3d9e96911796b597ce61e0a',1,'edu.UNO.blockChain.form.Tokenform.getId()']]],
+  ['getnonce_35',['getNonce',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1block_chainform.html#af8c6f0ea608b901c6bf7dbcf92c0d016',1,'edu::UNO::blockChain::form::blockChainform']]],
+  ['getnuid_36',['getnuid',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_user_form.html#a27545a80a5bc2dbdeafd6b633292b07f',1,'edu::UNO::blockChain::form::UserForm']]],
+  ['getowner_37',['getOwner',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_tokenform.html#a7e585095b81a52325668ad92f679abf6',1,'edu::UNO::blockChain::form::Tokenform']]],
+  ['getpassword_38',['getPassword',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_user_form.html#a4d5edf3a7ba4e7c2bfb134624c0dd56a',1,'edu::UNO::blockChain::form::UserForm']]],
+  ['getpreviousblock_39',['getPreviousblock',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1block_chainform.html#afdcce9098ca47cce949e7ff64b28f9a0',1,'edu::UNO::blockChain::form::blockChainform']]],
+  ['getprivatekey_40',['getPrivatekey',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_user_form.html#a6f13557b6d5bcf62e6dec7699eff8fac',1,'edu::UNO::blockChain::form::UserForm']]],
+  ['getreceiver_41',['getReceiver',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_broadcastform.html#ad3f146819dd3441df7dee037ecb55be8',1,'edu.UNO.blockChain.form.Broadcastform.getReceiver()'],['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_pollform.html#a7a119ecdd1af1cd975789617b27f6d33',1,'edu.UNO.blockChain.form.Pollform.getReceiver()']]],
+  ['getsender_42',['getSender',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_pollform.html#af908ff5b73a322e336e18d78426aa1cb',1,'edu::UNO::blockChain::form::Pollform']]],
+  ['gettimestamp_43',['getTimestamp',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1block_chainform.html#a338329ab97c660ed39c05bda9c440687',1,'edu::UNO::blockChain::form::blockChainform']]],
+  ['gettoken_44',['getToken',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_tokenform.html#a0d1159d448d68478b8641aa04fec4d04',1,'edu::UNO::blockChain::form::Tokenform']]],
+  ['gettransaction_45',['getTransaction',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1block_chainform.html#a699d66285a10613bc803cc8c3b003e69',1,'edu::UNO::blockChain::form::blockChainform']]]
 ];
