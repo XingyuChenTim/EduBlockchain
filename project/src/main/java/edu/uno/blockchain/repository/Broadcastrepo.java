@@ -19,34 +19,50 @@ import edu.UNO.blockChain.form.TokenMapper;
 import edu.UNO.blockChain.form.Pollform;
 import edu.UNO.blockChain.form.PollMapper;
 
-/*bodc
- * Transaction repository
- * Repository that stores transaction information.
+/**
+ * 
+ * @author fire-holder
+ *
  */
-
 @Repository
 public class Broadcastrepo {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
-
+    /**
+     * 
+     * @param createForm
+     * @param user
+     * @return
+     */
     public int createTransaction(Broadcastform createForm, String user) {
         String sql = "insert into transactionpoll(id, amount, fee, hash, date, sender, receiver) values(?,?,?,?,?,?,?)";
         return jdbcTemplate.update(sql, 1, createForm.getAmount(), 1, createForm.getHashid(), new Date().getTime(),
                 user,createForm.getReceiver());
     }
-
+    /**
+     * 
+     * @param user
+     * @return
+     */
     public List<Tokenform> findByTokens(String user) {
         return jdbcTemplate.query("SELECT id,token,owner FROM token where owner = "+user, new TokenMapper());
 
     }
-
+    /**
+     * 
+     * @return
+     */
     public List<Pollform> findByPolls() {
 
         return jdbcTemplate.query("SELECT id,amount,fee,hash,date,sender,receiver FROM transactionpoll", new PollMapper());
 
     }
-
+    /**
+     * 
+     * @param miner
+     * @return
+     */
     public String minereward(String miner) {
         // Miner will also get the fee from the sender, which is 1 bitcoin.
         String minerprivatekey = jdbcTemplate.queryForList("select PRIVATEKEY from user where NUID ="+miner, String.class).get(0);
@@ -62,13 +78,20 @@ public class Broadcastrepo {
         }
         return "reward inserted";
     }
-
+    /**
+     * 
+     * @return
+     */
     public List<blockChainform> findbyCardView() {
 
         return jdbcTemplate.query("SELECT id,blockheader,nonce,timestamp,previousblock FROM blockChain",
                 new blockChainMapper());
     }
-
+    /**
+     * 
+     * @param keyword
+     * @return
+     */
     public List<blockChainform> findByKeyword(String keyword) {
         
         //System.out.println("BroadRepKeyword: " + keyword);
