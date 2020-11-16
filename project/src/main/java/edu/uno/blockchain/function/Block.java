@@ -2,7 +2,7 @@ package edu.UNO.blockChain.function;
 
 import java.util.Date;
 /**
- * 
+ * The class of block function.
  * @author fire-holder
  *
  */
@@ -13,9 +13,9 @@ public class Block {
 	private String previousHash;
 	private String transaction;
 	/**
-	 * 
-	 * @param transaction
-	 * @param previousHash
+	 * Constructor to set all the variables with transaction and previous hash.
+	 * @param transaction The transaction to be set.
+	 * @param previousHash The previous hash to be set.
 	 */
 	public Block(String transaction, String previousHash) {
 		this.nonce = 0;
@@ -26,8 +26,8 @@ public class Block {
 				.applySha256(previousHash + Long.toString(timeStamp) + Integer.toString(nonce) + transaction);
 	}
 	/**
-	 * 
-	 * @param difficulty
+	 * Mine the block.
+	 * @param difficulty The int of difficulty.
 	 */
 	public void mineBlock(int difficulty) {
 		String target = StringUtil.getDificultyString(difficulty);

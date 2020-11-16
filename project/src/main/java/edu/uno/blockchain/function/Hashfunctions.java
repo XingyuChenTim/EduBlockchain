@@ -3,15 +3,15 @@ package edu.UNO.blockChain.function;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 /**
- * 
+ * The class of hash function.
  * @author fire-holder
  *
  */
 public class Hashfunctions {
 	/**
-	 * 
-	 * @param text
-	 * @return
+	 * Hashing with sha-356.
+	 * @param text The text to be hashed. 
+	 * @return The encrypted string.
 	 * @throws NoSuchAlgorithmException
 	 */
     public static String sha256hash(String text) throws NoSuchAlgorithmException {
@@ -25,9 +25,9 @@ public class Hashfunctions {
         return sb.toString();
     }
     /**
-     * 
-     * @param text
-     * @return
+     * Hashing with MD5.
+     * @param text The text to be hashed. 
+     * @return The encrypted string.
      * @throws NoSuchAlgorithmException
      */
     public String md5hash(String text) throws NoSuchAlgorithmException {

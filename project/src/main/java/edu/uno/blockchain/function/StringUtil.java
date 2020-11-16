@@ -3,21 +3,21 @@ package edu.UNO.blockChain.function;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 /**
- * 
+ * The class of string utility. 
  * @author fire-holder
  *
  */
 class StringUtil {
 	/**
-	 * 
+	 * Default constructor. 
 	 */
 	private StringUtil() {
 		throw new IllegalStateException("Utility class");
 	  }
 	/**
-	 * 
-	 * @param input
-	 * @return
+	 * To apply the sha 256 on input string.
+	 * @param input The string to be applied.
+	 * @return The string that are applied with sha 256.
 	 */
 	public static String applySha256(String input) {
 		try {
@@ -36,9 +36,9 @@ class StringUtil {
 		}
 	}
 	/**
-	 * 
-	 * @param difficulty
-	 * @return
+	 * Get difficulty string.
+	 * @param difficulty The int of difficulty.
+	 * @return The difficulty string.
 	 */
 	public static String getDificultyString(int difficulty) {
 		return new String(new char[difficulty]).replace('\0', '0');
