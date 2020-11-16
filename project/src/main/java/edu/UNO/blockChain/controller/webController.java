@@ -147,11 +147,11 @@ public class webController {
         return "token";
     }
 
-    @GetMapping("/transactionpoll")
+    @GetMapping("/poll")
     public String txpoll(Model model) {
         List<Pollform> ctf = broadcastrepo.findByPolls();
-        model.addAttribute("pollList", ctf);
-        return "transactionpoll";
+        model.addAttribute("tokenList2", ctf);
+        return "poll";
     }
 
     @GetMapping(value = "/mining")
