@@ -34,19 +34,19 @@
                             <caption>Your wallet balance details</caption>
                             <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col">Id</th>
                                     <th scope="col">Amount</th>
                                     <th scope="col">Fee</th>
-                                    <th scope="col">date</th>
-                                    <th scope="col">sender</th>
-                                    <th scope="col">receiver</th>
+                                    <th scope="col">Hash</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Sender</th>
+                                    <th scope="col">Receiver</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr th:each="tokens : ${tokenList2}">
-                                    <td th:text="${tokens.id}"></td>
                                     <td th:text="${tokens.amount}"></td>
                                     <td th:text="${tokens.fee}"></td>
+                                    <td th:text="${tokens.hash}"></td>
                                     <td th:text="${tokens.date}"></td>
                                     <td th:text="${tokens.sender}"></td>
                                     <td th:text="${tokens.receiver}"></td>
