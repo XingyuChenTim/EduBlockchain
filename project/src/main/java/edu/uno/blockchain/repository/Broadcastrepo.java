@@ -1,4 +1,4 @@
-package edu.uno.blockchain.repository;
+package edu.UNO.blockChain.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -8,13 +8,16 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 import java.util.List;
 
-import static edu.uno.blockchain.function.Hashfunctions.sha256hash;
+import static edu.UNO.blockChain.function.Hashfunctions.sha256hash;
 
-import edu.uno.blockchain.form.Broadcastform;
-import edu.uno.blockchain.form.Tokenform;
-import edu.uno.blockchain.form.TokenMapper;
-import edu.uno.blockchain.form.Pollform;
-import edu.uno.blockchain.form.PollMapper;
+import edu.UNO.blockChain.form.Broadcastform;
+import edu.UNO.blockChain.form.blockChainform;
+import edu.UNO.blockChain.form.searchBarMapper;
+import edu.UNO.blockChain.form.Tokenform;
+import edu.UNO.blockChain.form.blockChainMapper;
+import edu.UNO.blockChain.form.TokenMapper;
+import edu.UNO.blockChain.form.Pollform;
+import edu.UNO.blockChain.form.PollMapper;
 
 /*bodc
  * Transaction repository
@@ -59,5 +62,19 @@ public class Broadcastrepo {
         }
         return "reward inserted";
     }
+
+    public List<blockChainform> findbyCardView() {
+
+        return jdbcTemplate.query("SELECT id,blockheader,nonce,timestamp,previousblock FROM blockChain",
+                new blockChainMapper());
+    }
+
+    public List<blockChainform> findByKeyword(String keyword) {
+        
+        //System.out.println("BroadRepKeyword: " + keyword);
+        return jdbcTemplate.query("SELECT blockheader,transaction FROM blockchain b where b.blockheader like '%"
+                + keyword + "%' or b.transaction like '%" + keyword + "%'", new searchBarMapper());
+    }
+
 
 }
