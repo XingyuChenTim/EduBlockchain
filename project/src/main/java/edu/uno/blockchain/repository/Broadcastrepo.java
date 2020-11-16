@@ -20,7 +20,7 @@ import edu.UNO.blockChain.form.Pollform;
 import edu.UNO.blockChain.form.PollMapper;
 
 /**
- * 
+ * Repository that stores the broadcast report.
  * @author fire-holder
  *
  */
@@ -30,10 +30,10 @@ public class Broadcastrepo {
     @Autowired
     JdbcTemplate jdbcTemplate;
     /**
-     * 
-     * @param createForm
-     * @param user
-     * @return
+     * Insert the broadcast report into transaction poll table.
+     * @param createForm The broadcast object to be updated.
+     * @param user The user of the broadcast report.
+     * @return The number of rows that are updated.
      */
     public int createTransaction(Broadcastform createForm, String user) {
         String sql = "insert into transactionpoll(id, amount, fee, hash, date, sender, receiver) values(?,?,?,?,?,?,?)";
@@ -41,17 +41,17 @@ public class Broadcastrepo {
                 user,createForm.getReceiver());
     }
     /**
-     * 
-     * @param user
-     * @return
+     * Select the broadcast report by token.
+     * @param user The owner of the token.
+     * @return The result list.
      */
     public List<Tokenform> findByTokens(String user) {
         return jdbcTemplate.query("SELECT id,token,owner FROM token where owner = "+user, new TokenMapper());
 
     }
     /**
-     * 
-     * @return
+     * Select the broadcast report by transaction poll.
+     * @return The result list.
      */
     public List<Pollform> findByPolls() {
 
@@ -59,9 +59,9 @@ public class Broadcastrepo {
 
     }
     /**
-     * 
-     * @param miner
-     * @return
+     * Insert the reward for miner.
+     * @param miner The miner that gets rewards.
+     * @return The result of rewarding.
      */
     public String minereward(String miner) {
         // Miner will also get the fee from the sender, which is 1 bitcoin.
@@ -79,8 +79,8 @@ public class Broadcastrepo {
         return "reward inserted";
     }
     /**
-     * 
-     * @return
+     * Select the broadcast report by card view.
+     * @return The result list.
      */
     public List<blockChainform> findbyCardView() {
 
@@ -88,9 +88,9 @@ public class Broadcastrepo {
                 new blockChainMapper());
     }
     /**
-     * 
-     * @param keyword
-     * @return
+     * Select the broadcast report by keyword.
+     * @param keyword The keyword to be searched.
+     * @return The result list.
      */
     public List<blockChainform> findByKeyword(String keyword) {
         

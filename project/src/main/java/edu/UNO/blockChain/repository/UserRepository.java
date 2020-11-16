@@ -25,9 +25,9 @@ public class UserRepository {
     JdbcTemplate jdbcTemplate;
 
     /**
-     * Insert the user information into myTable when register.
-     * @param user
-     * @return
+     * Insert the user information into user table when register.
+     * @param user The user object to be registered.
+     * @return The number of rows that are updated.
      */
     public int registerUser(UserForm user) {
         String sql = "insert into user(NUID,PASSWORD,AUTHORITY, PRIVATEKEY) values(?,?,?,?)";
@@ -41,17 +41,17 @@ public class UserRepository {
     }
 
     /**
-     * Select the user information from myTable when sign in.
-     * @param user
-     * @return
+     * Select the user information from user table when sign in.
+     * @param user The user object that need to sign in.
+     * @return The list that contains a map of row.
      */
     public boolean signinUser(UserForm user) {
         String sql = "select * from user where NUID = ? and PASSWORD = ?";
         return !jdbcTemplate.queryForList(sql, user.getnuid(), user.getPassword()).isEmpty();
     }
     /**
-     * 
-     * @return
+     * To deal with the pending mining block.
+     * @return The pending block header. 
      */
     public String miningpending() {
 
