@@ -193,7 +193,7 @@ public class webController {
     @GetMapping(value = "/mining")
     public String miningpending(Model model) {
         minerRepo.miningpending();
-        broadcastrepo.minereward(user);
+        minerRepo.minereward(user);
         List<Pollform> ctf = broadcastrepo.findByPolls();
         model.addAttribute("tokenList3", ctf);
         return "proofofwork";

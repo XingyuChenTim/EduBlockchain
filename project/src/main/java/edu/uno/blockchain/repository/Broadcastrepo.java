@@ -29,6 +29,7 @@ public class Broadcastrepo {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
+    
     /**
      * Insert the broadcast report into transaction poll table.
      * @param createForm The broadcast object to be updated.
@@ -40,6 +41,7 @@ public class Broadcastrepo {
         return jdbcTemplate.update(sql, 1, createForm.getAmount(), 1, createForm.getHashid(), new Date().getTime(),
                 user,createForm.getReceiver());
     }
+
     /**
      * Select the broadcast report by token.
      * @param user The owner of the token.
@@ -49,6 +51,7 @@ public class Broadcastrepo {
         return jdbcTemplate.query("SELECT id,token,owner FROM token where owner = "+user, new TokenMapper());
 
     }
+
     /**
      * Select the broadcast report by transaction poll.
      * @return The result list.

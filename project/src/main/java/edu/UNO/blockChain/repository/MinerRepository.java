@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import edu.UNO.blockChain.form.UserForm;
 import edu.UNO.blockChain.function.*;
 
 
@@ -17,6 +16,27 @@ public class MinerRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
     
+    /**
+     * Insert the reward for miner.
+     * @param miner The miner that gets rewards.
+     * @return The result of rewarding.
+     */
+    public String minereward(String miner) {
+        // Miner will also get the fee from the sender, which is 1 bitcoin.
+        String minerprivatekey = jdbcTemplate.queryForList("select PRIVATEKEY from user where NUID ="+miner, String.class).get(0);
+        String sql = "insert into token(token, owner) values(?,?)";
+        String tokenkey = "";
+        for (int i = 0; i < 5; i++) {
+            try {
+                tokenkey = sha256hash(minerprivatekey + i);
+                jdbcTemplate.update(sql, tokenkey, miner);
+            } catch (NoSuchAlgorithmException e) {
+                return "reward insert failed";
+            }
+        }
+        return "reward inserted";
+    }
+
     /**
      * To deal with the pending mining block.
      * @return The pending block header. 
