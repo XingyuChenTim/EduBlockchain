@@ -2,28 +2,28 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" type="text/css" th:href="@{/css/sigreg.css}" />
-  <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
-  <title>Signin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/sigreg.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+    <title>Signin</title>
 </head>
 
 <body class="text-center">
-  <form class="form-signin" th:action="@{/sign}" method="post">
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1><br>
+    <form class="form-signin" th:action="@{/sign}" method="post">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1><br>
 
-    <label for="nuid" class="sr-only">NUID</label>
-    <input type="text" id="nuid" name="nuid" class="form-control" placeholder="NUID" required>
+        <label for="nuid" class="sr-only">NUID</label>
+        <input type="text" id="nuid" name="nuid" class="form-control" placeholder="NUID" required>
 
-    <label for="password" class="sr-only">Password</label>
-    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 
-    <p>Go Back to <a href="/">Home Page</a>.</p>
-    <p class="mt-5 mb-3 text-muted">&copy; Company 2020 BlockChain Education</p>
-  </form>
+        <p>Go Back to <a href="/">Home Page</a>.</p>
+        <p class="mt-5 mb-3 text-muted">&copy; Company 2020 BlockChain Education</p>
+    </form>
 </body>
 
 </html>
