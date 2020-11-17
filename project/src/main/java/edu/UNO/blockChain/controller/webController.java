@@ -17,6 +17,7 @@ import edu.UNO.blockChain.form.Tokenform;
 import edu.UNO.blockChain.form.Pollform;
 import edu.UNO.blockChain.repository.UserRepository;
 import edu.UNO.blockChain.repository.Broadcastrepo;
+import edu.UNO.blockChain.repository.MinerRepository;
 
 /**
  * This class is the web controller.
@@ -32,6 +33,9 @@ public class webController {
 
     @Autowired
     Broadcastrepo broadcastrepo;
+
+    @Autowired
+    MinerRepository minerRepo;
 
     private String user;
     /**
@@ -188,7 +192,7 @@ public class webController {
      */
     @GetMapping(value = "/mining")
     public String miningpending(Model model) {
-        userRepository.miningpending();
+        minerRepo.miningpending();
         broadcastrepo.minereward(user);
         List<Pollform> ctf = broadcastrepo.findByPolls();
         model.addAttribute("tokenList3", ctf);
