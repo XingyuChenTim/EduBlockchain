@@ -2,102 +2,97 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Broadcast</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Broadcast</title>
 
-	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
 
-	<script type="text/javascript" th:src="@{/javascript/broadcast.js}"></script>
-	<script type="text/javascript" th:src="@{/javascript/jquery.min.js}"></script>
-	<script type="text/javascript" th:src="@{/javascript/jquery-3.2.1.slim.min.js}"></script>
-	<script type="text/javascript" th:src="@{/javascript/popper.min.js}"></script>
-	<script type="text/javascript" th:src="@{/javascript/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/broadcast.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jquery-3.2.1.slim.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/popper.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/bootstrap.min.js}"></script>
 
-<body>
-	<nav class="navbar navbar-dark bg-dark" aria-labelledby="mainnavheading">
-		<!--Navbar -->
-		<nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color" aria-labelledby="secondarynavheading">
-			<a class="navbar-brand" href="user">Go Back to User Page</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333"
-				aria-expanded="false" aria-label="Toggle navigation">
+    <body>
+        <nav class="navbar navbar-dark bg-dark" aria-labelledby="mainnavheading">
+            <!--Navbar -->
+            <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color" aria-labelledby="secondarynavheading">
+                <a class="navbar-brand" href="user">Go Back to User Page</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-		</nav>
-		<!--/.Navbar -->
-	</nav>
-	</div>
-	<form class="form-broadcast" th:action="@{/broadcast}" method="post">
-		<div class="container">
-			<h1>Payment Options</h1>
+            </nav>
+            <!--/.Navbar -->
+        </nav>
+        </div>
+        <form class="form-broadcast" th:action="@{/broadcast}" method="post">
+            <div class="container">
+                <h1>Payment Options</h1>
 
-			<br>
+                <br>
 
-			<div class="form-group">
-				<label for="receiver">Receiver</label> 
-				<input type="text" class="form-control" id="receiver" name="receiver" 
-					aria-describedby="toAddressHelp">
-				<small id="toAddressHelp" class="form-text text-muted"> Enter
+                <div class="form-group">
+                    <label for="receiver">Receiver</label>
+                    <input type="text" class="form-control" id="receiver" name="receiver" aria-describedby="toAddressHelp">
+                    <small id="toAddressHelp" class="form-text text-muted"> Enter
 					the name of the Receiver, here! </small>
-			</div>
+                </div>
 
-			<div class="form-group">
-				<label for="amount">Amount</label> 
-				<input type="number" class="form-control" id="amount" name="amount"
-					aria-describedby="amountHelp">
-				<small id="amountHelp" class="form-text text-muted"> Enter
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" class="form-control" id="amount" name="amount" aria-describedby="amountHelp">
+                    <small id="amountHelp" class="form-text text-muted"> Enter
 					Amount , here! </small>
-			</div>
+                </div>
 
-			<div class="form-group">
-				<label for="hashid">Hash ID</label> 
-				<input type="text" class="form-control" id="hashid" name="hashid"
-					aria-describedby="hashid" />
-				<input class="btn btn-small btn-primary" type="button" value="Generate HashId" onclick="mine()" /><br>
-			</div>
+                <div class="form-group">
+                    <label for="hashid">Hash ID</label>
+                    <input type="text" class="form-control" id="hashid" name="hashid" aria-describedby="hashid" />
+                    <input class="btn btn-small btn-primary" type="button" value="Generate HashId" onclick="mine()" /><br>
+                </div>
 
-			<div class="form-group">
-				<a class="btn btn-info" data-toggle="collapse" href="#collapseExample" role="button"
-					aria-expanded="false" aria-controls="collapseExample"> Click to view your tokens </a>
-				<p class="text-primary"><em>Tokens you have in your Wallet: <strong class="text-danger"
+                <div class="form-group">
+                    <a class="btn btn-info" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> Click to view your tokens </a>
+                    <p class="text-primary"><em>Tokens you have in your Wallet: <strong class="text-danger"
 							id="count"></strong></em></p>
-				<div class="collapse" id="collapseExample">
-					<div class="card card-body">
-						<table id="tableId" class="table">
-							<caption>Your wallet balance details</caption>
-							<thead class="thead-dark">
-								<tr>
-									<th scope="col">Id</th>
-									<th scope="col">Tokens</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr th:each="tokens : ${tokenList}">
-									<td th:text="${tokens.id}"></td>
-									<td th:text="${tokens.token}"></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            <table id="tableId" class="table">
+                                <caption>Your wallet balance details</caption>
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Tokens</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr th:each="tokens : ${tokenList}">
+                                        <td th:text="${tokens.id}"></td>
+                                        <td th:text="${tokens.token}"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
 
-			<button class="btn btn-lg btn-primary" type="submit">Sign and Create Transaction</button>
+                <button class="btn btn-lg btn-primary" type="submit">Sign and Create Transaction</button>
 
-			<p>
-				Go Back to <a href="/">Home Page</a>.
-			</p>
+                <p>
+                    Go Back to <a href="/">Home Page</a>.
+                </p>
 
-		</div>
-	</form>
-</body>
-<script>
-    function rowCount() {
-        var table = document.getElementById("tableId");
-        var tbodyRowCount = table.tBodies[0].rows.length;
-        return tbodyRowCount;
-    }
-    document.getElementById("count").innerHTML = rowCount();
-</script>
+            </div>
+        </form>
+    </body>
+    <script>
+        function rowCount() {
+            var table = document.getElementById("tableId");
+            var tbodyRowCount = table.tBodies[0].rows.length;
+            return tbodyRowCount;
+        }
+        document.getElementById("count").innerHTML = rowCount();
+    </script>
+
 </html>
