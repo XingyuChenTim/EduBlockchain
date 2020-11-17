@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['user_148',['user',['../classedu_1_1uno_1_1blockchain_1_1controller_1_1_web_controller.html#a78fd4a5303cab42bf4ab01f79e3e0906',1,'edu::uno::blockchain::controller::WebController']]],
-  ['userform_149',['UserForm',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_user_form.html#ad0524edc196144f91dc72d258f0f3775',1,'edu::uno::blockchain::form::UserForm']]],
-  ['userinfo_150',['userInfo',['../classedu_1_1uno_1_1blockchain_1_1controller_1_1_web_controller.html#a4343c3bf61d011acfcdafdd41e5971c4',1,'edu::uno::blockchain::controller::WebController']]]
+  ['register_188',['register',['../classedu_1_1_u_n_o_1_1block_chain_1_1controller_1_1web_controller.html#afa8a16bd1505bc8454767b8944de7327',1,'edu::UNO::blockChain::controller::webController']]],
+  ['registeruser_189',['registerUser',['../classedu_1_1_u_n_o_1_1block_chain_1_1repository_1_1_user_repository.html#a279a7f57493be3481f2e48364f305ed1',1,'edu::UNO::blockChain::repository::UserRepository']]],
+  ['results_190',['results',['../classedu_1_1_u_n_o_1_1block_chain_1_1controller_1_1web_controller.html#a0d0fb4bb1cbb56319800b7b6c144b0ec',1,'edu::UNO::blockChain::controller::webController']]]
 ];
