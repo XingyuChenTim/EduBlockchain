@@ -1,4 +1,4 @@
 var namespaceedu =
 [
-    [ "uno", "namespaceedu_1_1uno.html", "namespaceedu_1_1uno" ]
+    [ "UNO", "namespaceedu_1_1_u_n_o.html", "namespaceedu_1_1_u_n_o" ]
 ];

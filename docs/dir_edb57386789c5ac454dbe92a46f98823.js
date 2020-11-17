@@ -1,4 +1,0 @@
-var dir_edb57386789c5ac454dbe92a46f98823 =
-[
-    [ "project", "dir_c1660c2a4882de13a584585a44719c86.html", "dir_c1660c2a4882de13a584585a44719c86" ]
-];

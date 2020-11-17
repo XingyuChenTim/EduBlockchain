@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['register_44',['register',['../classedu_1_1uno_1_1blockchain_1_1controller_1_1_web_controller.html#a86b2daa41654b5f39124450799cafeec',1,'edu::uno::blockchain::controller::WebController']]],
-  ['registeruser_45',['registerUser',['../classedu_1_1uno_1_1blockchain_1_1repository_1_1_user_repository.html#aa7cad38fd0043373c86fcf48caf9c9a9',1,'edu::uno::blockchain::repository::UserRepository']]]
+  ['nonce_58',['nonce',['../classedu_1_1_u_n_o_1_1block_chain_1_1function_1_1_block.html#ae62ac5c6bf4142dc122888f5ef63315e',1,'edu::UNO::blockChain::function::Block']]]
 ];

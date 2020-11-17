@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tokenform_80',['Tokenform',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_tokenform.html',1,'edu::uno::blockchain::form']]],
-  ['tokenmapper_81',['TokenMapper',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_token_mapper.html',1,'edu::uno::blockchain::form']]]
+  ['searchbarmapper_117',['searchBarMapper',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1search_bar_mapper.html',1,'edu::UNO::blockChain::form']]]
 ];

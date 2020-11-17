@@ -1,16 +1,9 @@
 var searchData=
 [
-  ['setamount_134',['setAmount',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_broadcastform.html#ae89e550c9dab75bd4bb4885bba0c28e4',1,'edu::uno::blockchain::form::Broadcastform']]],
-  ['setauthority_135',['setAUTHORITY',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_user_form.html#a578a365338b45feb048ef7f0128c59e5',1,'edu::uno::blockchain::form::UserForm']]],
-  ['sethashid_136',['setHashid',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_broadcastform.html#a5598d36dc4fb08b4085a165d80fadc5f',1,'edu::uno::blockchain::form::Broadcastform']]],
-  ['setid_137',['setId',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_tokenform.html#a20fc35e8ae378779b9128ed3e46fed18',1,'edu::uno::blockchain::form::Tokenform']]],
-  ['setnuid_138',['setnuid',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_user_form.html#aef3fcae0643ee594c9cf0b8d945aff4a',1,'edu::uno::blockchain::form::UserForm']]],
-  ['setpassword_139',['setPassword',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_user_form.html#a955baecc34622cdef69eeda21ee8e1da',1,'edu::uno::blockchain::form::UserForm']]],
-  ['setprivatekey_140',['setPrivatekey',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_user_form.html#aacb4b3b943943cd4fab1e5fdcfaf5380',1,'edu::uno::blockchain::form::UserForm']]],
-  ['setreceiver_141',['setReceiver',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_broadcastform.html#a26a687e18d4274816b9c5501a031c5ab',1,'edu::uno::blockchain::form::Broadcastform']]],
-  ['setsender_142',['setSender',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_broadcastform.html#abe332bb24100cbbd8e6a1eac3eeb63e6',1,'edu::uno::blockchain::form::Broadcastform']]],
-  ['settoken_143',['setToken',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_tokenform.html#a5fb9e5b3bfc4d54977a8d28751cae316',1,'edu::uno::blockchain::form::Tokenform']]],
-  ['setwallet_144',['setWallet',['../classedu_1_1uno_1_1blockchain_1_1form_1_1_user_form.html#a994cc009385985afd6765a4d6e0415f7',1,'edu::uno::blockchain::form::UserForm']]],
-  ['sha256hash_145',['sha256hash',['../classedu_1_1uno_1_1blockchain_1_1function_1_1_hashfunctions.html#a016117cf69e3d2b6987f0e1c64a5c8bb',1,'edu::uno::blockchain::function::Hashfunctions']]],
-  ['signinuser_146',['signinUser',['../classedu_1_1uno_1_1blockchain_1_1repository_1_1_user_repository.html#aab5ee65772e7b5578818959b57f84003',1,'edu::uno::blockchain::repository::UserRepository']]]
+  ['main_181',['main',['../classedu_1_1_u_n_o_1_1block_chain_1_1_project_application.html#af29574957992c4ec58b5492e0f3a26d9',1,'edu::UNO::blockChain::ProjectApplication']]],
+  ['maprow_182',['mapRow',['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1block_chain_mapper.html#ac652fb8257e28942b96566d6ec0f5e00',1,'edu.UNO.blockChain.form.blockChainMapper.mapRow()'],['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_poll_mapper.html#a4998646eb5820f3ed2037c04d26c2aba',1,'edu.UNO.blockChain.form.PollMapper.mapRow()'],['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1search_bar_mapper.html#a12ae01c18bdfd9cb2ce5c37f3ced6875',1,'edu.UNO.blockChain.form.searchBarMapper.mapRow()'],['../classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_token_mapper.html#ac899e6e779789cf611f70ab77182ee24',1,'edu.UNO.blockChain.form.TokenMapper.mapRow()']]],
+  ['md5hash_183',['md5hash',['../classedu_1_1_u_n_o_1_1block_chain_1_1function_1_1_hashfunctions.html#a3be95463580a9652a2f89bee87c20a92',1,'edu::UNO::blockChain::function::Hashfunctions']]],
+  ['mineblock_184',['mineBlock',['../classedu_1_1_u_n_o_1_1block_chain_1_1function_1_1_block.html#a0005d4a91794bc94bd261fde7d3e91d8',1,'edu::UNO::blockChain::function::Block']]],
+  ['minereward_185',['minereward',['../classedu_1_1_u_n_o_1_1block_chain_1_1repository_1_1_broadcastrepo.html#aa2aa0865498b6ac7426a36363339eeb5',1,'edu::UNO::blockChain::repository::Broadcastrepo']]],
+  ['miningpending_186',['miningpending',['../classedu_1_1_u_n_o_1_1block_chain_1_1controller_1_1web_controller.html#a1d44672d9acdef2cab5d7ca5bc0c7e1c',1,'edu.UNO.blockChain.controller.webController.miningpending()'],['../classedu_1_1_u_n_o_1_1block_chain_1_1repository_1_1_user_repository.html#a61ee69a5f7f0ea19a5d0acd411b1d0a8',1,'edu.UNO.blockChain.repository.UserRepository.miningpending()']]]
 ];

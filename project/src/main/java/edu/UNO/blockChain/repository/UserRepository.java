@@ -11,9 +11,12 @@ import org.springframework.stereotype.Repository;
 import edu.UNO.blockChain.form.UserForm;
 import edu.UNO.blockChain.function.*;
 
-/*
+
+/**
  * User repository
  * Repository that stores users information.
+ * @author fire-holder
+ *
  */
 @Repository
 public class UserRepository {
@@ -21,8 +24,10 @@ public class UserRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    /*
-     * Insert the user information into myTable when register.
+    /**
+     * Insert the user information into user table when register.
+     * @param user The user object to be registered.
+     * @return The number of rows that are updated.
      */
     public int registerUser(UserForm user) {
         String sql = "insert into user(NUID,PASSWORD,AUTHORITY, PRIVATEKEY) values(?,?,?,?)";
@@ -35,14 +40,19 @@ public class UserRepository {
         return jdbcTemplate.update(sql, user.getnuid(), user.getPassword(), "student", privatekey);
     }
 
-    /*
-     * Select the user information from myTable when sign in.
+    /**
+     * Select the user information from user table when sign in.
+     * @param user The user object that need to sign in.
+     * @return The list that contains a map of row.
      */
     public boolean signinUser(UserForm user) {
         String sql = "select * from user where NUID = ? and PASSWORD = ?";
         return !jdbcTemplate.queryForList(sql, user.getnuid(), user.getPassword()).isEmpty();
     }
-
+    /**
+     * To deal with the pending mining block.
+     * @return The pending block header. 
+     */
     public String miningpending() {
 
         String transaction = jdbcTemplate.queryForList("select hash from transactionpoll", String.class).get(0);
