@@ -25,27 +25,97 @@
     ></script>
   </head>
   <body>
-    <div class="form-group">
-      <div class="card card-body">
-        <table id="tableId" class="table">
-          <thead class="thead-dark">
-            <tr>
-              <!-- <th scope="col">Sender</th>
-              <th scope="col">Receiver</th> -->
-              <th scope="col">Block Hash Rate</th>
-              <th scope="col">Transaction Hash rate</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr th:each="items : ${blockchainlist}">
-              <td th:text="${items.blockheader}"></td>
-              <td th:text="${items.transaction}"></td>
-              <!-- <td th:text="${items.amount}"></td>
-              <td th:text="${items.date}"></td> -->
-            </tr>
-          </tbody>
-        </table>
+
+    <nav class="navbar navbar-dark bg-dark" aria-labelledby="mainnavheading">
+      <!--Navbar -->
+      <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color" aria-labelledby="secondarynavheading">
+        <a class="navbar-brand" href="search">Go Back to Search Page</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+      <!--/.Navbar -->
+    </nav>
+
+    <br>
+
+    <div class="d-flex justify-content-center mx-auto">
+    <div class="card-deck" style="max-width: fit-content">
+      <div class="card border-danger mb-10" th:each="item : ${blockchainlist}">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <p class="font-weight-bold">
+              Block Chain #<span th:text="${item.id}"></span>
+            </p>
+            <p>
+              Hash:
+              <li
+                class="list-group-item text-primary"
+                th:text="${item.blockheader}"
+              ></li>
+            </p>
+            <p>
+              Hash of previous block:
+              <li
+                class="list-group-item text-success"
+                th:text="${item.previousblock}"
+              ></li>
+            </p>
+            <p>
+              Nonce:
+              <li class="list-group-item" th:text="${item.nonce}"></li>
+            </p>
+            <p>
+              Timestamp:
+              <li class="list-group-item" th:text="${item.timestamp}"></li>
+            </p>
+          </ul>
+        </div>
       </div>
     </div>
+    </div>
+
+    <br>
+
+    <div class="d-flex justify-content-center">
+			<div class="form-group">
+				<a class="btn btn-info" data-toggle="collapse" href="#collapseExample" role="button"
+					aria-expanded="false" aria-controls="collapseExample"> Click to view your transaction details </a>
+				<p class="text-primary"><em>Transaction you have: <strong class="text-danger"
+							id="count"></strong></em></p>
+				<div class="collapse" id="collapseExample">
+					<div class="card card-body">
+						<table id="tableId" class="table">
+							<caption>Your transaction details</caption>
+							<thead class="thead-dark">
+                <tr>
+                  <th scope="col">Sender</th>
+                  <th scope="col">Receiver</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Date</th>
+                </tr>
+							</thead>
+							<tbody>
+                <tr th:each="items : ${blockchainlist}">
+                  <td th:text="${items.sender}"></td>
+                  <td th:text="${items.receiver}"></td>
+                  <td th:text="${items.amount}"></td>
+                  <td th:text="${items.date}"></td>
+                </tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
   </body>
+  <script>
+    function rowCount() {
+      var table = document.getElementById("tableId");
+      var tbodyRowCount = table.tBodies[0].rows.length;
+      return tbodyRowCount;
+    }
+    document.getElementById("count").innerHTML = rowCount();
+  </script>
 </html>

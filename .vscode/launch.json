@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ProjectApplication<project>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "edu.UNO.blockChain.ProjectApplication",
+            "projectName": "project",
+            "args": ""
+        }
+    ]
+}
