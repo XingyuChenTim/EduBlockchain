@@ -1,6 +1,5 @@
 <html lang="en-US" xmlns:th="http://www.thymeleaf.org"></html>
 <head>
-  <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
   <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -23,25 +22,28 @@
   />
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <link
-    rel="stylesheet"
-    type="text/css"
-    th:href="@{/css/cardViewBlockchain.css}"
-  />
 </head>
 
-<div class="card-deck">
-  <div class="card" th:each="item : ${cardviewitems}">
+<div class="card-deck" style="max-width: 150rem">
+  <div class="card border-danger mb-10" th:each="item : ${cardviewitems}">
     <div class="card-body">
       <ul class="list-group list-group-flush">
-        <p>Block Chain #<span th:text="${item.id}"></span></p>
+        <p class="font-weight-bold">
+          Block Chain #<span th:text="${item.id}"></span>
+        </p>
         <p>
           Hash:
-          <li class="list-group-item" th:text="${item.blockheader}"></li>
+          <li
+            class="list-group-item text-primary"
+            th:text="${item.blockheader}"
+          ></li>
         </p>
         <p>
           Hash of previous block:
-          <li class="list-group-item" th:text="${item.previousblock}"></li>
+          <li
+            class="list-group-item text-success"
+            th:text="${item.previousblock}"
+          ></li>
         </p>
         <p>
           Nonce:
@@ -55,4 +57,3 @@
     </div>
   </div>
 </div>
-

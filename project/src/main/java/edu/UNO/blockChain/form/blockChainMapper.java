@@ -17,6 +17,11 @@ public class blockChainMapper implements RowMapper<blockChainform>{
         blkf.setNonce(rs.getString("nonce"));
         blkf.setPreviousblock(rs.getString("previousblock"));
 
+        blkf.setSender(rs.getString("sender"));
+        blkf.setReceiver(rs.getString("receiver"));
+        blkf.setAmount(rs.getInt("amount"));
+        blkf.setDate(rs.getString("date"));
+
 		return blkf;
 	}
 }

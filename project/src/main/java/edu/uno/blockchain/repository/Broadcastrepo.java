@@ -12,7 +12,6 @@ import static edu.UNO.blockChain.function.Hashfunctions.sha256hash;
 
 import edu.UNO.blockChain.form.Broadcastform;
 import edu.UNO.blockChain.form.blockChainform;
-import edu.UNO.blockChain.form.searchBarMapper;
 import edu.UNO.blockChain.form.Tokenform;
 import edu.UNO.blockChain.form.blockChainMapper;
 import edu.UNO.blockChain.form.TokenMapper;
@@ -87,7 +86,7 @@ public class Broadcastrepo {
      */
     public List<blockChainform> findbyCardView() {
 
-        return jdbcTemplate.query("SELECT id,blockheader,nonce,timestamp,previousblock FROM blockChain",
+        return jdbcTemplate.query("SELECT * FROM blockChain",
                 new blockChainMapper());
     }
     /**
@@ -97,9 +96,8 @@ public class Broadcastrepo {
      */
     public List<blockChainform> findByKeyword(String keyword) {
         
-        //System.out.println("BroadRepKeyword: " + keyword);
-        return jdbcTemplate.query("SELECT blockheader,transaction FROM blockchain b where b.blockheader like '%"
-                + keyword + "%' or b.transaction like '%" + keyword + "%'", new searchBarMapper());
+        return jdbcTemplate.query("SELECT * FROM blockchain b where b.blockheader like '%"
+                + keyword + "%' or b.transaction like '%" + keyword + "%'", new blockChainMapper());
     }
 
 

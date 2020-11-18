@@ -1,8 +1,11 @@
 package edu.UNO.blockChain.form;
 
-// public class blockChainform extends Pollform{
     public class blockChainform {
     private int id;
+    private String sender;
+    private String receiver;
+    private int amount;
+    private String date;
     private String blockheader;
     private String nonce;
     private String previousblock;
@@ -12,8 +15,12 @@ package edu.UNO.blockChain.form;
     public blockChainform() {
     }
 
-    public blockChainform(int id,String blockheader,String nonce,String previousblock,String timestamp,String transaction) {
+    public blockChainform(int id,String blockheader,String nonce,String previousblock,String timestamp,String transaction,String sender,String receiver,int amount,String date) {
         this.id = id;
+        this.sender = sender;
+        this.receiver = receiver;
+        this.amount = amount;
+        this.date = date;
         this.blockheader = blockheader;
         this.nonce = nonce;
         this.previousblock = previousblock;
@@ -69,5 +76,37 @@ package edu.UNO.blockChain.form;
     public void setId(int id) {
         this.id = id;
     }
-    
+
+    public String getSender() {
+        return sender;
+    }
+
+    public void setSender(String sender) {
+        this.sender = sender;
+    }
+
+    public String getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(String receiver) {
+        this.receiver = receiver;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+   
 }

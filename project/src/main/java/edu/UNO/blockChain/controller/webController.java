@@ -215,12 +215,6 @@ public class webController {
     public String cardview(Model model) {
         List<blockChainform> blkh = broadcastrepo.findbyCardView();
         model.addAttribute("cardviewitems", blkh);
-
-        // to check if we are getting the attributes
-        // for (blockChainform bcf : blkh) {
-        //     System.out.println(bcf.getId());
-        // }
-
         return "cardViewBlockchain";
     }
     /**
@@ -231,13 +225,7 @@ public class webController {
      */
     @GetMapping("/results")
     public String results(Model model, @RequestParam("keyword") String keyword) {
-        //System.out.println(keyword);
-       List<blockChainform> blch = broadcastrepo.findByKeyword(keyword);
-       /* to check if we are getting the required value
-       for (Pollform pf : blch){
-            System.out.println(pf.getSender());
-        }
-        */
+        List<blockChainform> blch = broadcastrepo.findByKeyword(keyword);
         model.addAttribute("blockchainlist", blch);
         return "blockview";
     }
