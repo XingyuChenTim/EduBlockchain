@@ -192,11 +192,13 @@ public class webController {
      */
     @GetMapping(value = "/mining")
     public String miningpending(Model model) {
-        minerRepo.miningpending();
+        String blockhashid = minerRepo.miningpending();
         minerRepo.minereward(user);
-        List<Pollform> ctf = broadcastrepo.findByPolls();
+        List<blockChainform> blch = broadcastrepo.findByKeyword(blockhashid);
+        model.addAttribute("blockchainlist1", blch);
+        List<Tokenform> ctf = broadcastrepo.findByTokens(user);
         model.addAttribute("tokenList3", ctf);
-        return "proofofwork";
+        return "minereward";
     }
     /**
      * Get mapping of "/search" and go to the search bar page.
@@ -204,18 +206,7 @@ public class webController {
      */
     @GetMapping("/search")
     public String search() {
-        return "searchbar";
-    }
-    /**
-     * Get mapping of "/cardview" and go to the card view page.
-     * @param model
-     * @return
-     */
-    @GetMapping("/cardview")
-    public String cardview(Model model) {
-        List<blockChainform> blkh = broadcastrepo.findbyCardView();
-        model.addAttribute("cardviewitems", blkh);
-        return "cardViewBlockchain";
+        return "blockexplorer";
     }
     /**
      * 
@@ -226,7 +217,7 @@ public class webController {
     @GetMapping("/results")
     public String results(Model model, @RequestParam("keyword") String keyword) {
         List<blockChainform> blch = broadcastrepo.findByKeyword(keyword);
-        model.addAttribute("blockchainlist", blch);
+        model.addAttribute("blockchainlist2", blch);
         return "blockview";
     }
 }
