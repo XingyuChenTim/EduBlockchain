@@ -204,7 +204,7 @@ public class webController {
      */
     @GetMapping("/search")
     public String search() {
-        return "searchbar";
+        return "blockexplorer";
     }
     /**
      * Get mapping of "/cardview" and go to the card view page.
