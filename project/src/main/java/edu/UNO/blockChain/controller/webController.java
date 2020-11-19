@@ -196,7 +196,7 @@ public class webController {
         minerRepo.minereward(user);
         List<Pollform> ctf = broadcastrepo.findByPolls();
         model.addAttribute("tokenList3", ctf);
-        return "proofofwork";
+        return "minereward";
     }
     /**
      * Get mapping of "/search" and go to the search bar page.
