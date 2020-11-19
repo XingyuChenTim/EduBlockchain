@@ -1,66 +1,97 @@
-<!DOCTYPE HTML>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Proofofwork</title>
+    <meta charset="UTF-8" />
+    <title>searchresults</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
-    <script type="text/javascript" th:src="@{/javascript/broadcast.js}"></script>
     <script type="text/javascript" th:src="@{/javascript/jquery-3.2.1.slim.min.js}"></script>
     <script type="text/javascript" th:src="@{/javascript/popper.min.js}"></script>
     <script type="text/javascript" th:src="@{/javascript/bootstrap.min.js}"></script>
+</head>
 
-    <body>
-        <nav class="navbar navbar-dark bg-dark" aria-labelledby="mainnavheading">
-            <!--Navbar -->
-            <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color" aria-labelledby="secondarynavheading">
-                <a class="navbar-brand" href="user">Go Back to User Page</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-            </nav>
-            <!--/.Navbar -->
+<body>
+
+    <nav class="navbar navbar-dark bg-dark" aria-labelledby="mainnavheading">
+        <!--Navbar -->
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color" aria-labelledby="secondarynavheading">
+            <a class="navbar-brand" href="user">Go Back to User Page</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </nav>
-        </div>
-        <div class="container">
-            <div class="form-group">
-                <a class="btn btn-info" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> Click to view your tokens </a>
-                <p class="text-primary"><em>Tokens you have in your Wallet: <strong class="text-danger"
-							id="count"></strong></em></p>
-                <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                        <table id="tableId" class="table">
-                            <caption>Your wallet balance details</caption>
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Id</th>
-                                    <th scope="col">Tokens</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr th:each="tokens : ${tokenList3}">
-                                    <td th:text="${tokens.id}"></td>
-                                    <td th:text="${tokens.token}"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+        <!--/.Navbar -->
+    </nav>
+
+    <br>
+
+    <div class="d-flex justify-content-center mx-auto">
+        <div class="card-deck" style="max-width: fit-content">
+            <div class="card border-danger mb-10" th:each="item : ${blockchainlist1}">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <p class="font-weight-bold">
+                            Block Chain #<span th:text="${item.id}"></span>
+                        </p>
+                        <p>
+                            Hash:
+                            <li class="list-group-item text-primary" th:text="${item.blockheader}"></li>
+                        </p>
+                        <p>
+                            Hash of previous block:
+                            <li class="list-group-item text-success" th:text="${item.previousblock}"></li>
+                        </p>
+                        <p>
+                            Nonce:
+                            <li class="list-group-item" th:text="${item.nonce}"></li>
+                        </p>
+                        <p>
+                            Timestamp:
+                            <li class="list-group-item" th:text="${item.timestamp}"></li>
+                        </p>
+                    </ul>
                 </div>
             </div>
-            <p>
-                Go Back to <a href="/">Home Page</a>.
-            </p>
-
         </div>
-    </body>
-    <script>
-        function rowCount() {
-            var table = document.getElementById("tableId");
-            var tbodyRowCount = table.tBodies[0].rows.length;
-            return tbodyRowCount;
-        }
-        document.getElementById("count").innerHTML = rowCount();
-    </script>
+    </div>
+
+    <br>
+
+    <div class="d-flex justify-content-center">
+        <div class="form-group">
+            <a class="btn btn-info" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> Click to view your tokens </a>
+            <p class="text-primary"><em>Tokens you have in your Wallet: <strong class="text-danger"
+							id="count"></strong></em></p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <table id="tableId" class="table">
+                        <caption>Your wallet balance details</caption>
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Tokens</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="tokens : ${tokenList3}">
+                                <td th:text="${tokens.id}"></td>
+                                <td th:text="${tokens.token}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    function rowCount() {
+        var table = document.getElementById("tableId");
+        var tbodyRowCount = table.tBodies[0].rows.length;
+        return tbodyRowCount;
+    }
+    document.getElementById("count").innerHTML = rowCount();
+</script>
 
 </html>
