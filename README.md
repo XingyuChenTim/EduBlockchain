@@ -168,9 +168,20 @@ SpringBoot
    WebController.   
    Pollform.   
    PollMapper.   
-
-Future updates in milestone 4:    
-1. Transaction pull table function fix.  
-2. Loading mining function.  
-3. Blockchain Explorer function.  
-4. User History Plot function (undecided).  
+   
+## Release Update - November 24, 2020 
+1. **Mining function by Xingyu:**       
+   Miningpendng function.     
+   Miningreward function.     
+   Database table updated.     
+2. **Transactionpoll function fix by Xingyu:**      
+   Getting pending transaction from database.   
+3. **Block Explorer function by Bishwo:**    
+   Block view function.   
+   Card view function.   
+4. **Pug Simulation function by Zexi :**    
+   Fix Mining function.   
+   Private-Public key function.  
+   Verify payment function.  
+5. **Testing and Documentation by Yimin:**    
+   All application except PUG application.    
