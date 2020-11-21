@@ -101,7 +101,7 @@ JSON
 SpringBoot  
 
 
-## Release Update - October 4, 2020
+## Release Update - Milestone 1 - October 4, 2020
 1. **Spring Boot:**  
    webController: postmapping and getmapping.   
    UserRepository: insert/select user info to database.  
@@ -121,7 +121,7 @@ SpringBoot
    UserForm, createTransactionForm;  
    SHA256, Block, Transaction.  
    
-## Release Update - October 22, 2020
+## Release Update - Milestone 2 - October 22, 2020
 1. **Database structure modified:**  
    Blockchain table: store all block, each row represent one block.   
    User table: store user information and user’s private key.   
@@ -141,7 +141,7 @@ SpringBoot
    Block simulation page.   
    Blockchain simulation page.        
    
-## Release Update - November 10, 2020
+## Release Update - Milestone 3 - November 10, 2020
 1. **Database structure by Xingyu:**  
    User table.   
    Token table.   
@@ -169,7 +169,7 @@ SpringBoot
    Pollform.   
    PollMapper.   
    
-## Release Update - November 24, 2020 
+## Release Update - Milestone 4 - November 24, 2020 
 1. **Mining function by Xingyu:**       
    Miningpendng function.     
    Miningreward function.     
@@ -185,3 +185,7 @@ SpringBoot
    Verify payment function.  
 5. **Testing and Documentation by Yimin:**    
    All application except PUG application.    
+   
+   
+## Release Update - Milestone 5 - December 11, 2020    
+
