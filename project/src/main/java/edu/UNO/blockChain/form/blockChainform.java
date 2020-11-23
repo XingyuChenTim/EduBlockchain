@@ -15,7 +15,8 @@ package edu.UNO.blockChain.form;
     public blockChainform() {
     }
 
-    public blockChainform(int id,String blockheader,String nonce,String previousblock,String timestamp,String transaction,String sender,String receiver,int amount,String date) {
+    public blockChainform(int id, String blockheader, String nonce, String previousblock, 
+    		String timestamp, String transaction, String sender, String receiver, int amount, String date) {
         this.id = id;
         this.sender = sender;
         this.receiver = receiver;
