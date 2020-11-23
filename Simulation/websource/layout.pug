@@ -19,6 +19,10 @@ html
     script(src='/javascripts/lib/bootstrap.min.js')
     script(src='/javascripts/lib/spin.min.js')
     script(src='/javascripts/lib/ladda.min.js')
+    script(src='/javascripts/lib/elliptic.js')
+    script(src='/javascripts/lib/BigInteger.min.js')
+    script(src='/javascripts/lib/Buffer.js')
+    script(src='/javascripts/lib/js.cookie.min.js')
     script(src='/javascripts/lib/ie10-viewport-bug-workaround.js')
     script(src='/javascripts/lib/sha256.js')
     script(src='/javascripts/blockchain.js')
@@ -32,7 +36,7 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          img.niubi-image(src='/images/uno.png', alt='UNO cool' style="width:5%; height:100%")
+          img.niubi-image(src='/images/uno.png', alt='UNO cool' style="width:50px; height:50px; position: relative")
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
             li
@@ -48,7 +52,15 @@ html
             li
               a(href='/decentralized') #{('Decentralized')}
             li
+              a(href='/keys') #{('Private Key Generation')}
+            li
+              a(href='/payhash') #{('User Payment Hash')}
+            li
+              a(href='/signtrans') #{('Sign Transaction')}
+            li
               a(href='/mining') #{('Mining')}
+
+
     block content
 
 
