@@ -30,15 +30,19 @@ function updateHash(block, chain) {
   updateState(block, chain);
 }
 
-function updateChain(block, chain) {
+function updateChain(block, chain, txCount) {
   // update all blocks walking the chain from this block to the end
   for (var x = block; x <= 5; x++) {
     if (x > 1) {
       $('#block'+x+'chain'+chain+'previous').val($('#block'+(x-1).toString()+'chain'+chain+'hash').val());
     }
     updateHash(x, chain);
+    if (txCount)
+      for (var y=0; y<txCount; y++)
+        verifySignature(block, chain, y);
   }
 }
+
 
 function mine(block, chain, isChain) {
   for (var x = 0; x <= maximumNonce; x++) {
@@ -54,4 +58,11 @@ function mine(block, chain, isChain) {
       break;
     }
   }
+}
+function popup() {
+  popupS.confirm({
+    content: 'You can not change the Block',
+    labelBack: 'Back to original',
+    labelRef: 'Refresh page',
+  });
 }

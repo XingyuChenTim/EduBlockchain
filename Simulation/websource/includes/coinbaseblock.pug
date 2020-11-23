@@ -6,21 +6,21 @@
       .col-sm-10
         .input-group
           span.input-group-addon #
-          input.form-control(id='block'+block.block+'chain'+block.chain+'number', type='number', value=block.block onchange='updateChain('+block.block+', '+block.chain+');' onkeyup='updateChain('+block.block+', '+block.chain+');')
+          input.form-control(id='block'+block.block+'chain'+block.chain+'number', type='number', value=block.block onchange='updateChain('+block.block+', '+block.chain+', '+block.txCount+');' onkeyup='updateChain('+block.block+', '+block.chain+', '+block.txCount+');')
 
     .form-group
       label.col-sm-2.control-label(for='block'+block.block+'chain'+block.chain+'nonce') #{__('Nonce')}:
       .col-sm-10
-         input.form-control(id='block'+block.block+'chain'+block.chain+'nonce', type='text', value=block.nonce, onkeyup='updateChain('+block.block+', '+block.chain+');')
+         input.form-control(id='block'+block.block+'chain'+block.chain+'nonce', type='text', value=block.nonce, onkeyup='updateChain('+block.block+', '+block.chain+', '+block.txCount+');')
 
     .form-group
       label.col-sm-2.control-label #{__('New Block Rewards')}:
       .col-sm-10
         .input-group
           .input-group-addon #{__('$')}
-          input.form-control(id='block'+block.block+'chain'+block.chain+'mreward', type='text', value=block.mreward, onkeyup='updateChain('+block.block+', '+block.chain+');')
+          input.form-control(id='block'+block.block+'chain'+block.chain+'mreward', type='text', value=block.mreward, onkeyup='updateChain('+block.block+', '+block.chain+', '+block.txCount+');')
           .input-group-addon -&gt;
-          input.form-control(id='block'+block.block+'chain'+block.chain+'miner', type='text', value=block.miner, onkeyup='updateChain('+block.block+', '+block.chain+');')
+          input.form-control(id='block'+block.block+'chain'+block.chain+'miner', type='text', value=block.miner, onkeyup='updateChain('+block.block+', '+block.chain+', '+block.txCount+');')
 
     .form-group
       label.col-sm-2.control-label #{__('Tx')}:
@@ -28,12 +28,17 @@
         each tx, x in block.txs
           .input-group
             .input-group-addon #{__('$')}
-            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'value', type='text', value=tx.value, onkeyup='updateChain('+block.block+', '+block.chain+');')
-            .input-group-addon #{__('From')}:
-            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'from', type='text', value=tx.from, onkeyup='updateChain('+block.block+', '+block.chain+');')
-            .input-group-addon -&gt;
-            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'to', type='text', value=tx.to, onkeyup='updateChain('+block.block+', '+block.chain+');')
-
+            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'value', type='text', value=tx.value, onkeyup='updateChain('+block.block+', '+block.chain+', '+block.txCount+');')
+          .input-group
+            .input-group-addon #{__('Sender')}:
+            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'from', type='text', value=tx.from, onkeyup='updateChain('+block.block+', '+block.chain+', '+block.txCount+');')
+          .input-group
+            .input-group-addon #{__('Receiver')};
+            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'to', type='text', value=tx.to, onkeyup='updateChain('+block.block+', '+block.chain+', '+block.txCount+');')
+          .input-group
+            .input-group-addon PayHash:
+            input.form-control(id='block' + block.block + 'chain' + block.chain + 'tx' + x + 'sig', type='text', value=tx.sig, onkeyup='updateChain('+block.block+', '+block.chain+', '+block.txCount+');')
+          br
     #state.form-group
       label.col-sm-2.control-label(for='block'+block.block+'chain'+block.chain+'previous') #{__('Prev')}:
       .col-sm-10

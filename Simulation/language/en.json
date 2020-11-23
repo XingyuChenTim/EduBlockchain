@@ -36,5 +36,21 @@
 	"Mine (Be patient!)": "Mine (Be patient!)",
 	"Mine (Be patient !)": "Mine (Be patient !)",
 	"Mine it": "Mine it",
-	"": ""
+	"": "",
+	"Version number": "Version number",
+	"Previous Hash": "Previous Hash",
+	"You can not Mine it": "You can not Mine it",
+	"Back to origin": "Back to origin",
+	"Back to Origin": "Back to Origin",
+	"Miner": "Miner",
+	"Main": "Main",
+	"Transaction (Merkle Tree) 10 rows": "Transaction (Merkle Tree) 10 rows",
+	"Transaction (Merkle Tree) 20 rows": "Transaction (Merkle Tree) 20 rows",
+	"Private & Public Key": "Private & Public Key",
+	"Private ": "Private ",
+	"Signatures": "Signatures",
+	"Payment Hash": "Payment Hash",
+	"Verify Transaction": "Verify Transaction",
+	"Sender": "Sender",
+	"Receiver": "Receiver"
 }
