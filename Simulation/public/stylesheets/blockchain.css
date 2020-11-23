@@ -11,7 +11,7 @@ body {
 }
 
 body > .container {
-  padding: 60px 15px 0;
+  padding: 50px 20px 0;
 }
 
 .container .text-muted {
@@ -19,7 +19,7 @@ body > .container {
 }
 
 body > .container-fluid {
-  padding: 60px 15px 0;
+  padding: 50px 20px 0;
 }
 
 .container-fluid .text-muted {
@@ -43,6 +43,10 @@ input {
   top: 0;
   left: 0;
   border: 0;
-  /*z-index: 20000;*/
+  z-index: 10;
 }
-p {font-size: 19px; color: #f02626;}
+
+p {
+  font-size: 19px;
+  color: #f02626;
+}
