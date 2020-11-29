@@ -91,7 +91,23 @@ Description:
    3. _Block Practice Page_ : it gives user some information about the block to help them understand the structure of a block header,user can modify the content of one block;   
       ![](/image/Block.png)  
    4. _Blockchain Practice Page_: based on previous block page, we connect different blocks together to form a chain. Even a minor change in a block will make the rest of              connected blocks become invalid.  
-      ![](/image/Chain.png)  
+      ![](/image/Chain1.png)  
+   5. _Transaction Page_: it shows how users' transactions can be recorded into the blockchain.
+      ![](/image/Transaction.PNG)
+   6. _Decentralized Page_: it demonstrates that every user in the blockchain system will have to store a copy of original blockchain into their local storage, and everyone's 
+       local copy of the blockchain is exactly the same. 
+      ![](/image/Decentralized.PNG)
+   7. _Public key Generation Page_: this page elaborates the real case of how Bitcoin can generate each user's public key based on the private key, and it also includes an            external link to let users explore the algorithm of generating key pairs
+      ![](/image/KeyGen.PNG)
+   8. _User Payment Hash Page_: since every transaction in the Blockchain network should be signed to protect the integrity and confidentiality, user has to create an unique
+       Payment hash while he/she tries to initiate transactions by using his/her own public key. After the new Payment hash has been create, users can verify if the current 
+       Payment hash is generated from a specific users public key. 
+      ![](/image/PayVerify.PNG)
+   9. _Transaction Verify Page_: In the real world Blockchain network, people will normally put the transaction detail along with their public key to generate a Transaction
+       Hash to let the other users verify the authenticity of every transaction.
+      ![](/image/TransVerify.PNG)
+   10. _Mining Page_: this page is used for simulating the real world mining work, and modification inside of each block will cause a deviation of block authenticity. 
+      ![](/image/Mining.PNG)
 
 ## License
 MIT  
