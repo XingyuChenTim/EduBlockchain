@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>video_Volume 90_jw-video jw-reset</name>
+   <tag></tag>
+   <elementGuidId>f280cb4d-79d9-4562-9f0f-1b0ff264d79e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>video.jw-video.jw-reset</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='jwplayer-xNkyvYMKyr7O']/div[2]/div[4]/video</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>video</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>jw-video jw-reset</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tabindex</name>
+      <type>Main</type>
+      <value>-1</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>src</name>
+      <type>Main</type>
+      <value>https://cdn.app.vidgrid.com/content/x/N/k/xNkyvYMKyr7O/xNkyvYMKyr7O_xlEGL0GmWQMo.mp4?Expires=1606731382&amp;Signature=axa4bn6VdScie7KdcK8J1xs7iCPpHGc7lbrrLA-ad1YYO0uT8c4cOXveSLxhJT1USupbeku2q~4GPSFA97pJoMBj5ehgAaVRtJSU87~tlrSYuBijgad6mwzqTpuIlmZxatiOTlwSJ6aQ3Ph4~nVAJmi5cBCLhSruijgieBOv9Wm0n7EZ5ffzbeYyvqJo4-~l5Tr5iEBQIEi~Nz-x0ky2KNZfXHuorbBS5Wx7M-NXHcNStQ80sWWomzokc3faJGInqn-KF3iqj01PuMy5IgUh2FDLKjhIIPWzTxPJ1jFMWDd04XJO9yudTaFuq1wBLw7oIeKxLeY1Yu7y-GrqxemSgg__&amp;Key-Pair-Id=APKAI5WX3ARH327VVIVA</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;jwplayer-xNkyvYMKyr7O&quot;)/div[@class=&quot;jw-wrapper jw-reset&quot;]/div[@class=&quot;jw-media jw-reset&quot;]/video[@class=&quot;jw-video jw-reset&quot;]</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ref_element</name>
+      <type>Main</type>
+      <value>Object Repository/Project/Simulation/Page_EDUBC/iframe_Milestone 1 of EDU Blockchain Mining_35daf0</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='jwplayer-xNkyvYMKyr7O']/div[2]/div[4]/video</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//video</value>
+   </webElementXpaths>
+</WebElementEntity>
