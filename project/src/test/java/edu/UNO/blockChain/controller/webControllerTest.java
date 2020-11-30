@@ -1,4 +1,5 @@
-package edu.UNO.blockChain.test.project.controller;
+package edu.UNO.blockChain.controller;
+
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
