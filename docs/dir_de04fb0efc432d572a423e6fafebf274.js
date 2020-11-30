@@ -15,9 +15,6 @@ var dir_de04fb0efc432d572a423e6fafebf274 =
     [ "PollMapper.java", "_poll_mapper_8java.html", [
       [ "PollMapper", "classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_poll_mapper.html", "classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_poll_mapper" ]
     ] ],
-    [ "searchBarMapper.java", "search_bar_mapper_8java.html", [
-      [ "searchBarMapper", "classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1search_bar_mapper.html", "classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1search_bar_mapper" ]
-    ] ],
     [ "Tokenform.java", "_tokenform_8java.html", [
       [ "Tokenform", "classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_tokenform.html", "classedu_1_1_u_n_o_1_1block_chain_1_1form_1_1_tokenform" ]
     ] ],
