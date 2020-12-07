@@ -60,6 +60,17 @@ Description:
        ```
        http://localhost:8080
        ```
+   8. If you want to enjoy the functions in the user page, you have to create four tables in your local database:
+       ```
+       The first table is called user: for user login in and register. Make sure you have at least one user in the table
+       ![](/image/UserTableconfi.png)  
+       ```
+       
+   9. The jar file above is already configured, so if you want to try the functions in the user page, make sure you configure the database and password:
+       ```
+       
+       ```
+       
        
 ## User Interface
 
@@ -79,8 +90,19 @@ Description:
         ![Block Header Structure](/image/Block2.png)  
       * How to initiate a transaction between different users  
         ![Transaction](/image/Block3.png)  
-   6. _Payment_: More concrete transaction simulator  
-      ![Payment](/image/UpdatedPayment.PNG)    
+   6. Userpage: home page after user login in
+        ![](/image/userpage.png)  
+   7. Tokenpage: Token table for user check wallet balance
+        ![](/image/tokenview.png)  
+   8. Broadcast function: User broadcast a request for bitcoin
+        ![](/image/broadcast.png)  
+   9. Transactionpoll function: check if there is a pending transaction need to be mined
+        ![](/image/transactionpolll)  
+   10. Mining function: Mining block and get reward because of PoW
+        ![](/image/Mining.png)  
+   11. Blockexplorer function: search specific block based on hash id
+        ![](/image/blockexplorer.png) 
+        ![](/image/blockexplorerresult.png)  
       
  **Simulation of Real World Blockchain:**  
  
