@@ -203,5 +203,14 @@ SpringBoot
    All application except PUG application.    
    
    
-## Release Update - Milestone 5 - December 11, 2020    
-
+## Release Update - Milestone 5 - December 11, 2020      
+1. **User Page by Bishwo:**         
+   Update description to each function.       
+   Update css for user page.      
+2. **Readme by Xingyu:**   
+   Update install instructions.   
+   Update User interface.    
+3. **Final presentation:**      
+   https://drive.google.com/file/d/1Mpd2a8T2sYyXNOqsr8ZXanKgwatWW9kX/view?usp=sharing.      
+4. **Final report:**     
+   https://drive.google.com/file/d/1OVp4pR-gwjoQ-Sk7jZEgKyYkUqfSZaYl/view?usp=sharing.      
