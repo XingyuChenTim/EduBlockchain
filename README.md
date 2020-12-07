@@ -62,14 +62,30 @@ Description:
        ```
    8. If you want to enjoy the functions in the user page, you have to create four tables in your local database:
        ```
-       The first table is called user: for user login in and register. Make sure you have at least one user in the table
+       The first table is called user: for user login in and register. 
+       Make sure you have at least one user in the table
+       ```
        ![](/image/UserTableconfi.png)  
        ```
-       
-   9. The jar file above is already configured, so if you want to try the functions in the user page, make sure you configure the database and password:
+       The Second table is called transactionpoll: 
+       for user check if there is pending transaction
        ```
-       
+       ![](/image/transactionpollconfig.png) 
        ```
+       The Third table is called blockchain: contain all the block in the blockchain. 
+       Make sure you have the first block in the database and change auto increament to 2 for further mining work
+       ```
+       ![](/image/blockchaindetail.png) 
+       ![](/image/blockchainconfig.png) 
+       ```
+       The Fourth table is called token: contain all the tokens. 
+       Make sure you have five token initialled and change the owner to who already in the user table
+       ```
+       ![](/image/tokendetail.png) 
+       ![](/image/tokenconfi.png)        
+   9. The jar file above is already configured, so if you want to try the functions in the user page, 
+      make sure you configure the database and password:
+       ![](/image/databaseConfig.png)   
        
        
 ## User Interface
