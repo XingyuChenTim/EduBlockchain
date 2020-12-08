@@ -113,7 +113,7 @@ Description:
    8. Broadcast function: User broadcast a request for bitcoin
         ![](/image/broadcast.png)  
    9. Transactionpoll function: check if there is a pending transaction need to be mined
-        ![](/image/transactionpolll)  
+        ![](/image/transactionpolll.png)  
    10. Mining function: Mining block and get reward because of PoW
         ![](/image/Mining.png)  
    11. Blockexplorer function: search specific block based on hash id
